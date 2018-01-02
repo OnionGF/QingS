@@ -6,12 +6,179 @@
     @include flex-direction(column);
     width:100%;
     height:100%;
+    padding-top: 0.2rem;
+    background: #fff;
     .m-image{
-        height: 2.1rem;
-        background:red;
+       // height: 3rem; 
+        .title{
+            text-align: right;
+            padding-right: 0.18rem;
+            height: 0.44rem;
+            background: #017c84;
+            color: #FFFFFF;
+            font-size: 0.26rem;
+            i{
+                margin-left: 1.06rem;
+            }
+        }
+        header{
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-around); 
+            height: 0.71rem;
+            background: #eeeeee;
+            .person-head{
+                @include flexbox();
+                @include align-items(center);
+                width: 0.51rem;
+                height: 0.51rem;  
+                img{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 50%;  
+                }
+            }
+            .person-info{
+                @include flexbox();
+                @include flex-direction(column);
+                margin-right: 1.6rem;
+                .person-info-name{
+                    font-size: 0.16rem;
+                    color: #000;
+                    font-weight: bold;
+                }
+                .person-info-signature{
+                    font-size: 0.14rem;
+                    color: #666;
+                    margin-top: 0.06rem;
+                }
+               
+            }
+            .person-more{
+                @include flexbox();
+                @include align-items(center);
+            }
+        }
+        nav{ 
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-around);
+            height: 0.9rem;
+            background: #fff;
+            border-bottom: 1px solid #eeeeee;
+            .wallet{
+                @include flexbox();
+                @include justify-content(center);
+                @include flex-direction(column);
+                color: #017c84; 
+                text-align: center;
+                span{
+                    display: block;
+                    padding-top: 0.09rem;
+                }
+                
+            }
+            .sale{
+                @include flexbox();
+                @include justify-content(center);
+                @include flex-direction(column);
+                color: #017c84;
+                text-align: center;
+                span{
+                    display: block;
+                    padding-top: 0.09rem;
+                }    
+            }
+            .bankcard{
+                @include flexbox();
+                @include justify-content(center);
+                @include flex-direction(column);
+                color: #017c84;
+                text-align: center;
+                span{
+                    display: block;
+                    padding-top: 0.09rem;
+                }
+            }
+        }
     }
     .mes{
-        @include flex();
+        @include flexbox();
+        @include flex-direction(column);
+        background: #fff;
+        min-height:3.93rem ;
+        .need{
+            width: 98%;
+            height: 0.5rem;
+            @include flexbox();
+            @include align-items(center);
+            margin-left: 0.08rem;
+            border-bottom: 1px solid #eeeeee;
+            span{
+                display: block;
+                margin-left: 0.05rem;
+                color: #333333;
+                font-weight: bold;
+            }
+            
+        }
+        .evaluate{
+            @include flexbox();
+            @include align-items(center);
+            width: 98%;
+            margin-left: 0.08rem;
+            height: 0.5rem;
+            border-bottom: 1px solid #eeeeee;
+            span{
+                display: block;
+                margin-left: 0.11rem;
+                color: #333333;
+                font-weight: bold;
+            }
+        }
+        .release{
+            @include flexbox();
+            @include align-items(center);
+            height: 0.5rem;
+            width: 98%;
+            margin-left: 0.08rem;
+            border-bottom: 1px solid #eeeeee;
+            span{
+                display: block;
+                margin-left: 0.11rem;
+                color: #333333;
+                font-weight: bold;
+            }
+        }
+        .setup{
+            @include flexbox();
+            @include align-items(center);
+            height: 0.5rem;
+            width: 98%;
+            margin-left: 0.08rem;
+            border-bottom: 1px solid #eeeeee;
+            span{
+                display: block;
+                margin-left: 0.11rem;
+                color: #333333;
+                font-weight: bold;
+            }
+        }
+        .connect{
+            @include flexbox();
+            @include align-items(center);
+            height: 0.5rem;
+            width: 98%;
+            margin-left: 0.08rem;
+            border-bottom: 1px solid #eeeeee;
+            span{
+                display: block;
+                margin-left: 0.11rem;
+                color: #333333;
+                font-weight: bold;
+            }
+        }
       
 
     }

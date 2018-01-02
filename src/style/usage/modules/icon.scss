@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'iconfont';
+  src: 
+  url('/static/font/mineiconfont.woff') format('woff'),
+  url('/static/font/mineiconfont.ttf') format('truetype')
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family:'iconfont';   //修改class名字
+    src: 
+    url('/static/font/iconfont.woff') format('woff'),
+    url('/static/font/iconfont.ttf') format('truetype')
+  }
+ 
+@font-face {
+  font-family: 'iconfont';
+  src: 
+  url('/static/font/iconfontmore.woff') format('woff'),
+  url('/static/font/iconfontmore.ttf') format('truetype')
+}
+.share{
+    font-size: 24px;
+}
+.personmore{
+    color: #017c84;
+    font-weight: bold;
+    font-size: 18px;
+}
+.iwallet{
+    font-size: 30px;
+    color: #017c84;
+}
+.isale{
+    font-size: 30px;
+    color: #017c84;
+}
+.ibankcard{
+    font-size: 30px;
+    color: #017c84;
+}
+.ineed{
+    font-size: 35px;
+    color: #017c84;
+    margin-left: 0.02rem;
+}
+.ievaluate{
+    font-size: 25px;
+    color: #017c84;
+    margin-left: 0.07rem;
+}
+.irelease{
+    font-size: 25px;
+    color: #017c84;
+    margin-left: 0.07rem;
+}
+.isetup{
+    font-size: 25px;
+    color: #017c84;
+    margin-left: 0.07rem;
+}
+.iconnect{
+    font-size: 25px;
+    color: #017c84;
+    margin-left: 0.07rem;
+}
