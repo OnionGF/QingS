@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-
 Vue.use(Router)
-
 
 import index from '@/components/index/index.vue'
 import order from '@/components/order/order.vue'
@@ -34,6 +32,7 @@ import tag2 from '@/components/collect/tag-2.vue'
     {path:'',redirect:'/mains'},  //重定向，为空的时候进入到main文件里
     {path:'/mains',name:'mains',component:index},
     {path:'/tracks',name:'tracks',component:tracks},
+<<<<<<< HEAD
     {path:'/collect',name:'collect',component:collect,children:[
       {path:'',redirect:'tag1',name:'tag1'},
       {path:'/tag1',component:tag1,name:'tag1'},
@@ -62,6 +61,25 @@ import tag2 from '@/components/collect/tag-2.vue'
     {path:'/connect',component:connect,name:'connect'},
     
     {path:'**',redirect:'/mains'},
+=======
+    {path:'/collect',name:'collect',component:collect,
+      children:[
+        {path:'/collect',redirect:'/tag1'},
+        {path:'/tag1',component:tag1,name:'tag1'},
+        {path:'/tag2',component:tag2,name:'tag2'}
+      ]},
+    {path:'/order',name:'order',component:order,
+      children:[
+        // {path:'',redirect:'or1',name:''},
+        {path:'/or1',component:or1,name:'or1'},
+        {path:'/or2',component:or2,name:'or2'},
+        {path:'/or3',component:or3,name:'or3'},
+        {path:'/or4',component:or4,name:'or4'},
+        {path:'/or5',component:or5,name:'or5'}
+      ]},
+    {path:'/mine',name:'mine',component:mine},
+    {path:'**',redirect:'/mains'}
+>>>>>>> origin/GF
  ]
      
   

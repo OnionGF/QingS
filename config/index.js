@@ -18,7 +18,14 @@ module.exports = {
         pathRewrite:{
             '^/api' : ''
         }
-       }
+       },
+       '/mz':{
+        target:'https://m.maizuo.com',  //我们请求数据的目标地址
+        changeOrigin:true,
+        pathRewrite:{
+            '^/mz' : ''
+        }
+       },
     },
 
     // Various Dev Server settings
