@@ -4,11 +4,13 @@
     @include flex();
     @include flexbox();
     @include flex-direction(column);
+    position:relative;
     width:100%;
     height:100%;
     .banner{
         height:2.1rem;
         background:red;
+       
     }
     .search-top{
         position:fixed;
@@ -23,23 +25,39 @@
         @include flexbox();
         @include flex();
         background:green;
-       
+
+        height:100%;
+
         div{
             width:100%;
             height:4rem;
             @include border(1px,solid,black);
-            position:relative;
-            .search{
-                position:absolute;
-                left:0.45rem;
-                top:-0.35rem;
-                width:2.85rem;
-                height:1.5rem;
-                background:#ccc;
-                z-index:999;
-                @include border(1px,solid,#ccc);
-
-            }
+            
+        }
+    }
+    .searchBox{
+        width:3.2rem;
+        // height:1.6rem;
+        background:#fff;
+        position:absolute;
+        top:1.85rem;
+        left:0.25rem;
+        z-index:999;   
+        // @include border(1px,solid,#ccc);
+        box-shadow: 0 0 8px #888888;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(space-around);
+        @include align-items(center);
+        #checkinout{
+            height: 0.5rem;
+            line-height: 50px;
+            position: relative;
+            display: -webkit-box;
+            display: flex;
+            border-bottom: 1px solid #e5e5e5;
+            background: #fff;
+            width:3rem;
         }
     }
 }
