@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'iconfont';
   src: 
-  url('/static/mineiconfont.woff') format('woff'),
-  url('/static/mineiconfont.ttf') format('truetype')
+  url('/static/font/mineiconfont.woff') format('woff'),
+  url('/static/font/mineiconfont.ttf') format('truetype')
 }
 
 .iconfont{
@@ -13,10 +13,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
+    font-family:'iconfont';   //修改class名字
+    src: 
+    url('/static/font/iconfont.woff') format('woff'),
+    url('/static/font/iconfont.ttf') format('truetype')
+  }
+ 
+@font-face {
   font-family: 'iconfont';
   src: 
-  url('/static/iconfontmore.woff') format('woff'),
-  url('/static/iconfontmore.ttf') format('truetype')
+  url('/static/font/iconfontmore.woff') format('woff'),
+  url('/static/font/iconfontmore.ttf') format('truetype')
 }
 .share{
     font-size: 24px;
