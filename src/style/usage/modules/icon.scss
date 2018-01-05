@@ -25,6 +25,12 @@
   url('/static/font/iconfontmore.woff') format('woff'),
   url('/static/font/iconfontmore.ttf') format('truetype')
 }
+@font-face {
+    font-family: 'iconfont';
+    src: 
+    url('/static/font/iconfontpos.woff') format('woff'),
+    url('/static/font/iconfontpos.ttf') format('truetype')
+  }
 .share{
     font-size: 24px;
 }

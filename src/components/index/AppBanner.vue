@@ -25,26 +25,27 @@
 			getData(){
 				let that = this;
 				//https://m.maizuo.com/v4/api/billboard/home?__t=1514030525181
-				axios.get("/mz/v4/api/billboard/home",{
-					params:{__t:Date.now()}
-				}).then((response)=>{
-					console.log(response);
+				axios.get("/mz/v4/api/billboard/home")
+				.then((response)=>{
+					// console.log(response);
 					that.billboards = response.data.data.billboards
 				})
 			}
 		},
 		created(){
-			this.getData()
+			this.getData()	
 		},
 		updated(){
 			new Swiper('.app-banner',{
 				loop :true,
-				autoplay:{delay:2500}
+				autoplay:{delay:1500}
 			})
 		}
 	}
 </script>
 
 <style>
-	
+		.swiper-container{
+			width:100%;
+		}
 </style>

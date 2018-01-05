@@ -8,8 +8,9 @@
 @import './modules/order.scss';
 @import './modules/icon.scss';
 .container{
-    overflow:auto;
+    // overflow:auto;
     height:100%;
+    background:#fff;    
     @include flexbox();
     @include flex-direction(column);
     @include justify-content(space-between);
