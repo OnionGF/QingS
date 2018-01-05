@@ -1,7 +1,7 @@
 <template>
     <div>
        <div id="checkbox">
-		   	<input type="button" value='搜索' class='buttonSearch'>
+		   	<button   class='buttonSearch'>搜索</button>
         </div>        
     </div>
 </template>
@@ -31,11 +31,12 @@
 	}
 	.buttonSearch{
 			width:2rem;
-			height:0.35rem;
+			height:0.3rem;
 			background:#017c84;
-			border-radius: 2px;
 			text-align: center;
-			line-height: 0.35rem;
+			line-height: 0.3rem;
 			color:#fff;
+			border:0;
+			border-radius:6px;
 		}
 </style>

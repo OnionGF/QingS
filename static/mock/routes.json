@@ -1,7 +1,9 @@
 
-[
-    
-    {
+
+
+{
+    "/api/user/selectHouse" : "/list",
+    "/mz/v4/api/billboard/home" : "/pict",
+    "/api/play/gym_list" : "/choo",
     "/api/user/findAllHouse" : "/searchlist"
-    }
-]
+}

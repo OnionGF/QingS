@@ -5,8 +5,9 @@
     @include flexbox();
     @include flex-direction(column);
     position:relative;
+    background:#fff; 
+    overflow: auto;   
     width:100%;
-    height:100%;
     .banner{
         height:2.1rem;
         background:red;
@@ -24,24 +25,58 @@
     .con{
         @include flexbox();
         @include flex();
-        background:green;
-
+        @include flex-direction(column);
         height:100%;
-
+        width:100%;
+        padding:1.6rem 0.15rem 0;
+        .con-hot{
+            @include flexbox();
+            @include flex-direction(column);
+            // @include flex(0.5);
+            width:3.43rem;
+            min-height:8rem;
+            _height:8rem;
+           
+          
+            .conBox{
+                @include flexbox();
+                @include flex-direction(column);
+                @include flex(0.5);
+                width:3.43rem;
+        
+            }
+           
+        }
+        .con-choo{
+            @include flexbox();
+            @include flex-direction(column);
+            @include flex();
+            width:3.43rem;
+            height:100%;
+          
+            .conBox{
+                @include flexbox();
+                @include flex-direction(column);
+                width:3.43rem;
+                
+            }
+           
+        }
         div{
             width:100%;
             height:4rem;
-            @include border(1px,solid,black);
+            
+            
             
         }
     }
     .searchBox{
-        width:3.2rem;
+        width:3.43rem;
         // height:1.6rem;
         background:#fff;
         position:absolute;
         top:1.85rem;
-        left:0.25rem;
+        left:0.15rem;
         z-index:999;   
         // @include border(1px,solid,#ccc);
         box-shadow: 0 0 8px #888888;

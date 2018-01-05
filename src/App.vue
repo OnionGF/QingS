@@ -2,8 +2,8 @@
     <div class="container">
         <router-view></router-view>
        
-        
-        
+<!--         
+        <div class='wrap'></div> -->
         <foots></foots> 
     </div>
 </template>

@@ -14,17 +14,12 @@ module.exports = {
       //代理服务器  
       '/api':{
         target:'http://localhost:9000',  //我们请求数据的目标地址
-        changeOrigin:true,
-        pathRewrite:{
-            '^/api' : ''
-        }
+        changeOrigin:true
        },
        '/mz':{
-        target:'https://m.maizuo.com',  //我们请求数据的目标地址
+        target:'http://localhost:9000',  //我们请求数据的目标地址
         changeOrigin:true,
-        pathRewrite:{
-            '^/mz' : ''
-        }
+      
        },
     },
 
