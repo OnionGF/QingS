@@ -1,8 +1,10 @@
 
-var polist = require('./poslist.json')
+
+var searchlist = require('./searchlist.json')
 
 module.exports = function (){
     return {
-        list : polist
+        searchlist:searchlist,
+
     }
 }
