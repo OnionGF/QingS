@@ -27,11 +27,20 @@ import collect from '@/components/collect/collect.vue'
 import tag1 from '@/components/collect/tag-1.vue'
 import tag2 from '@/components/collect/tag-2.vue'
 
+import login from '@/components/login/login.vue'
+import yanzhengma from '@/components/login/yanzhengma.vue'
+import password from '@/components/login/password.vue'
 
  const routes = [
     {path:'',redirect:'/mains'},  //重定向，为空的时候进入到main文件里
     {path:'/mains',name:'mains',component:index},
     {path:'/tracks',name:'tracks',component:tracks},
+    {path:'/login',component:login,
+       children:[
+        {path:'/login',redirect:'/yanzhengma'},
+        {path:'/yanzhengma',component:yanzhengma,name:'yanzhengma'},
+        {path:'/password',component:password,name:'password'}
+      ]},
     {path:'/collect',component:collect,
       children:[
         {path:'/collect',redirect:'/tag1'},
