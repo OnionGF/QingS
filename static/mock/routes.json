@@ -5,6 +5,11 @@
     "/api/user/selectHouse" : "/list",
     "/mz/v4/api/billboard/home" : "/pict",
     "/api/play/gym_list" : "/choo",
+<<<<<<< HEAD
     "/api/user/findAllHouse" : "/searchlist"
 }
 
+=======
+    "/apiuser/selectHouse" : "/sele"
+}
+>>>>>>> origin/GF

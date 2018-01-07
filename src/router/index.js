@@ -1,3 +1,4 @@
+
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -34,6 +35,10 @@ import password from '@/components/login/password.vue'
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/GF
  const routes = [
     {path:'',redirect:'/mains'},  //重定向，为空的时候进入到main文件里
     {path:'/mains',name:'mains',component:index},
@@ -80,7 +85,11 @@ import password from '@/components/login/password.vue'
     {path:'**',redirect:'/mains'}
  ]
 
+<<<<<<< HEAD
      
+=======
+
+>>>>>>> origin/GF
   
 
 export default new Router({
