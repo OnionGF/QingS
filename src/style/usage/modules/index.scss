@@ -13,14 +13,28 @@
         background:red;
        
     }
-    .search-top{
+    .searchTop{
         position:fixed;
         top:0;
         left:0;
         width:100%;
         height:0.5rem;
-        background:black;
-        display:none;
+        z-index:1000;
+        background:#fff;
+        border-radius:0 0 0.2rem 0.2rem;
+        padding-right:0.2rem;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        #checkinout{
+            height:0.5rem;
+            @include flexbox();
+            @include flex();
+            @include align-items(center);
+        }
+        #checkbox{
+            width:20%;
+        }
     }
     .con{
         @include flexbox();
