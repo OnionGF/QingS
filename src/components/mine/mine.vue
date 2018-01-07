@@ -5,7 +5,7 @@
         <div class="m-image">
             <div class="title">
             	<span>我的</span>
-            	<i class="iconfont share">&#xe61d;</i>
+            	<i class="iconfont share">&#xe626;</i>
             </div>
             <header>
                 <div class="person-head">

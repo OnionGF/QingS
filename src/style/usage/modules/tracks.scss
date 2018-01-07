@@ -1,0 +1,21 @@
+.track{
+    height: 100%;
+    .tratitle{
+        @include flexbox();
+        @include justify-content(center);
+        width: 100%;
+        height: 0.4rem;
+        background: #017c84;
+        position: relative;
+        .mess{
+            line-height: 0.4rem;
+            color: #fff;
+             font-size: 0.2rem;
+        }
+        .isearch{
+            position: absolute;
+            top: 0.04rem;
+            right: 0.18rem;
+        }
+    }   
+}
