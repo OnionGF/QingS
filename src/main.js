@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import store from './store'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -13,10 +13,12 @@ import './style/usage/app.scss'
 import  '../node_modules/swiper/dist/css/swiper.min.css'
 /* eslint-disable no-new */
 
+//自定义指令
+import './modules/directives'
 new Vue({
   el: '#app',
   router,
-  // store,
+  store,
   template: '<App/>',
   components: { App }
 })

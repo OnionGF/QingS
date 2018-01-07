@@ -1,16 +1,11 @@
 <template>
     <div class="home">     
         <banner/>    
-        <div class='search-top'>
-            search-top 顶部的搜索框
-        </div>
+      
         <div class='searchBox'>
-            <keep-alive>
-                <pos/>
-            </keep-alive>
+            <pos/>
             <search/>
             <sousuo/>
-            <button1/>
         </div>
       
         <div class="con">            
@@ -24,23 +19,37 @@
 </template>
 
 
-// import {mapState,mapMutations,mapGetters,mapActions}  from 'vuex'
+
 
 
 <script>
 	import banner from "./AppBanner.vue"
 	import search from "./searchBox/search.vue"
-	import button1 from "./searchBox/button1.vue"
 	import pos from "./searchBox/pos.vue"
 	import sousuo from "./searchBox/sousuo.vue"
     import axios from 'axios'
-
     import conHot from './contentBox/conHot.vue'
     import conCho from './contentBox/conChoose.vue'
     // import chec from 'checkout.vue'
 	export default{
 		name:'mains',
-        components:{banner,search,pos,sousuo,button1,conHot,conCho}
+        components:{banner,search,pos,sousuo,conHot,conCho},
+    //    methods:{
+    //         ...mapActions(['getMes']),
+    //         scrollHeigh(){
+    //             console.log('index')
+    //             $('body').bind('touchmove', function(e) { 
+    //                 e.preventdefault();               //禁用默认滚动行为，需要自己实现滚动
+    //                 console.log($(this).scrollTop()); // 计算你的屏幕高度
+    //             });
+    //         }
+
+    //     },
+    //     mounted(){
+    //         this.scrollHeigh();
+    //     }
+       
+        
       
 	}
 </script>
