@@ -10,7 +10,6 @@ module.exports = function (){
         list : polist,
         pict : picture,
         choo : choose,
-        searchlist:searchlist,
-
-
+        searchlist:searchlist
     }
+}
