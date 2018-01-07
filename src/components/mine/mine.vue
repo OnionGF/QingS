@@ -9,7 +9,7 @@
             </div>
             <header>
                 <div class="person-head">
-                	<img src="../../style/usage/1.png"/>
+                	<img src="../../style/usage/img/1.png"/>
                 </div>
                 <div class="person-info">
                     <p class="person-info-name">那天八点半</p>

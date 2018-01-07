@@ -31,6 +31,13 @@
     url('/static/font/iconfontpos.woff') format('woff'),
     url('/static/font/iconfontpos.ttf') format('truetype')
   }
+
+@font-face {
+  font-family: 'iconfont';
+  src: 
+  url('/static/font/iconfontlogin.woff') format('woff'),
+  url('/static/font/iconfontlogin.ttf') format('truetype'),
+}
 .share{
     font-size: 24px;
 }
@@ -75,4 +82,12 @@
     font-size: 25px;
     color: #017c84;
     margin-left: 0.07rem;
+}
+
+.number{
+    font-size: 20px;
+}
+
+.pwd{
+    font-size: 26px;
 }
