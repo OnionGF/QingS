@@ -18,14 +18,21 @@
         </div>        
     </div>
 </template>
-
-
 <script>
-
+import {mapState,mapActions} from 'vuex'
     export default {
 		name:'ban',
+		data:function(){
+			return {
+				
+			}
+		},
+		computed:{
+			...mapState(['position'])
+		},
 		methods:{
 			search(){
+				let that = this;
 				console.log("1")
 				  $(function(){
 					$('#firstSelect').on('click',function () {
@@ -53,19 +60,9 @@
 							var startDate = $('#startDate').val();  //入住的天数
 							var endDate = $('#endDate').val();      //离店的天数
 							var NumDate = $('.NumDate').text();    //共多少晚
-							console.log(startDate);
-							console.log(endDate);
-							console.log(NumDate);
-							//下面做ajax请求
-							//show_loading();
-							/*$.post("demo.php",{startDate:startDate, endDate:endDate, NumDate:NumDate},function(data){
-								if(data.result==1){
-									//成功
-								} else {
-									//失败
-								}
-							});*/
-						}  ,   
+							that.startDate(startDate);
+							that.endDate(endDate);
+						},   
 						comfireBtn:'.comfire'//确定按钮的class或者id
 					});
 					var b=new Date();
@@ -82,11 +79,12 @@
 					var da=b.getDate();
 					da = da<10?"0"+da:da;
 					$('#endDate').val(ye+'-'+mo+'-'+da);
-				});
-			}
+				});				
+			},
+			...mapActions(['startDate','endDate'])
 		},
 		mounted(){
-			this.search()
+			this.search()			
 		}
     }
   
