@@ -14,7 +14,13 @@ const mutations = {
     },
     endDate(state,info){
         state.endDate = info
-    }
+    },
+
+    //用户登录 本地存储
+    change_type(state,user_info){
+        state.user_info = user_info
+        localStorage.user_info = JSON.stringify(user_info)
+    },
 }
 
 export default mutations

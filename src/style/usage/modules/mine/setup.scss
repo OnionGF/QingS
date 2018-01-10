@@ -22,16 +22,18 @@
     }
     .systemnotice{
         height: 1rem;
-        h1{
+        .h1t{
             height: 0.47rem;
             font-size: 22px;
             line-height: 0.47rem;
             margin-left: 0.14rem;
         }
         .newmessage{
-            height: 0.35rem;
-            margin-left: 0.14rem;
+            height: 0.6rem;
+            padding-left: 0.14rem;
             position: relative;
+            border-bottom: 1px solid #4da3a9;
+            margin-top: 0.1rem;
             .newtit{
                 font-size: 18px;
                 color: #333333;
@@ -79,9 +81,149 @@
             }
         }
     }
-    .prenotice{background: yellow;
-        height: 0.45rem;
+    .prenotice{
+        height: 0.6rem;
+        margin-top: 0.3rem;
+        border-bottom: 1px solid #4da3a9;
+        .newmessage{
+            margin-left: 0.15rem;
+            .prenot{
+                font-size: 18px;
+                color: #333333;
+            }
+            .neworder{
+                font-size: 14px;
+                color: #666666;
+            }
+            .pretapswitch{
+                width: 1rem;
+                height: 0.16rem;
+                margin-left: 0.5rem;
+                position: absolute;
+                top: 1.86rem;
+                left: 2.41rem;
+                .mint-switch-core{
+                    display: inline-block;
+                    position: relative;
+                    width: 63px;
+                    height: 32px;
+                    border: 1px solid #017c84;
+                    border-radius: 16px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    background: #fff;
+                    .mint-switch-core::after, .mint-switch-core::before {
+                        -webkit-transition: -webkit-transform .3s;
+                        transition: -webkit-transform .3s;
+                        transition: transform .3s;
+                        transition: transform .3s, -webkit-transform .3s;
+                        border-radius: 15px;
+                    }
+                   &::before {
+                        width: 60px;
+                        height: 30px;
+                        background-color: #fff;
+                    }
+                    &::after {
+                        width: 40px;
+                        height: 30px;
+                        background-color: #017c84;
+                    }
+                }
+                
+            }
+        }
     }
+    .shortnotice{
+        margin-top: 0.22rem;
+        .h1t{
+            height: 0.47rem;
+            font-size: 22px;
+            line-height: 0.47rem;
+            margin-left: 0.14rem;
+        }
+         .newmessage{
+            height: 0.6rem;
+            padding-left: 0.14rem;
+            position: relative;
+            border-bottom: 1px solid #4da3a9;
+            margin-top: 0.1rem;
+            .newtit{
+                font-size: 18px;
+                color: #333333;
+            }
+            .send{
+                font-size: 14px;
+                color: #666666;
+            }
+            .tapswitch{
+                width: 1rem;
+                height: 0.16rem;
+                margin-left: 0.5rem;
+                position: absolute;
+                top: 0.1rem;
+               left: 2.4rem;
+                .mint-switch-core{
+                    display: inline-block;
+                    position: relative;
+                    width: 63px;
+                    height: 32px;
+                    border: 1px solid #017c84;
+                    border-radius: 16px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    background: #fff;
+                    .mint-switch-core::after, .mint-switch-core::before {
+                        -webkit-transition: -webkit-transform .3s;
+                        transition: -webkit-transform .3s;
+                        transition: transform .3s;
+                        transition: transform .3s, -webkit-transform .3s;
+                        border-radius: 15px;
+                    }
+                   &::before {
+                        width: 60px;
+                        height: 30px;
+                        background-color: #fff;
+                    }
+                    &::after {
+                        width: 40px;
+                        height: 30px;
+                        background-color: #017c84;
+                    }
+                }
+                
+            }
+        }
+    }
+    .clearing{
+        @include flexbox();
+        @include justify-content(space-between);
+        height: 0.6rem;
+        line-height: 0.6rem;
+        border-bottom: 1px solid #4da3a9;
+        .cleartit{
+            font-size: 16px;
+            color: #333333;
+            margin-left: 0.14rem;
+        }
+        .personmore{
+            margin-right: 0.1rem;
+        }
+    }
+    .exitp{
+        margin-top: 0.6rem;
+        margin-left: 1.1rem;
+        #exitbtn{
+            background: #017c84;
+            color: #fff;
+            width: 1.52rem;
+            height: 0.22rem;
+            outline: none;
+            border: none;
+
+        }
+    }
+    
   
 }
    

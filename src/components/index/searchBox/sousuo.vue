@@ -1,7 +1,7 @@
 <template>
     <div v-changeClass :class='{searchTop:isShow}'>
         <div id="checkinout ">
-		   	<input v-model="mes" type="text" placeholder="输入位置、地标、房源信息">   
+		   	<input  v-model="mes" type="text" placeholder="输入位置、地标、房源信息">
         </div>  
         <div id="checkbox">
 		   	<button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>          
@@ -14,10 +14,10 @@
   import {mapActions,mapState} from 'vuex'
     export default {
         name:'sousuo',
+        props:['isShow'],
         data:function(){
             return {
-                mes:'',
-                isShow:false
+                mes:'',    
             }
         },
         computed:{
@@ -25,19 +25,12 @@
         },
         methods:{
             ...mapActions(['getMes']),
-            scrollHeigh(){
-                console.log('年后')
-                $('body').bind('touchmove', function(e) { 
-                    e.preventdefault();               //禁用默认滚动行为，需要自己实现滚动
-                    console.log($(this).scrollTop()); // 计算你的屏幕高度
-                });
-            }
-
+           
         },
         mounted(){
-            this.scrollHeigh();
-        }
-       
+          
+        },
+      
     }
   
 </script>

@@ -4,7 +4,11 @@ const state = {
     position:"",
     searchMes:"",
     startDate:"",
-    endDate :""
+    endDate :"",
+
+    //用户登录 密码  本地登录
+    user_info:localStorage.user_info?localStorage.user_info:'',
+    LoginOnData:'',
 }
 
 export default state

@@ -1,21 +1,56 @@
 <template>
     <div>
        <div id="yanzhengma">
-		 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" id="num" placeholder="国内手机号/邮箱/用户名"></p>
-         <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" id="yan" placeholder="密码"></p>
-         <p class="pbtn"><input type="button" id="btn" value="按钮"/></p>
-         <p class="forget"> <a href="#">忘记密码？</a></p>
-        </div>        
+            <form @submit.prevent = 'login(phone,password)'>
+                <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" v-model = "phone" id="num" placeholder="手机号"></p>
+                <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" v-model = "password" id="yan" placeholder="密码"></p>
+                <p class="pbtn"><input type="submit" id="btn" value="按钮"/></p>
+            </form> 
+            <p class="forget"> <a href="#">忘记密码？</a></p> 
+        </div>  
+             
     </div>
 </template>
 
 
 <script>
-
+import bus from '../../store/modules/bus.js'
+import axios from 'axios'
+import {Toast} from 'mint-ui'
     export default {
-        name:'yanzhengma',
-      
+        name:'password',
+        data(){
+            return {
+                phone:'',
+                password:'',
+                LoginOnData:''
+            }
+        },
+        methods:{
+            login(user,pass){
+            let that =this
+            if(user==''||pass==''){
+                
+                return false
+            }
+            axios.get('/api/common/pwd_login').then((res)=>{
+               console.log(res.data.msg);
+                if(res.data.success!=true) {
+                    Toast('登陆失败')
+                    return false;
+                }
+                Toast('登陆成功')
+                let data = {user_id:that.phone,phone:that.phone}
+                that.LoginOnData = res.data.data
+                console.log(that.LoginOnData)
+                //调用vuex方法 创建本地存储
+                that.$store.commit('change_type',data)    
+                that.$router.replace({name:'mine'})  //跳转到个人中心页面     
+            })
+                bus.$emit("loginondata",this.LoginOnData)
+        },
     }
+}
   
 </script>
 

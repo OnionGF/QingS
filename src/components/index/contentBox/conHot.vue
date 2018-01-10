@@ -1,8 +1,8 @@
 <template>
-    <div class="con-hot">
+    <div class="con-hot" >
         <h1>青宿最热</h1>
         <div class='conBox'>
-            <div class='conDiv' v-for='info of mes' :key='info.id'>
+            <div class='conDiv' v-for='info of mes' :key='info.id' @click="conhotdetail(info)" >
                 <img :src=info.housePhoto alt="">             
                 <i>{{info.title}}</i>
                 <p>{{info.style}}</p>
@@ -35,11 +35,17 @@
                     this.mes = response.data.result;
 					console.log(this.mes[0].title);
 				})
-			}
+            },
+            conhotdetail(info){
+                this.$router.push({name:'conHotdetail',params:{id:info.id}})
+            }
 		},
 		created(){
 			this.getData()
-		}
+        },
+        
+       
+        
 	}
 </script>
 <style lang="scss">

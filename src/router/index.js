@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import index from '@/components/index/index.vue'
+import conHotdetail from '@/components/index/contentBox/conHotdetail.vue'
 import order from '@/components/order/order.vue'
 import or1 from '@/components/order/or1.vue'
 import or2  from '@/components/order/or2.vue'
@@ -34,10 +35,11 @@ import password from '@/components/login/password.vue'
  const routes = [
     {path:'',redirect:'/mains'},  //重定向，为空的时候进入到main文件里
     {path:'/mains',name:'mains',component:index},
+    {path:'/conHotdetail/:id',component:conHotdetail,name:'conHotdetail'},
     {path:'/tracks',name:'tracks',component:tracks},
     {path:'/login',component:login,
        children:[
-        {path:'/login',redirect:'/yanzhengma'},
+        {path:'/login',redirect:'/password'},
         {path:'/yanzhengma',component:yanzhengma,name:'yanzhengma'},
         {path:'/password',component:password,name:'password'}
       ]},

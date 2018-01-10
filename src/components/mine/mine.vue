@@ -59,8 +59,16 @@
 
 
 <script>
+import bus from '../../store/modules/bus.js'
     export default {
-        name:'mine'
+        name:'mine',
+        created(){
+            var that =this
+            bus.$on("loginondata",(val)=>{
+                that.data=val
+                console.log(that.data)
+            })
+        },
        
     }
 </script>
