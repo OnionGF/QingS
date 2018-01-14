@@ -12,7 +12,7 @@
    #checkin{
         height:0.35rem;
         line-height: 0.35rem;
-        display: flex;
+        /* display: flex; */
         justify-content: space-between;
 
         border-bottom: 1px solid #e5e5e5;

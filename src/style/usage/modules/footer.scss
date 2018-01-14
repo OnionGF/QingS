@@ -18,11 +18,11 @@
             @include justify-content(center);
             @include align-items(center);
             i{
-                font-size:22px;
+                font-size:0.22rem;
                 color: #017c84;
             }
             b{
-                font-size:12px;
+                font-size:0.12rem;
                 color: #017c84;
             }
         }

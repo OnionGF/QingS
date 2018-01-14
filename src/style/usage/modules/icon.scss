@@ -31,8 +31,44 @@
     url('/static/font/iconfontpos.woff') format('woff'),
     url('/static/font/iconfontpos.ttf') format('truetype')
   }
+
+@font-face {
+  font-family: 'iconfont';
+  src: 
+  url('/static/font/iconfontlogin.woff') format('woff'),
+  url('/static/font/iconfontlogin.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'iconfont';
+    src: 
+    url('/static/font/iconfontpos.woff') format('woff'),
+    url('/static/font/iconfontpos.ttf') format('truetype')
+  }
+
+@font-face {
+  font-family: 'iconfont';
+  src: 
+  url('/static/font/iconfontmessage.woff') format('woff'),
+  url('/static/font/iconfontmessage.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 532672 */
+  src: 
+  url('//at.alicdn.com/t/font_532672_u0b25w9xsfsi3sor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_532672_u0b25w9xsfsi3sor.ttf') format('truetype'),
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .share{
-    font-size: 24px;
+    font-size: 22px;
 }
 .personmore{
     color: #017c84;
@@ -75,4 +111,38 @@
     font-size: 25px;
     color: #017c84;
     margin-left: 0.07rem;
+}
+
+.number{
+    font-size: 20px;
+}
+
+.pwd{
+    font-size: 26px;
+}
+
+.isearch{
+    font-size: 24px;
+    color: #fff;
+}
+
+.back{
+    font-size: 26px;
+}
+
+.peopletwo{
+    font-size: 25px;
+    text-align: center;
+}
+.roomone{
+     font-size: 25px;
+     text-align: center;
+}
+.bedone{
+     font-size: 25px;
+     text-align: center;
+}
+.toilet{
+    font-size: 25px;
+    text-align: center;
 }

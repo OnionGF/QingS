@@ -5,11 +5,11 @@
         <div class="m-image">
             <div class="title">
             	<span>我的</span>
-            	<i class="iconfont share">&#xe61d;</i>
+            	<i class="iconfont share">&#xe626;</i>
             </div>
             <header>
                 <div class="person-head">
-                	<img src="../../style/usage/1.png"/>
+                	<img src="../../style/usage/img/1.png"/>
                 </div>
                 <div class="person-info">
                     <p class="person-info-name">那天八点半</p>
@@ -59,8 +59,16 @@
 
 
 <script>
+import bus from '../../store/modules/bus.js'
     export default {
-        name:'mine'
+        name:'mine',
+        created(){
+            var that =this
+            bus.$on("loginondata",(val)=>{
+                that.data=val
+                console.log(that.data)
+            })
+        },
        
     }
 </script>

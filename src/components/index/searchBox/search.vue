@@ -103,25 +103,26 @@ import {mapState,mapActions} from 'vuex'
 	 	color: #666;
 	 	border: 1px solid #e5e5e5;
 	 	padding:2px 8px;
-		line-height: 20px;
+		line-height: 0.1rem;
 	 	border-radius: .2rem;
     	background-color: #fff;
 	 }
 	#checkinout{
-		height: 0.5rem;
-		line-height: 50px;
+		height: 0.6rem;
+		line-height: 0.4rem;
 		position: relative;
-		padding: 2px 0;
 		display: -webkit-box;
 		display: flex;
-		border-bottom: 1px solid #e5e5e5;
-		/* border-radius: .02rem; */
-        background-color: #fff;
-        width:3rem
+		background-color: #fff;
+		width:3rem;
+        display: flex;
+        /* border-top:1px solid #ccc; */
+		justify-content: center;
+		align-items: center;
 	}
-	#firstSelect p{line-height:25px;color: #999;font-size:12px;}
-	#startDate{border:0;position: absolute;left: 0;margin: 0 auto;width: 50%;font-size: 16px;color: #017c84;text-align: center;height:20px;}
-	#endDate{border:0;position: absolute;right: 0;margin:auto 0;width:50%;font-size: 16px;color: #017c84;text-align: center;height:20px;}
+	#firstSelect p{line-height:0.2rem;color: #999;font-size:0.12rem;}
+	#startDate{border:0;position: absolute;left: 0;margin: 0 auto;width: 50%;font-size: 0.16rem;color: #017c84;text-align: center;height:0.20rem;}
+	#endDate{border:0;position: absolute;right: 0;margin:auto 0;width:50%;font-size: 0.16rem;color: #017c84;text-align: center;height:0.20rem;}
 	.mask_calendar {
 		width: 100%;
 		height: 100%;
@@ -135,7 +136,7 @@ import {mapState,mapActions} from 'vuex'
 		z-index: 9999;
 	}
 	.calendar {
-		height: 400px;
+		height: 4rem;
 		position: fixed;
 		bottom: 0;
 		left: 0;
