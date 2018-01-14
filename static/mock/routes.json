@@ -7,8 +7,7 @@
     "/api/play/gym_list" : "/choo",
     "/api/user/findAllHouse" : "/searchlist",
     "/apiuser/selectHouse" : "/sele",
-    "/api/common/pwd_login":"/pwdlogin"
-   
+    "/api/common/pwd_login":"/pwdlogin"  
 }
 
 

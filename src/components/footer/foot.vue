@@ -38,28 +38,42 @@
 
 
 <script>
+    // import Vue from  'vue'
+    // Vue.component()
+
     export default {
         name:'foot',
         data:function(){
-           return {
-            //      navs:[
-            //     {id:1,content:'首页',name:'mains',font:"&#xe604;"},
-            //     {id:2,content:'订单',name:'tracks',font:"&#xe624;"},
-            //     {id:3,content:'收藏',name:'collect',font:'&#xe72d;'},
-            //     {id:4,content:'消息',name:'order',font:'&#xe6bf;'},
-            //     {id:5,content:'我的',name:'mine',font:'&#xe631;'},
-            // ]
+           return {         
            }
         },
         methods:{
             turnout(name){
                 this.$router.push({name})
                 // this.toggleNav()
+            },
+            changeColor(){
+                console.log('事件委托')
+               
+                $('ul').on('click','li',function(){
+                    console.log($(this).children)
+                    $('li').css({
+                        color:'#017c84'
+                    })
+                    $(this).css({
+                        color:'#53d1d8'
+                    })
+                })
             }
+        },
+        mounted(){
+            this.changeColor()
         }
     }
-    // $('ul').on('li',click,function(){
-    //     console.log(this)
-    // })
-
+ 
 </script>
+
+
+<style>
+   
+</style>

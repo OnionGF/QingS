@@ -78,8 +78,11 @@ import {Toast} from 'mint-ui'
          height: 0.23rem; 
          border: none;
          border-bottom: 1px solid #dcdee0;
-         outline: none;
+         outline: none; 
        }
+    #btn{
+        background: #017c84;
+    }
    .pyan{
         margin-bottom: 0.17rem;
       

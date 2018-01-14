@@ -18,8 +18,7 @@ module.exports = {
        },
        '/mz':{
         target:'http://localhost:9000',  //我们请求数据的目标地址
-        changeOrigin:true,
-      
+        changeOrigin:true,     
        },
     },
 
