@@ -21,6 +21,7 @@ const mutations = {
         state.user_info = user_info
         localStorage.user_info = JSON.stringify(user_info)
     },
+
 }
 
 export default mutations

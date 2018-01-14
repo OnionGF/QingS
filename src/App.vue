@@ -4,10 +4,9 @@
        
 <!--         
         <div class='wrap'></div> -->
-        <foots></foots> 
+     
 
         <div class="mark  animated"></div>
-        <!-- <foots></foots>  -->
     </div>
 </template>
 
@@ -18,7 +17,7 @@
 export default {
     name :'app',
     components:{
-        foots
+       
     },
     methods:{
         //启动页
@@ -35,7 +34,6 @@ export default {
     },
     mounted(){
         this.load()
-        //foots
     }
 }
 </script>

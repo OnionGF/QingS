@@ -1,7 +1,7 @@
 <template>
     <div>
        <div id="password"> 
-            <i class="iconfont back posback" onclick="javascript:history.back(-1);">&#xe624;</i>
+            <i class="iconfont back posback" onclick="javascript:history.back(0);">&#xe624;</i>
             <form @submit.prevent = 'login(phone,password)'>
                 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" v-model = "phone" id="num" placeholder="手机号"></p>
                 <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" v-model = "password" id="pass" placeholder="密码"></p>
@@ -31,17 +31,19 @@ import {Toast} from 'mint-ui'
             login(phone,password){
             let that =this
             if(phone==''||password==''){
-                
                 return false
             }
-            axios.get('/api/common/pwd_login').then((res)=>{
-               //console.log(res.data.msg);
-                if(res.data.success!=true) {
+            axios.get('/api/common/pwd_login',
+            {
+               phone:that.phone,
+               password:that.password 
+            }
+            ).then((res)=>{
+               if(res.data.success!=true) {
                     Toast('登陆失败')
                     return false;
                 }
                 Toast('登陆成功')
-
                 let data = {phone:that.phone,password:that.password}
                 console.log(data)
                 that.LoginOnData = res.data.data
