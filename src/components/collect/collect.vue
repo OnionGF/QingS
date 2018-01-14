@@ -12,15 +12,17 @@
         </div>
        
         <router-view></router-view>
-            
+        <foots></foots> 
       
     </div>
 </template>
 
 
 <script>
+    import foots from '../footer/foot'
     export default {
         name:'collect',
+        components:{foots},
         data:function(){
             return {
 

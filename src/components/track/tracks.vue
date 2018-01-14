@@ -8,12 +8,15 @@
         </div> 
         <div class="tranotice">
         </div> 
+        <foots></foots>
     </div>
 </template>
 
 
 <script>
+ import foots from '../footer/foot'
     export default {
-        name:'tracks'
+        name:'tracks',
+        components:{foots},
     }
 </script>

@@ -1,9 +1,10 @@
 <template>
     <div>
-       <div id="yanzhengma">
+       <div id="password"> 
+            <i class="iconfont back posback" onclick="javascript:history.back(-1);">&#xe624;</i>
             <form @submit.prevent = 'login(phone,password)'>
                 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" v-model = "phone" id="num" placeholder="手机号"></p>
-                <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" v-model = "password" id="yan" placeholder="密码"></p>
+                <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" v-model = "password" id="pass" placeholder="密码"></p>
                 <p class="pbtn"><input type="submit" id="btn" value="按钮"/></p>
             </form> 
             <p class="forget"> <a href="#">忘记密码？</a></p> 
@@ -43,12 +44,11 @@ import {Toast} from 'mint-ui'
 
                 let data = {phone:that.phone,password:that.password}
                 console.log(data)
-                that.LoginOnData =data
-                //that.LoginOnData = res.data.data
-                console.log(that.LoginOnData,66666666666666)
+                that.LoginOnData = res.data.data
+                console.log(that.LoginOnData,6666)
                 //调用vuex方法 创建本地存储
                 that.$store.commit('change_type',data)    
-               // that.$router.replace({name:'mine'})  //跳转到个人中心页面     
+                that.$router.replace({name:'mine'})  //跳转到个人中心页面     
             })
                 bus.$emit("loginondata",this.LoginOnData)
         },
@@ -59,7 +59,7 @@ import {Toast} from 'mint-ui'
 
 
 <style  scoped>
-   #yanzhengma{
+   #password{
        width: 3.35rem;
        height: 2.18rem;
        position: absolute;
@@ -76,7 +76,7 @@ import {Toast} from 'mint-ui'
        margin-bottom: 0.17rem;
    } 
    
-   #num,#yan,#btn{
+   #num,#pass,#btn{
          width: 2.68rem; 
          height: 0.23rem; 
          border: none;
@@ -87,8 +87,8 @@ import {Toast} from 'mint-ui'
         margin-bottom: 0.17rem;
       
    }
-   .pyan #yan{
-        width: 1.9rem;
+   .pyan #pass{
+        width: 2.68rem;
         color: #c0c3c8;
    }
    .pyan .huo{

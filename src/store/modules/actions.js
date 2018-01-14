@@ -19,9 +19,11 @@ const  actions = {
             if(data.result==1){
                 //成功
                 console.log("成功")
+               
             } else {
                 //失败
-                console.log("失败")
+                console.log("失败") 
+               
             }
         });
         commit('getMes',mes.place)

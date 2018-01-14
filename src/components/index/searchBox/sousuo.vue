@@ -4,7 +4,8 @@
 		   	<input  v-model="mes" type="text" placeholder="输入位置、地标、房源信息">
         </div>  
         <div id="checkbox">
-		   	<button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>          
+		   	<!-- <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>   -->
+            <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>        
         </div>         
     </div>
 </template>

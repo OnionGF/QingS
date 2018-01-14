@@ -1,5 +1,6 @@
 <template>
     <div class="con-hotdetail">
+        <i class="iconfont back posback" onclick="javascript:history.back(-1);">&#xe624;</i>
         <div class="topimg">
              <img src="https://i1.mayi.com/mayi13/M48/EW/RF/F8BMWR2TH9KYSWKU4DWTAMMUS6B4K6.jpg_670hc.jpg"/>
         </div>
