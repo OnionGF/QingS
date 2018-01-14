@@ -10,6 +10,7 @@
                 <conHot/> 
                 <conCho/>           
         </div>
+        <foots></foots>
     </div>
 </template>
 
@@ -25,11 +26,12 @@
     import axios from 'axios'
     import conHot from './contentBox/conHot.vue'
     import conCho from './contentBox/conChoose.vue'
-     import conHotdetail from './contentBox/conHotdetail.vue'
+    import conHotdetail from './contentBox/conHotdetail.vue'
+    import foots from '../footer/foot'
   
 	export default{
 		name:'mains',
-        components:{banner,search,pos,sousuo,conHot,conCho,conHotdetail},
+        components:{banner,search,pos,sousuo,conHot,conCho,conHotdetail,foots},
         data(){
             return{
                 scroll:"",

@@ -54,14 +54,17 @@
              	<span>客服及意见反馈</span>
             </router-link>
         </div>
+        <foots></foots>
     </div>
 </template>
 
 
 <script>
+import foots from '../footer/foot'
 import bus from '../../store/modules/bus.js'
     export default {
         name:'mine',
+        components:{foots},
         created(){
             var that =this
             bus.$on("loginondata",(val)=>{

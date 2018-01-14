@@ -4,6 +4,9 @@
     background:#fff;
     width:100%;
     border-top:1px solid #ccc; 
+    position: fixed;
+    top: 6.18rem;
+    left: 0;
     ul{
         height:100%;
         @include flexbox();
