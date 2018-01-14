@@ -2,10 +2,10 @@
 	<div class="setupbox">
 		<div class="setuptitle">
             <span class="setupt">设置</span>
-            <i class="iconfont back">&#xe624;</i>
+            <i class="iconfont back" onclick="javascript:history.back(-1);">&#xe624;</i>
         </div> 
 		<div class="systemnotice">
-			<h1 class="h1t">系统通知</h1>
+			<div class="h2t">系统通知</div>
 			<div class="newmessage bb">
 				<p class="newtit">新消息</p>
 				<p class="send">房东和房客发送</p>
@@ -21,7 +21,7 @@
 		</div>
 		
 		<div class="shortnotice">
-			<h1 class="h1t">短信通知</h1>
+			<div class="h2t">短信通知</div>
 			<div class="newmessage bb">
 				<p class="newtit">预订通知</p>
 				<p class="send">新预订，确认，更改和其他</p>
