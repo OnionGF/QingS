@@ -1,19 +1,14 @@
 <template>
     <div class="home">     
-        <banner/>    
-      
+        <banner/>         
         <div class='searchBox'  >
             <pos/>
             <search/>
             <sousuo :isShow="isShow" />
-        </div>
-      
+        </div>     
         <div class="con">            
-          
                 <conHot/> 
-                <conCho/>        
-               
-       
+                <conCho/>           
         </div>
     </div>
 </template>

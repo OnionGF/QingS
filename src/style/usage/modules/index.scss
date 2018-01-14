@@ -46,7 +46,7 @@
         .con-hot{
             @include flexbox();
             @include flex-direction(column);
-            // @include flex(0.5);
+            @include flex(0.5);
             width:3.43rem;
             min-height:8rem;
             _height:8rem;
@@ -64,9 +64,8 @@
         .con-choo{
             @include flexbox();
             @include flex-direction(column);
-            @include flex();
+            @include flex(0.5);
             width:3.43rem;
-            height:100%;
           
             .conBox{
                 @include flexbox();

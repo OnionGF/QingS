@@ -47,7 +47,7 @@
 		line-height: 50px;
 		position: relative;
 		display: -webkit-box;
-		display: flex;
+		/* display: flex; */
 		background-color: #fff;
 		width:3rem;
         display: flex;
