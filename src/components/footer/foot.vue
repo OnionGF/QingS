@@ -17,11 +17,11 @@
                 <i class="iconfont">&#xe652;</i>
                 <b>消息</b>
             </router-link> 
-
+<!-- 
             <router-link tag='li' :to="{name:'tag1'}">
                 <i class="iconfont">&#xe502;</i>
                 <b>收藏</b>
-            </router-link> 
+            </router-link>  -->
 
             <router-link tag='li' :to="{name:'or1'}">
                 <i class="iconfont">&#xe501;</i>

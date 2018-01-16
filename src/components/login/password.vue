@@ -29,31 +29,31 @@ import {Toast} from 'mint-ui'
         },
         methods:{
             login(phone,password){
-            let that =this
-            if(phone==''||password==''){
-                return false
-            }
-            axios.get('/api/common/pwd_login',
-            {
-               phone:that.phone,
-               password:that.password 
-            }
-            ).then((res)=>{
-               if(res.data.success!=true) {
-                    Toast('登陆失败')
-                    return false;
+                let that =this
+                if(phone==''||password==''){
+                    return false
                 }
-                Toast('登陆成功')
-                let data = {phone:that.phone,password:that.password}
-                console.log(data)
-                that.LoginOnData = res.data.data
-                console.log(that.LoginOnData,6666)
-                //调用vuex方法 创建本地存储
-                that.$store.commit('change_type',data)    
-                that.$router.replace({name:'mine'})  //跳转到个人中心页面     
-            })
-                bus.$emit("loginondata",this.LoginOnData)
-        },
+                axios.get('/api/common/pwd_login',
+                {
+                phone:that.phone,
+                password:that.password 
+                }
+                ).then((res)=>{
+                if(res.data.success!=true) {
+                        Toast('登陆失败')
+                        return false;
+                    }
+                    Toast('登陆成功')
+                    let data = {phone:that.phone,password:that.password}
+                    console.log(data)
+                    that.LoginOnData = res.data.data
+                    console.log(that.LoginOnData,6666)
+                    //调用vuex方法 创建本地存储
+                    that.$store.commit('change_type',data)    
+                    that.$router.replace({name:'mine'})  //跳转到个人中心页面     
+                })
+                    bus.$emit("loginondata",this.LoginOnData)
+            },
     }
 }
   
