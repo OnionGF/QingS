@@ -4,8 +4,8 @@
 		   	<input  v-model="mes" type="text" placeholder="输入位置、地标、房源信息">
         </div>  
         <div id="checkbox">
-		   	<!-- <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>   -->
-            <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>        
+		   	 <!-- <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>  -->
+             <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button> 
         </div>         
     </div>
 </template>
@@ -18,18 +18,29 @@
         props:['isShow'],
         data:function(){
             return {
-                mes:'',    
+                mes:'',   
             }
         },
         computed:{
             ...mapState(['searchMes','startDate','endDate'])
         },
         methods:{
-            ...mapActions(['getMes']),
+           ...mapActions(['getMes']),
+          // getMes({place:mes,startDate:startDate,endDate:endDate}){
+            //      this.$router.push({name:'mysearch',params:{place:mes,startDate:startDate,endDate:endDate}})
+           //}
            
         },
+        created:function(){
+            // let hello = {
+            //     place:mes,
+            //     startDate:startDate,
+            //     endDate:endDate
+            // }
+            // this.getMes(hello)
+        },
         mounted(){
-          
+           
         },
       
     }

@@ -12,7 +12,7 @@
                 	<img src="../../style/usage/img/1.png"/>
                 </div>
                 <div class="person-info">
-                    <p class="person-info-name">那天八点半</p>
+                    <p class="person-info-name"> 那天八点半</p>
                     <p class="person-info-signature">来到青宿一天了</p>
                 </div>
                 <div class="iconfont personmore">&#xe609;</div>
@@ -71,6 +71,12 @@ import bus from '../../store/modules/bus.js'
                 that.data=val
                 console.log(that.data)
             })
+        },
+        mounted(){  
+            let that=this
+            that.data = localStorage.getItem("user_info")
+            that.data = JSON.parse(that.data)
+            that.data_nickname = that.data.phone
         },
        
     }

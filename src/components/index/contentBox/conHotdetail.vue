@@ -174,6 +174,10 @@
                 }
             }
         }
+        .fff{
+            height: 0.44rem;
+        }
+    
             .userComments{
                 height: 1.44rem;
                 padding-left:0.25rem;
