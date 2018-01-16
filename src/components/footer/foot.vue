@@ -53,16 +53,17 @@
                 // this.toggleNav()
             },
             changeColor(){
-                console.log('事件委托')
+                // console.log('事件委托')
                
                 $('ul').on('click','li',function(){
-                    console.log($(this).children)
+                    // console.log($(this).children)
                     $('li').css({
                         color:'#017c84'
                     })
                     $(this).css({
                         color:'#53d1d8'
                     })
+                   
                 })
             }
         },

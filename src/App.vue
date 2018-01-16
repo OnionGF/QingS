@@ -6,8 +6,11 @@
         <div class='wrap'></div> -->
       
 
-        <div class="mark  animated"></div>
+   
        
+     
+
+        <div class="mark  animated"></div>
     </div>
 </template>
 
@@ -35,7 +38,6 @@ export default {
     },
     mounted(){
         this.load()
-        //foots
     }
 }
 </script>

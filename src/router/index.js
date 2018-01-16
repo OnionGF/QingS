@@ -5,6 +5,7 @@ Vue.use(Router)
 
 import index from '@/components/index/index.vue'
 import conHotdetail from '@/components/index/contentBox/conHotdetail.vue'
+import orderHotel from  '@/components/index/contentBox/orderHotel.vue'
 import mysearch from '@/components/index/searchBox/mysearch.vue'
 import order from '@/components/order/order.vue'
 import or1 from '@/components/order/or1.vue'
@@ -37,6 +38,7 @@ import password from '@/components/login/password.vue'
     {path:'',redirect:'/mains'},  //重定向，为空的时候进入到main文件里
     {path:'/mains',name:'mains',component:index},
     {path:'/conHotdetail/:id',component:conHotdetail,name:'conHotdetail'},
+    {path:'/orderHotel/',component:orderHotel,name:'orderHotel'},
     {path:'/mysearch',component:mysearch,name:'mysearch'},
     {path:'/tracks',name:'tracks',component:tracks},
     {path:'/login',component:login,

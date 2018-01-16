@@ -47,8 +47,8 @@ const  actions = {
                 commit('endDate',end)
             }
         }, 1000);
-    }
-    
+    },
+   
 
 }
 

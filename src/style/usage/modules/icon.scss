@@ -137,9 +137,11 @@
 }
 .posback{
     position: fixed;
-    top: 0.1rem;
+    z-index:10000;
+    top: 0.04rem;
     left: 0.15rem;
-    color: white;
+    color: #333;
+    font-weight:900;
     font-weight: normal;
 }
 
