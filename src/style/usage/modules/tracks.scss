@@ -1,4 +1,6 @@
 .track{
+    @include flexbox();
+    @include flex-direction(column);
     height: 100%;
     .tratitle{
         @include flexbox();
@@ -16,6 +18,99 @@
             position: absolute;
             top: 0.04rem;
             right: 0.18rem;
+        }
+    }
+    .tranotice{
+       // @include flex();
+        .notsystem{
+            @include flexbox();
+            height: 0.65rem;
+            border-bottom: 1px solid #e5e5e5;
+            .noticon{
+                width: 0.5rem;
+                height: 0.5rem;
+                background: #017c84;
+                border-radius: 50%;
+                margin-top: 0.07rem;
+                margin-left: 0.1rem;
+                position: relative;
+                .notiicon{
+                    position: absolute;
+                    font-size: 36px;
+                    color: #fff;
+                    top: -0.02rem;
+                    left: 0.06rem;
+                }
+            }
+            .notcon{
+                margin-left: 0.14rem;
+                .notit{
+                    margin-top: 0.1rem;
+                    .notconspan1{
+                        color: #333;
+                        font-size: 18px;
+                       
+                    }
+                    .notconspan2{
+                        color: #666;
+                        margin-left: 1.27rem;
+                    }
+                    .notconspan3{
+                        color: #666;
+                        margin-left: 0.06rem;
+                    }
+                }
+                .nottuijian{
+                   margin-top: 0.02rem;
+                   .tuijianspan1{
+                       color: #f47100;
+                   }
+                   .tuijianadd{
+                        color: #666;
+                    }
+                }
+            }
+        }
+        .message{
+            @include flexbox();
+            height: 0.65rem;
+            border-bottom: 1px solid #e5e5e5;
+            .messageicon{
+                width: 0.5rem;
+                height: 0.5rem;
+                background: #017c84;
+                border-radius: 50%;
+                margin-top: 0.07rem;
+                margin-left: 0.1rem;
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .messagecon{
+                 margin-left: 0.14rem;
+                 .messagetit{
+                    margin-top: 0.1rem;
+                    .messconspan1{
+                        color: #333333;
+                        font-size: 16px;
+                    }
+                    .messconspan2{
+                        color: #666;
+                        margin-left: 0.73rem;
+                    }
+                    .notconspan3{
+                        color: #666;
+                        margin-left: 0.06rem;
+                    }
+                }
+                .chat{
+                    color: #666;
+                    margin-top: 0.02rem;
+                }
+            }
         }
     }   
 }

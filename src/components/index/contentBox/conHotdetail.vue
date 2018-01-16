@@ -141,5 +141,5 @@
         .fff{
             height: 0.44rem;
         }
-        }
+    }
 </style>

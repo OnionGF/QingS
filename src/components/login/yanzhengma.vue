@@ -1,7 +1,7 @@
 <template>
     <div>
        <div id="yanzhengma">
-         <i class="iconfont back posback" onclick="javascript:history.back(-1);">&#xe624;</i>
+         <i class="iconfont back posback" onclick="javascript:history.back(0);">&#xe624;</i>
 		 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" id="num" placeholder="手机号"></p>
          <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" id="yan" placeholder="验证码"><input type="button" class="huo" value="获取验证码"/></p>
          <p class="pbtn"><input type="button" id="btn" value="按钮"/></p>
