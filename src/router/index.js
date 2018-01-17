@@ -10,7 +10,6 @@ import mysearch from '@/components/index/searchBox/mysearch.vue'
 import order from '@/components/order/order.vue'
 import or1 from '@/components/order/or1.vue'
 import or2  from '@/components/order/or2.vue'
-import or3  from '@/components/order/or3.vue'
 import or4 from '@/components/order/or4.vue'
 import or5 from '@/components/order/or5.vue'
 
@@ -47,18 +46,17 @@ import password from '@/components/login/password.vue'
         {path:'/yanzhengma',component:yanzhengma,name:'yanzhengma'},
         {path:'/password',component:password,name:'password'}
       ]},
-    {path:'/collect',component:collect,
-      children:[
-        {path:'/collect',redirect:'/tag1'},
-        {path:'/tag1',component:tag1,name:'tag1'},
-        {path:'/tag2',component:tag2,name:'tag2'}
-      ]},
+    // {path:'/collect',component:collect,
+    //   children:[
+    //     {path:'/collect',redirect:'/tag1'},
+    //     {path:'/tag1',component:tag1,name:'tag1'},
+    //     {path:'/tag2',component:tag2,name:'tag2'}
+    //   ]},
     {path:'/order',component:order,
       children:[
         {path:'/order',redirect:'/or1'},
         {path:'/or1',component:or1,name:'or1'},
         {path:'/or2',component:or2,name:'or2'},
-        {path:'/or3',component:or3,name:'or3'},
         {path:'/or4',component:or4,name:'or4'},
         {path:'/or5',component:or5,name:'or5'}
       ]},
