@@ -5,10 +5,10 @@
 		 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" id="num" placeholder="手机号"></p>
          <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" id="yan" placeholder="验证码"><input type="button" class="huo" value="获取验证码"/></p>
          <p class="pbtn"><input type="button" id="btn" value="按钮"/></p>
-         <p class="tip">未注册的手机号将自动创建为蚂蚁短租账户</p>
+         <p class="tip">未注册的手机号将自动创建为青宿短租账户</p>
         </div>        
     </div>
-</template>
+</template> 
 
 
 <script>
