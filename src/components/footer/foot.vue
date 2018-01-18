@@ -2,19 +2,19 @@
 
 <template>
     <div class="foot">
-        <ul>
+        <ul class="aa">
            <!-- <li @click='turnout(nav.name)' :key='nav.id' v-for='nav of navs' >
                <i class='iconfont'>&#xe652;</i>
                
                <b>{{nav.content}}</b>   
             </li> -->
-            <router-link tag='li' :to="{name:'mains'}">
-                <i class="iconfont">&#xe535;</i>
+            <router-link tag='li' class="aa" :to="{name:'mains'}">
+                <i class="iconfont homeicon">&#xe61a;</i>
                 <b>首页</b>
             </router-link> 
             
-            <router-link tag='li' :to="{name:'tracks'}">
-                <i class="iconfont">&#xe652;</i>
+            <router-link tag='li' class="bb" :to="{name:'tracks'}">
+                <i class="iconfont homeicon">&#xe60d;</i>
                 <b>消息</b>
             </router-link> 
 <!-- 
@@ -23,13 +23,13 @@
                 <b>收藏</b>
             </router-link>  -->
 
-            <router-link tag='li' :to="{name:'or1'}">
-                <i class="iconfont">&#xe501;</i>
+            <router-link tag='li' class="cc" :to="{name:'or1'}">
+                <i class="iconfont homeicon">&#xe608;</i>
                 <b>订单</b>
             </router-link>
 
-             <router-link tag='li' :to="{name:'password'}">
-                <i class="iconfont">&#xe604;</i>
+             <router-link tag='li'  class="dd" :to="{name:'password'}">
+                <i class="iconfont homeicon">&#xe619;</i>
                 <b>我的</b>
             </router-link>
         </ul>
@@ -44,7 +44,8 @@
     export default {
         name:'foot',
         data:function(){
-           return {         
+           return {  
+           	
            }
         },
         methods:{
@@ -75,6 +76,11 @@
 </script>
 
 
-<style>
-   
+<style scoped>
+	/*.{
+		color:#333333;
+	}*/
+   .router-link-active{
+   	color: #017c84 !important;
+   }
 </style>
