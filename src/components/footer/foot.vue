@@ -3,35 +3,11 @@
 <template>
     <div class="foot">
         <ul>
-           <!-- <li @click='turnout(nav.name)' :key='nav.id' v-for='nav of navs' >
-               <i class='iconfont'>&#xe652;</i>
-               
-               <b>{{nav.content}}</b>   
-            </li> -->
-            <router-link tag='li' :to="{name:'mains'}">
-                <i class="iconfont">&#xe535;</i>
-                <b>首页</b>
-            </router-link> 
-            
-            <router-link tag='li' :to="{name:'tracks'}">
-                <i class="iconfont">&#xe652;</i>
-                <b>消息</b>
-            </router-link> 
-<!-- 
-            <router-link tag='li' :to="{name:'tag1'}">
-                <i class="iconfont">&#xe502;</i>
-                <b>收藏</b>
-            </router-link>  -->
-
-            <router-link tag='li' :to="{name:'or1'}">
-                <i class="iconfont">&#xe501;</i>
-                <b>订单</b>
+           <router-link tag='li' :key='nav.id' v-for='nav of navs' :to="{name:nav.path}">
+               <i class="footer" :class='nav.class'></i>               
+               <b>{{nav.text}}</b>   
             </router-link>
-
-             <router-link tag='li' :to="{name:'password'}">
-                <i class="iconfont">&#xe604;</i>
-                <b>我的</b>
-            </router-link>
+           
         </ul>
     </div>
 </template>
@@ -44,31 +20,17 @@
     export default {
         name:'foot',
         data:function(){
-           return {         
+           return { 
+                navs:[
+                {id:1,text:'首页',icon:'home',path:'mains',class:'foot1'},
+                {id:2,text:'消息',icon:'commenting-o',path:'tracks',class:'foot2'},
+                {id:3,text:'订单',icon:'clipboard',path:'or1',class:'foot3'},
+                {id:4,text:'我',icon:'user-o',path:'password',class:'foot4'}
+            ]        
            }
         },
         methods:{
-            turnout(name){
-                this.$router.push({name})
-                // this.toggleNav()
-            },
-            changeColor(){
-                // console.log('事件委托')
-               
-                $('ul').on('click','li',function(){
-                    // console.log($(this).children)
-                    $('li').css({
-                        color:'#017c84'
-                    })
-                    $(this).css({
-                        color:'#53d1d8'
-                    })
-                   
-                })
-            }
-        },
-        mounted(){
-            this.changeColor()
+           
         }
     }
  
@@ -76,5 +38,14 @@
 
 
 <style>
-   
+    .footer{
+        width:0.25rem;
+        height: 0.25rem;
+        background:url(/static/img/foot.png)  no-repeat center; 
+        background-size:  100% 0.25rem;
+
+    }
+    .foot1{
+        background-position:0 -2px; 
+    }
 </style>

@@ -20,7 +20,7 @@
             @include flex-direction(column);
             @include justify-content(center);
             @include align-items(center);
-            color: #017c84;
+            color: #999;
             i{
                 font-size:0.22rem;
               
@@ -28,6 +28,9 @@
             b{
                 font-size:0.12rem;
             }
+        }
+        .active{
+            color:#017c84;
         }
     }
 }
