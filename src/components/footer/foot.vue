@@ -2,10 +2,35 @@
 
 <template>
     <div class="foot">
-        <ul>
-           <router-link tag='li' :key='nav.id' v-for='nav of navs' :to="{name:nav.path}">
-               <i class="footer" :class='nav.class'></i>               
-               <b>{{nav.text}}</b>   
+        <ul class="aa">
+           <!-- <li @click='turnout(nav.name)' :key='nav.id' v-for='nav of navs' >
+               <i class='iconfont'>&#xe652;</i>
+               
+               <b>{{nav.content}}</b>   
+            </li> -->
+            <router-link tag='li' class="aa" :to="{name:'mains'}">
+                <i class="iconfont homeicon">&#xe61a;</i>
+                <b>首页</b>
+            </router-link> 
+            
+            <router-link tag='li' class="bb" :to="{name:'tracks'}">
+                <i class="iconfont homeicon">&#xe60d;</i>
+                <b>消息</b>
+            </router-link> 
+<!-- 
+            <router-link tag='li' :to="{name:'tag1'}">
+                <i class="iconfont">&#xe502;</i>
+                <b>收藏</b>
+            </router-link>  -->
+
+            <router-link tag='li' class="cc" :to="{name:'or1'}">
+                <i class="iconfont homeicon">&#xe608;</i>
+                <b>订单</b>
+            </router-link>
+
+             <router-link tag='li'  class="dd" :to="{name:'password'}">
+                <i class="iconfont homeicon">&#xe619;</i>
+                <b>我的</b>
             </router-link>
            
         </ul>
@@ -20,13 +45,8 @@
     export default {
         name:'foot',
         data:function(){
-           return { 
-                navs:[
-                {id:1,text:'首页',icon:'home',path:'mains',class:'foot1'},
-                {id:2,text:'消息',icon:'commenting-o',path:'tracks',class:'foot2'},
-                {id:3,text:'订单',icon:'clipboard',path:'or1',class:'foot3'},
-                {id:4,text:'我',icon:'user-o',path:'password',class:'foot4'}
-            ]        
+           return {  
+           	
            }
         },
         methods:{
@@ -37,15 +57,11 @@
 </script>
 
 
-<style>
-    .footer{
-        width:0.25rem;
-        height: 0.25rem;
-        background:url(/static/img/foot.png)  no-repeat center; 
-        background-size:  100% 0.25rem;
-
-    }
-    .foot1{
-        background-position:0 -2px; 
-    }
+<style scoped>
+	/*.{
+		color:#333333;
+	}*/
+   .router-link-active{
+   	color: #017c84 !important;
+   }
 </style>

@@ -25,6 +25,8 @@
 </script>
 
 <style lang="scss" scoped>
-   
+  .box{
+  	
+  }
 </style>
 
