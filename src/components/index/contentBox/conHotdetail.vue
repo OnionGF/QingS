@@ -50,7 +50,37 @@
                 <button @click='orderHotel()' class="bookingButton">立即预订</button>
             </div>
         </div>
-       
+        <!--<div class="hoteleval">
+        		<p class="hotelevaltit"><span>房源评价</span><a class="aa" href="#">2评价</a> <i class="iconfont personmore ee">&#xe609;</i></p>
+        		<p class="hotelevalcon">还不错，很热情，下次来还住这里，哪里都方便</p>
+        		<div class="hotelevalvper">
+        			<div class="hotelevalvimg">
+        				<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3016890200,2017113207&fm=27&gp=0.jpg"/>
+        			</div>
+        		<p class="pp"><span class="hotelevalvnum">181****8726</span><span class="hotelevalvtime">2018年3月入住</span></p>
+        	</div>
+        <div class="hotelhost">
+        	<div class="hotelhostimg">
+        		<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3238427873,3550277771&fm=27&gp=0.jpg" />
+        	</div>
+        	<div class="hotelhostinfo">
+        		<p class="hotelhostinfo1"><span class="hotelhostinfo11">三亚异地风情度假</span><span class="roomhost1">房东主页</span><i class="iconfont personmore dd">&#xe609;</i></p>
+        		<p class="hotelhostinfo2">实名认证 好评率87% 平均回复时间2分钟</p>
+        	</div>
+        </div>
+    </div>
+    <div class="conhotdetailfooter">
+    	<div class="daphone">
+    		<i class="iconfont daphoneicon">&#xe627;</i>
+    		<span>通话</span>
+    	</div>
+    	<div class="chatt">
+    		<i class="iconfont chatticon">&#xe628;</i>
+    		<span>聊天</span>
+    	</div>
+    
+    </div>
+   -->
 
       
     </div>
@@ -89,10 +119,9 @@
 </script>
 <style lang="scss">
 .con-hotdetail{
-    display:flex;
+    display:flex;  
     flex:1;
     height:100%;
-    // width:100%;
     flex-direction: column;
     overflow: auto;
         .title{
@@ -207,6 +236,104 @@
                     height:0.4rem;
                 }
             }
+            /*.hoteleval{
+            	height: 1.25rem;
+            	border-bottom: 1px solid #eaeaea;
+            	.hotelevaltit{
+            		margin-top: 0.14rem;
+            		font-size: 16px;
+            		font-weight: bold;
+            		color: #333333;
+            		margin-left: 0.2rem;
+            		.aa{
+            			font-size: 14px;
+            			color: #017C84;
+            			margin-left: 2.2rem;
+            		}
+            		.ee{
+            			font-size: 14px;
+            		}
+            	}
+            	.hotelevalcon{
+            		margin-top: 0.1rem;
+            		margin-left: 0.2rem;
+            		color: #666;
+            	}
+            	.hotelevalvper{
+            		margin-top: 0.1rem;
+            		margin-left: 1.4rem;
+            		display: flex;
+            		
+            		.hotelevalvimg{
+            			width: 0.3rem;
+            			height: 0.3rem;
+            			border-radius:50%;
+            			overflow:hidden;
+            			img{
+            				width: 100%;
+            				height: 100%;
+            			}
+            		}
+            		.pp{
+            			height: 0.3rem;
+            			margin-bottom: 0.08rem;
+            			.hotelevalvnum{
+	            			color: #hotelevalvnum;
+	            			margin-left: 0.05rem;
+		            	}
+	            		.hotelevalvtime{
+	            			color: #999;
+	            			margin-left: 0.12rem;
+	            			line-height: 0.3rem;
+	            		}
+            		}
+            		
+            	}
+            }
+            .hotelhost{
+            	height: 0.65rem;
+            	display: flex;
+            	.hotelhostimg{
+            		width: 0.4rem;
+            		height: 0.4rem;
+            		border-radius: 50%;
+            		overflow:hidden;
+            		margin-top: 0.15rem;
+            		margin-left:0.2rem;
+            		img{
+            			width: 100%;
+            			height: 100%;
+            		}
+            	}
+            	.hotelhostinfo{
+            		.hotelhostinfo1{
+	            		margin-top: 0.15rem;
+	            		.hotelhostinfo11{
+	            			font-size: 16px;
+	            			font-weight: bold;
+	            			margin-left: 0.09rem;
+	            			}
+	            		.roomhost1{
+            				color: #017C84;
+            				font-size: 14px;
+            				margin-left: 0.9rem;
+            				
+	            		}
+	            		.dd{
+	            			font-size: 14px;
+	            			margin-left: 0.03rem;
+	            		}
+	            	}
+            		.hotelhostinfo2{
+	            		margin-left: 0.09rem;
+	            		margin-bottom: 0.05rem;
+	            		color: #666;
+	            	}
+	            	
+            	}
+            	
+            	
+            }*/
         }
 </style>
 
