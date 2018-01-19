@@ -80,8 +80,12 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
+@font-face {
+  font-family: 'iconfont';  /* project id 532670 */
+  src:
+  url('//at.alicdn.com/t/font_532670_64r0qkci7xas8aor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_532670_64r0qkci7xas8aor.ttf') format('truetype'),
+}
 .share{
     font-size: 22px;
 }
