@@ -4,7 +4,6 @@
 		   	<input  v-model="mes" type="text" placeholder="输入位置、地标、房源信息">
         </div>  
         <div id="checkbox">
-		   	 <!-- <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button>  -->
              <button  @click="getMes({place:mes,startDate:startDate,endDate:endDate})" class='buttonSearch'>搜索</button> 
         </div>         
     </div>
@@ -25,18 +24,9 @@
             ...mapState(['searchMes','startDate','endDate'])
         },
         methods:{
-        //    ...mapActions(['getMes']),
-            getMes(){
-                this.$store.dispatch('getMes',{place:this.mes,startDate:this.startDate,endDate:this.endDate});
-                this.$router.push({path:'mysearch'})
-            }     
+           ...mapActions(['getMes']),        
         },
-        // creaete:function(){
-        //     let paramDate = {
-        //         $router:this.$router
-        //     }
-        //     this.getMes(paramDate)
-        // },
+     
         mounted(){         
         },     
     }
