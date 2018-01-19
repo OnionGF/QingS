@@ -11,17 +11,18 @@
      
 
         <div class="mark  animated"></div>
+        <!-- <foots></foots> -->
     </div>
 </template>
 
 
 
 <script>
-// import foots from './components/footer/foot.vue'
+import foots from './components/footer/foot.vue'
 export default {
     name :'app',
     components:{
-       
+       foots
     },
     methods:{
         //启动页

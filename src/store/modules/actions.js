@@ -1,10 +1,8 @@
 
 import getpos from '../../modules/position.js'
-import { Toast } from 'mint-ui';
-import axios from 'axios'
+ 
 import router from '../../router'
 const  actions = {
-
 
     //定位搜索框
     getPosition({ commit }){    
@@ -15,23 +13,20 @@ const  actions = {
          }, 1000);
     },
     getMes({commit},mes){
-        // console.log(paramDate)
         $.post("/apiuser/selectHouse",mes,function(data) {
             if(data.result==1){
                 //成功
                 console.log("成功")  
                 
             } else {
-                //失败
                 console.log("失败");
-                router.push({path:'/mysearch'});
+                router.push({path:'mysearch'})
             }
         });
         commit('getMes',mes.place)
     },
    
     startDate({commit},start){
-        // console.log(12+start)
         setTimeout(() => {             
             let result ='ok'
             if(result=='ok'){
@@ -39,8 +34,7 @@ const  actions = {
             }
         }, 1000);
     },
-    endDate({commit},end){
-        // console.log(12+end)        
+    endDate({commit},end){     
         setTimeout(() => {             
             let result ='ok'
             if(result=='ok'){

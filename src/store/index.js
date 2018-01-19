@@ -1,7 +1,7 @@
 
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import router from '../router'
 import actions from './modules/actions.js'
 import mutations from './modules/mutations.js'
 import state from './modules/state.js'
