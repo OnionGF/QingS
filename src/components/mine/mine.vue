@@ -33,10 +33,10 @@
             </nav>   
         </div>
         <div class="mes">
-          	<router-link to="/need" class="need">
+          	<!-- <router-link to="/need" class="need">
              	<i class="iconfont ineed">&#xe650;</i>
              	<span>我的需求</span>
-            </router-link>
+            </router-link> -->
             <router-link to="/evaluate" class="evaluate">
             	<i class="iconfont ievaluate">&#xe66e;</i>
              	<span>我的评价</span>

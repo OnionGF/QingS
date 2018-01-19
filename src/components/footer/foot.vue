@@ -3,32 +3,28 @@
 <template>
     <div class="foot">
         <ul class="aa">
-           <!-- <li @click='turnout(nav.name)' :key='nav.id' v-for='nav of navs' >
-               <i class='iconfont'>&#xe652;</i>
-               
-               <b>{{nav.content}}</b>   
-            </li> -->
-            <router-link tag='li' class="aa" :to="{name:'mains'}">
+
+            <router-link tag='li' class="aa" :to=path[0]>
                 <i class="iconfont homeicon">&#xe61a;</i>
                 <b>首页</b>
             </router-link> 
             
-            <router-link tag='li' class="bb" :to="{name:'tracks'}">
+            <router-link  @click.native='clicklogin'   tag='li' class="bb" :to=path[1]>
                 <i class="iconfont homeicon">&#xe60d;</i>
                 <b>消息</b>
-            </router-link> 
+            </router-link > 
 <!-- 
             <router-link tag='li' :to="{name:'tag1'}">
                 <i class="iconfont">&#xe502;</i>
                 <b>收藏</b>
             </router-link>  -->
 
-            <router-link tag='li' class="cc" :to="{name:'or1'}">
+            <router-link  @click.native='clicklogin' tag='li' class="cc" :to=path[2]>
                 <i class="iconfont homeicon">&#xe608;</i>
                 <b>订单</b>
             </router-link>
 
-             <router-link tag='li'  class="dd" :to="{name:'password'}">
+             <router-link  @click.native='clicklogin' tag='li' class="dd" :to=path[4]>
                 <i class="iconfont homeicon">&#xe619;</i>
                 <b>我的</b>
             </router-link>
@@ -39,18 +35,31 @@
 
 
 <script>
-    // import Vue from  'vue'
-    // Vue.component()
 
+    import {mapState} from 'vuex'
     export default {
         name:'foot',
         data:function(){
            return {  
-           	
+           	   path:[{name:'mains'},{name:'tracks'},{name:'or1'},{name:'password'},{name:'mine'}]
            }
         },
+        computed:{
+            ...mapState(['LoginOnData'])
+        },
         methods:{
-           
+             clicklogin(){
+                //  alert('1')
+                 console.log(this.LoginOnData)
+                if(!this.LoginOnData){
+                    this.$router.push({name:'password'})
+                }else{
+                   return ;
+                }
+             }
+        },
+        mounted(){
+          
         }
     }
  

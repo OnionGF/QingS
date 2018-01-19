@@ -20,6 +20,12 @@ module.exports = {
         target:'http://localhost:9000',  //我们请求数据的目标地址
         changeOrigin:true,     
        },
+       '/dola':{
+         //http://www.dolapocket.com/app/user/newgetverifycode
+        target:'http://www.dolapocket.com',  //我们请求数据的目标地址
+        changeOrigin:true,  
+        pathRewrite:{'^/dola': ''}
+       },
     },
 
     // Various Dev Server settings
