@@ -4,7 +4,7 @@
             <i class="iconfont back posback" onclick="javascript:history.back(0);">&#xe624;</i>
             <form @submit.prevent = 'login(phone,password)'>
                 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" v-model = "phone" id="num" placeholder="手机号"></p>
-                <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text" v-model = "password" id="pass" placeholder="密码"></p>
+                <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="password" v-model = "password" id="pass" placeholder="密码"></p>
                 <p class="pbtn"><input type="submit" id="btn" value="按钮"/></p>
             </form> 
             <p class="forget"> <a href="#">忘记密码？</a></p> 

@@ -2,9 +2,9 @@
 
 <template>
     <div class="or5 or">
-        <div class="">
+        <!-- <div class='content'> -->
            <Box v-for='(nav,i) of navs' :key='i' :data='navs[i]'/>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 
@@ -15,7 +15,7 @@ import Box from './box.vue'
         name:'or5',
         data(){
             return{
-                navs:['已退款','已退款']
+                navs:['已退款','已退款','已退款','已退款','已退款','已退款']
             }
         },
         components:{

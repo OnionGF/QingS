@@ -3,17 +3,15 @@
 <template>
     <div class="home">
         <p class='title'>订单</p>
-        <div class="nav">          
+        <div class="orderNav">          
             <router-link to='or1'>全部</router-link>
             <router-link to='or2' >待付款</router-link>
             <router-link to='or4' >待评价</router-link>
             <router-link to='or5' >退款/售后</router-link>
             <!-- <router-link v-for='item in navs' :key='item.id' path={{item.path}}> -->
-        </div>
-       
+        </div>      
         <router-view></router-view>
-        <foots></foots> 
-      
+        <foots></foots>   
     </div>
 </template>
 
@@ -36,3 +34,9 @@
     }
 </script>
 
+<style lang="scss" scoped>
+     .router-link-active{
+    	border-bottom:3px solid #017c84
+   }
+</style>
+>

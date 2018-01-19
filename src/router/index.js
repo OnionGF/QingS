@@ -6,7 +6,7 @@ Vue.use(Router)
 import index from '@/components/index/index.vue'
 import conHotdetail from '@/components/index/contentBox/conHotdetail.vue'
 import orderHotel from  '@/components/index/contentBox/orderHotel.vue'
-import mysearch from '@/components/index/searchBox/mysearch.vue'
+import mysearch from '@/components/index/mysearch.vue'
 import order from '@/components/order/order.vue'
 import or1 from '@/components/order/or1.vue'
 import or2  from '@/components/order/or2.vue'

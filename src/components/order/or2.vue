@@ -2,9 +2,9 @@
 
 <template>
     <div class="or2 or">
-        <div>
+        <!-- <div class='content'> -->
             <Box v-for="(nav,i) of navs" :key='i' :data='navs[i]'/>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 
@@ -15,7 +15,7 @@ import Box from './box.vue'
         name:'or2',
         data(){
             return{
-                navs:['代付款','代付款','代付款','代付款','代付款','代付款']
+                navs:['代付款','代付款','代付款','代付款','代付款','代付款','代付款','代付款','代付款','代付款']
             }
         },
         components:{

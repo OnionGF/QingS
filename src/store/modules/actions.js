@@ -1,7 +1,7 @@
 
 import getpos from '../../modules/position.js'
-
-
+ 
+// import router from './router'
 const  actions = {
 
 
@@ -14,20 +14,19 @@ const  actions = {
          }, 1000);
     },
     getMes({commit},mes){
-        console.log(mes,55555)
-      //  let $router = mes.$router 
+        // console.log(paramDate)
         $.post("/apiuser/selectHouse",mes,function(data) {
             if(data.result==1){
                 //成功
-                console.log("成功")   
+                console.log("成功")  
+                
             } else {
                 //失败
-                console.log("失败")    
+                console.log("失败");
+                // route.push({path:'/mysearch'});
             }
         });
-          //$router.push({name:'mysearch'})
         commit('getMes',mes.place)
-        console.log(mes.place)
     },
    
     startDate({commit},start){

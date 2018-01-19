@@ -25,24 +25,20 @@
             ...mapState(['searchMes','startDate','endDate'])
         },
         methods:{
-           ...mapActions(['getMes']),
-          // getMes({place:mes,startDate:startDate,endDate:endDate}){
-            //      this.$router.push({name:'mysearch',params:{place:mes,startDate:startDate,endDate:endDate}})
-           //}
-           
+        //    ...mapActions(['getMes']),
+            getMes(){
+                this.$store.dispatch('getMes',{place:this.mes,startDate:this.startDate,endDate:this.endDate});
+                this.$router.push({path:'mysearch'})
+            }     
         },
-        created:function(){
-            // let hello = {
-            //     place:mes,
-            //     startDate:startDate,
-            //     endDate:endDate
-            // }
-            // this.getMes(hello)
-        },
-        mounted(){
-           
-        },
-      
+        // creaete:function(){
+        //     let paramDate = {
+        //         $router:this.$router
+        //     }
+        //     this.getMes(paramDate)
+        // },
+        mounted(){         
+        },     
     }
   
 </script>

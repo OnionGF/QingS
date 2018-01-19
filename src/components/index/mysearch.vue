@@ -3,7 +3,7 @@
 <template>
     <div class="mysearch">
         <header class="mysearchtop">
-           <i class="fa fa-angle-left leftarror"></i>
+           <i class="fa fa-angle-left leftarror"  onclick="javascript:history.back(0);"></i>
            <div class="searchbox"><i class="iconfont searchicon">&#xe625;</i><span class="searchcity">北京</span><input type="text" id="searchtxt" placeholder="搜索位置，地标，房源标题"/></div>
         </header>
         <section class="mysearchsection">
@@ -61,20 +61,19 @@
             
 
         </section>
-         <foots></foots>
+         <!-- <foots></foots> -->
     </div>
 </template>
 
 
 <script>
-import foots from '../../footer/foot'
+// import foots from '../../footer/foot'
 import {mapActions,mapState} from 'vuex'
     export default {
         name:'mysearch',
-        components:{foots},  
+        components:{},  
         mounted(){ 
-           //console.log(this.$route.params,9999999);
-            //this.$store.dispatch('getMes(this.$route.params)') 
+
         }
     }
 </script>

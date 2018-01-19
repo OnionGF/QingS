@@ -2,9 +2,9 @@
 
 <template>
     <div class="or1 or">
-        <div>
+        <!-- <div class='content'> -->
             <Box v-for='(nav,i) of navs' :data='navs[i]' :key='i'/>      
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 
@@ -15,7 +15,7 @@
         name:'or1',
         data(){
             return {
-                navs:['待评价','已退款','已退款','已退款','已退款','代付款','代付款','代付款']
+                navs:['待评价','待评价','待评价','待评价','待评价','已退款','已退款','已退款','已退款','代付款','代付款','代付款']
             }
         },
         components:{
