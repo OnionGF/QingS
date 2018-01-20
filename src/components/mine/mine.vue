@@ -1,5 +1,5 @@
 <template>
-<<<<<<< HEAD
+
 	<div class="home">
 		<div class="m-image">
 			<div class="title">
