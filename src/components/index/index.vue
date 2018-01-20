@@ -1,5 +1,5 @@
 <template>
-    <div class="home">     
+    <div class="home">
         <banner/>         
         <div class='searchBox'  >
             <pos/>
@@ -9,7 +9,11 @@
         <div class="con">            
                 <conHot/> 
                 <conCho/>           
+                <conCho/>           
+                <conCho/>           
         </div>
+        <backTop/>     
+        
         <foots></foots>
     </div>
 </template>
@@ -27,11 +31,12 @@
     import conHot from './contentBox/conHot.vue'
     import conCho from './contentBox/conChoose.vue'
     import conHotdetail from './contentBox/conHotdetail.vue'
+    import backTop from './backTop'
     import foots from '../footer/foot'
   
 	export default{
 		name:'mains',
-        components:{banner,search,pos,sousuo,conHot,conCho,conHotdetail,foots},
+        components:{banner,search,pos,sousuo,conHot,conCho,conHotdetail,foots,backTop},
         data(){
             return{
                 scroll:"",

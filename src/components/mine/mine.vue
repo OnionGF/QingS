@@ -1,83 +1,115 @@
-
-
 <template>
-    <div class="home">
-        <div class="m-image">
-            <div class="title">
-            	<span>我的</span>
-            	<i class="iconfont share">&#xe626;</i>
-            </div>
-            <header>
-                <div class="person-head">
-                	<img src="../../style/usage/img/1.png"/>
-                </div>
-                <div class="person-info">
-                    <p class="person-info-name"> 那天八点半</p>
-                    <p class="person-info-signature">来到青宿一天了</p>
-                </div>
-                <div class="iconfont personmore">&#xe609;</div>
-            </header>
-            <nav>          
-                 <router-link to="/wallet" class="wallet">
-                 	<i class="iconfont iwallet">&#xe623;</i>
-                 	<span>钱包</span>
-                 </router-link>
-                <router-link to="/sale" class="sale">
-                	<i class="iconfont isale">&#xe61f;</i>
-                 	<span>优惠券</span>
-                </router-link>
-                <router-link to="/bankcard" class="bankcard">
-                	<i class="iconfont ibankcard">&#xe610;</i>
-                 	<span>银行卡</span>
-                </router-link>
-            </nav>   
-        </div>
-        <div class="mes">
-          	<!-- <router-link to="/need" class="need">
-             	<i class="iconfont ineed">&#xe650;</i>
-             	<span>我的需求</span>
-            </router-link> -->
-            <router-link to="/evaluate" class="evaluate">
-            	<i class="iconfont ievaluate">&#xe66e;</i>
-             	<span>我的评价</span>
-            </router-link>
-            <router-link to="/release" class="release">
-            	<i class="iconfont irelease">&#xe61e;</i>
-             	<span>我要发布房源</span>
-            </router-link>
-            <router-link to="/setup" class="setup">
-            	<i class="iconfont isetup">&#xe60c;</i>
-             	<span>设置</span>
-            </router-link>
-            <router-link to="/connect" class="connect">
-            	<i class="iconfont iconnect">&#xe681;</i>
-             	<span>客服及意见反馈</span>
-            </router-link>
-        </div>
-        <foots></foots>
-    </div>
+	<div class="home">
+		<div class="m-image">
+			<div class="title">
+				<span>我的</span>
+				<i class="iconfont share">&#xe626;</i>
+			</div>
+			<header>
+				<div class="person-head" @click="actionSheet">
+					<img src="../../style/usage/img/1.png" />
+				</div>
+				<div class="person-info">
+					<p class="person-info-name"> 那天八点半</p>
+					<p class="person-info-signature">来到青宿一天了</p>
+				</div>
+				<div class="iconfont personmore" @click="updateinfo()">&#xe609;</div>
+			</header>
+			<nav>
+				<router-link to="/wallet" class="wallet">
+					<i class="iconfont iwallet">&#xe623;</i>
+					<span>收藏</span>
+				</router-link>
+				<router-link to="/sale" class="sale">
+					<i class="iconfont isale">&#xe61f;</i>
+					<span>优惠券</span>
+				</router-link>
+				<router-link to="/bankcard" class="bankcard">
+					<i class="iconfont ibankcard">&#xe610;</i>
+					<span>浏览记录</span>
+				</router-link>
+			</nav>
+		</div>
+		<div class="mes">
+			<router-link to="/need" class="need">
+				<i class="iconfont ineed">&#xe650;</i>
+				<span>我的需求</span>
+			</router-link>
+			<router-link to="/evaluate" class="evaluate">
+				<i class="iconfont ievaluate">&#xe66e;</i>
+				<span>我的评价</span>
+			</router-link>
+			<router-link to="/release" class="release">
+				<i class="iconfont irelease">&#xe61e;</i>
+				<span>我要发布房源</span>
+			</router-link>
+			<router-link to="/setup" class="setup">
+				<i class="iconfont isetup">&#xe60c;</i>
+				<span>设置</span>
+			</router-link>
+			<router-link to="/connect" class="connect">
+				<i class="iconfont iconnect">&#xe681;</i>
+				<span>客服及意见反馈</span>
+			</router-link>
+		</div>
+		<foots></foots>
+		<mt-actionsheet :actions="actions" v-model="sheetVisible">
+		</mt-actionsheet>
+	</div>
 </template>
 
-
 <script>
-import foots from '../footer/foot'
-import bus from '../../store/modules/bus.js'
-    export default {
-        name:'mine',
-        components:{foots},
-        created(){
-            var that =this
-            bus.$on("loginondata",(val)=>{
-                that.data=val
-                console.log(that.data)
-            })
-        },
-        mounted(){  
-            let that=this
-            that.data = localStorage.getItem("user_info")
-            that.data = JSON.parse(that.data)
-            that.data_nickname = that.data.phone
-        },
-       
-    }
+	import foots from '../footer/foot'
+	import bus from '../../store/modules/bus.js'
+	export default {
+		name: 'mine',
+		components: {
+			foots
+		},
+		created() {
+			var that = this
+			bus.$on("loginondata", (val) => {
+				that.data = val
+				console.log(that.data)
+			})
+		},
+		mounted() {
+			let that = this
+			that.data = localStorage.getItem("user_info")
+			that.data = JSON.parse(that.data)
+			that.data_nickname = that.data.phone
+		},
+		data() {
+			return {
+				actions: [{
+						name: '拍照',
+						method: this.getCamera()
+					},
+					{
+						name: '从相册中选择',
+						method: this.getLibrary
+					}
+				],
+				sheetVisible: false
+			}
+		},
+		methods: {
+			actionSheet: function() {
+				this.sheetVisible = true;
+			},
+			getCamera: function() {
+				console.log("打开照相机")
+			},
+			getLibrary: function() {
+				console.log("打开相册")
+
+			},
+			updateinfo:function(){
+				this.$router.push({
+					name: "updateinfo"
+				});
+
+			}
+		}
+	}
 </script>

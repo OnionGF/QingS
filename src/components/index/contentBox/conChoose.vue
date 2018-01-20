@@ -33,8 +33,7 @@
 				// let that = this;
                 axios.get("/api/play/gym_list")
                 .then((response)=>{
-                    this.mes = response.data.result;
-                   
+                    this.mes = response.data.result;        
 				})
 			}
 		},
