@@ -7,6 +7,7 @@ import index from '@/components/index/index.vue'
 import conHotdetail from '@/components/index/contentBox/conHotdetail.vue'
 import orderHotel from  '@/components/index/contentBox/orderHotel.vue'
 import mysearch from '@/components/index/mysearch.vue'
+import noLogin from '@/components/index/noLogin.vue'
 import order from '@/components/order/order.vue'
 import or1 from '@/components/order/or1.vue'
 import or2  from '@/components/order/or2.vue'
@@ -34,6 +35,7 @@ import tag1 from '@/components/collect/tag-1.vue'
 import tag2 from '@/components/collect/tag-2.vue'
 
 import login from '@/components/login/login.vue'
+import forget from '@/components/login/forget.vue'
 import yanzhengma from '@/components/login/yanzhengma.vue'
 import password from '@/components/login/password.vue'
 
@@ -48,6 +50,8 @@ import password from '@/components/login/password.vue'
     {path:'/nologin',name:'nologin',component:nologin},
 
     {path:'/dialog',name:'dialog',component:dialog},
+    {path:'/noLogin',name:'nologin',component:noLogin},
+    {path:'/forget',name:'forget',component:forget},
     {path:'/login',component:login,
        children:[
         {path:'/login',redirect:'/password'},

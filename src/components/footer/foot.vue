@@ -52,7 +52,7 @@
                 //  alert('1')
                  console.log(this.LoginOnData)
                 if(!this.LoginOnData){
-                    this.$router.push({name:'password'})
+                    this.$router.push({name:'nologin'})
                 }else{
                    return ;
                 }
