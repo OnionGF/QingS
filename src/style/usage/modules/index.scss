@@ -2,8 +2,8 @@
 
 .home{
     //@include flex();
-    @include flexbox();
-    @include flex-direction(column);
+    // @include flexbox();
+    // @include flex-direction(column);
     position:relative;
     background:#fff; 
     overflow: auto;   
@@ -52,16 +52,20 @@
         .cont-hot{
             width: 100%;
             height: 2.42rem;
-            @include flexbox();          
-            @include flex-direction(column);
+            // @include flexbox();          
+            // @include flex-direction(column);
             margin-bottom: .1rem;
             background: #fff;
             clear: both;
             h3{
-               height: .4rem;
-               line-height: .4rem;
-               font-size: .16rem;
-               margin-left: .1rem;
+                height:0.42rem;
+                line-height:0.42rem;
+                font-size:0.25rem; 
+                background:url('/static/img/hot.png')   no-repeat;
+                background-size:.6rem;
+                padding-left:0.6rem;
+                margin-bottom:0.15rem;
+
             }          
             .cont-box{
                 width: 100%;
@@ -69,7 +73,7 @@
                 @include flexbox();    
                 overflow-x: scroll;              
                 .cont-div {
-                   width: 2.1rem;
+                   width: 48%;
                    margin-left: .1rem;
                    float: left;
                     img{
@@ -99,21 +103,13 @@
             }           
         }
         .cont-choo{
-            @include flexbox();
-            @include flex-direction(column);
-             @include flex(0.5);
-            width:3.43rem;
-          
-           
-           
+            // @include flexbox();
+            // @include flex-direction(column);
+            //  @include flex(0.5);
+            width:100%;
+                   
         }
-        // div{
-        //     width:100%;
-        //     height:4rem;
-            
-            
-            
-        // }
+    
     }
     .searchBox{
         width:3.43rem;

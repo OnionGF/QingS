@@ -1,6 +1,6 @@
 
 import getpos from '../../modules/position.js'
- 
+import { Toast } from 'mint-ui';
 import router from '../../router'
 const  actions = {
 
@@ -91,6 +91,11 @@ const  actions = {
             iconClass: 'icon icon-success'
           });
         console.log('132')
+    },
+    //提交订单
+    subOrder(){
+        Toast('提交成功');
+        router.push({path:'/mains'});
     }
 
 }

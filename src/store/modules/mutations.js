@@ -1,5 +1,6 @@
 // 根级别的 mutation
 import router from '../../router'
+import { Toast } from 'mint-ui';
 const mutations = {
     
     //定位搜索框

@@ -25,6 +25,7 @@ import connect  from '@/components/mine/connect.vue'
 
 
 import tracks from '@/components/track/tracks.vue'
+import dialog from '@/components/track/dialog.vue'
 import collect from '@/components/collect/collect.vue'
 import tag1 from '@/components/collect/tag-1.vue'
 import tag2 from '@/components/collect/tag-2.vue'
@@ -40,6 +41,7 @@ import password from '@/components/login/password.vue'
     {path:'/orderHotel/',component:orderHotel,name:'orderHotel'},
     {path:'/mysearch',component:mysearch,name:'mysearch'},
     {path:'/tracks',name:'tracks',component:tracks},
+    {path:'/dialog',name:'dialog',component:dialog},
     {path:'/login',component:login,
        children:[
         {path:'/login',redirect:'/password'},

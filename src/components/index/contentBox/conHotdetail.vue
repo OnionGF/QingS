@@ -1,8 +1,9 @@
 <template>
     <div class="con-hotdetail">
+	<header class="mint-header"><div class="mint-header-button is-left"><a href="#/" class="router-link-active"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-back"></i></span> <label class="mint-button-text">返回</label></button></a></div> <h1 class="mint-header-title"></h1> <div class="mint-header-button is-right"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-more"></i></span> <label class="mint-button-text"></label></button></div></header>
     	<div class="conhotcontent">
     	<!-----------------------------------轮播图部分---------------------------------------->
-	        <i class="iconfont back posback" onclick="javascript:history.back(0);">&#xe624;</i>
+	        <!-- <i class="iconfont back posback" onclick="javascript:history.back(0);">&#xe624;</i> -->
 	        <div class="topimg">
 	            <banner/>
 	        </div>
@@ -144,7 +145,11 @@
     height:100%;
     flex-direction: column;
 	overflow-y: auto;
-        
+        .mint-header{
+			background:#017C84;
+
+
+		}
         .conhotcontent{
             flex:1;
             display:flex; overflow-y: auto;
