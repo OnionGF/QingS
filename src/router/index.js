@@ -44,7 +44,9 @@ import password from '@/components/login/password.vue'
     {path:'/orderHotel/',component:orderHotel,name:'orderHotel'},
     {path:'/mysearch',component:mysearch,name:'mysearch'},
     {path:'/tracks',name:'tracks',component:tracks},
+
     {path:'/nologin',name:'nologin',component:nologin},
+
     {path:'/dialog',name:'dialog',component:dialog},
     {path:'/login',component:login,
        children:[
@@ -70,7 +72,7 @@ import password from '@/components/login/password.vue'
     {path:'/wallet',component:wallet,name:'wallet'},
     {path:'/sale',component:sale,name:'sale'},
     {path:'/bankcard',component:bankcard,name:'bankcard'},
-    {path:'/need',component:need,name:'need'},
+    // {path:'/need',component:need,name:'need'},
     {path:'/evaluate',component:evaluate,name:'evaluate'},
     {path:'/release',component:release,name:'release'},
     {path:'/setup',component:setup,name:'setup'},

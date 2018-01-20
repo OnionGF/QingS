@@ -20,11 +20,23 @@
 			请留下您的联系方式，以便我们能够方便的了解问题以及给您反馈问题结果。紧急问题可拨打400-800-9999获得及时帮助
 			</p>
 		</div>
-		<p><input type="submit" class="mysub" value="提交建议"/></p>
+		<p><input @click='submitSuggest' type="submit" class="mysub" value="提交建议"/></p>
 	</div>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
+export default {
+    name :'compo',
+    components:{
+       
+    },
+    methods:{
+        // 启动页
+       ...mapActions(['submitSuggest'])
+    }
+   
+}
 </script>
 
 <style lang="scss">

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 	<div class="home">
 		<div class="m-image">
 			<div class="title">
@@ -56,6 +57,7 @@
 		<mt-actionsheet :actions="actions" v-model="sheetVisible">
 		</mt-actionsheet>
 	</div>
+
 </template>
 
 <script>

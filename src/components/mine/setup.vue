@@ -31,12 +31,12 @@
 		<div class="clearing">
 			<span class="cleartit">清空缓存</span><i class="iconfont personmore">&#xe609;</i>
 		</div>
-        <p class="exitp"><input id="exitbtn" type="button" value="退出登录"/></p>
+        <p class="exitp"><input @click="exitLogin"  id="exitbtn" type="button" value="退出登录"/></p>
         </div>
 </template>
 
 <script>
-
+	import {mapState,mapMutations} from 'vuex'
 	 export default {
 		name:'setup',
 		data:function(){
@@ -45,7 +45,12 @@
 				value1:false,
 				value2:false
 			}
+		},
+		
+		methods:{
+			...mapMutations(['exitLogin'])
 		}
+
 		
       
     }

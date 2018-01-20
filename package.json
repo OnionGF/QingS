@@ -14,11 +14,13 @@
     "mock": "json-server ./static/mock/mock.js -r ./static/mock/routes.json -p 9000"
   },
   "dependencies": {
+    "antd-mobile": "^2.1.3",
     "axios": "^0.17.1",
     "mint-ui": "^2.2.13",
     "router": "^1.3.2",
     "swiper": "^4.0.7",
     "vue": "^2.5.2",
+    "vue-antd": "^0.2.9",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "yo3": "^3.0.16"

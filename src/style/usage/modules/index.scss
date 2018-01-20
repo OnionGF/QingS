@@ -2,8 +2,8 @@
 
 .home{
     //@include flex();
-    @include flexbox();
-    @include flex-direction(column);
+    // @include flexbox();
+    // @include flex-direction(column);
     position:relative;
     background:#fff; 
     overflow: auto;   
@@ -36,52 +36,80 @@
             width:20%;
         }
     }
+
+    
+
+
     .con{
         @include flexbox();
         @include flex();
         @include flex-direction(column);
         height:100%;
         width:100%;
-        padding:1.6rem 0.15rem 0;
-        .con-hot{
-            @include flexbox();
-            @include flex-direction(column);
-            @include flex(0.5);
-            width:3.43rem;
-            min-height:8rem;
-            _height:8rem;
-           
-          
-            .conBox{
-                @include flexbox();
-                @include flex-direction(column);
-                @include flex(0.5);
-                width:3.43rem;
-        
-            }
-           
+        background: #f4f4f4;
+        padding-top:1.5rem;
+        margin-bottom: .5rem;
+        .cont-hot{
+            width: 100%;
+            height: 2.42rem;
+            // @include flexbox();          
+            // @include flex-direction(column);
+            margin-bottom: .1rem;
+            background: #fff;
+            clear: both;
+            h3{
+                height:0.42rem;
+                line-height:0.42rem;
+                font-size:0.25rem; 
+                background:url('/static/img/hot.png')   no-repeat;
+                background-size:.6rem;
+                padding-left:0.6rem;
+                margin-bottom:0.15rem;
+
+            }          
+            .cont-box{
+                width: 100%;
+                height: 2rem;
+                @include flexbox();    
+                overflow-x: scroll;              
+                .cont-div {
+                   width: 48%;
+                   margin-left: .1rem;
+                   float: left;
+                    img{
+                       width: 100%;
+                       height: 1.5rem;
+                    }
+                   .cont-info{
+                        width: 100%;
+                        height: .18rem;
+                        line-height: .18rem;
+                        @include flexbox();
+                        font-size: .14rem;
+                        font-weight: bold;
+                        margin-top: .05rem;
+                        h5{
+                            padding-right: .1rem;
+                        }
+                        p{
+                            @include ellipsis();
+                        }
+                        span{
+                            color: #999;
+                            padding: 0 .03rem;
+                        }
+                    }
+                }             
+            }           
         }
-        .con-choo{
-            @include flexbox();
-            @include flex-direction(column);
-            @include flex(0.5);
-            width:3.43rem;
-          
-            .conBox{
-                @include flexbox();
-                @include flex-direction(column);
-                width:3.43rem;
-                
-            }
-           
-        }
-        div{
+        .cont-choo{
+            // @include flexbox();
+            // @include flex-direction(column);
+            //  @include flex(0.5);
             width:100%;
-            height:4rem;
-            
-            
-            
+                   
         }
+    
     }
     .searchBox{
         width:3.43rem;

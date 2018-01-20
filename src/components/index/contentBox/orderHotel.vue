@@ -1,8 +1,6 @@
 <template>
   <div class="orderHotel">
-     <header>
-        <i class="iconfont back posback" onclick="javascript:history.back(-1);">&#xe624;</i> 确认订单
-     </header>
+     	<header class="mint-header"><div class="mint-header-button is-left"><a href="#/" class="router-link-active"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-back"></i></span> <label class="mint-button-text">返回</label></button></a></div> <h1 class="mint-header-title">确认订单</h1> <div class="mint-header-button is-right"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-more"></i></span> <label class="mint-button-text"></label></button></div></header>
      <section>
      <div>
         <div class="orderMes">
@@ -28,18 +26,31 @@
         <p>手机号：<input type="text" placeholder="请输入您的手机号码"></p>
      </div>
      <div class="hotel">
-        <p>开具发票</p>         
+        <div class="mint-cell-wrapper">
+            <div class="mint-cell-title"><!---->
+             <span class="mint-cell-text">开具发票</span> 
+             <!----></div> <div class="mint-cell-value">
+                 <label class="mint-switch">
+                     <input type="checkbox" class="mint-switch-input">
+                      <span class="mint-switch-core">
+                          </span> <div class="mint-switch-label">
+                              </div>
+                              </label>
+                              
+                              </div> 
+                              <!----></div>      
         <p><input type="checkbox">我已阅读并同意房东<i>《交易规则》</i></p>
      </div>
      <div class="money">
         <p>线上支付（含押金）：<span>￥568</span></p> 
-        <button>提交订单</button>
+        <button  @click="subOrder()">提交订单</button>
      </div>
     </section> 
   </div>
 </template>
 <script>
 import search from '../searchBox/search.vue'
+import {mapActions} from 'vuex'
 export default {
     name:'orderHotel',
     data(){
@@ -49,20 +60,25 @@ export default {
     },
     components:{
         search
+    },
+    methods:{
+        ...mapActions(['subOrder'])
     }
 }
 </script>
 
 <style lang="scss" scoped>
 .orderHotel{
-    // background:#f7f7f7;
+
+    // overflow:auto;
      header{
-            height: 0.44rem;
-            background:#f7f7f7;
-            text-align: center;
-            line-height: 0.44rem;
-            font-size: 0.18rem;
-            padding:0 -0.15rem;
+            // height: 0.44rem;
+            background:#017C84;
+            // text-align: center;
+            // line-height: 0.44rem;
+            // font-size: 0.18rem;
+            // padding:0 -0.15rem;
+            // overflow: auto;
         }
     section{
         padding:0.13rem;
@@ -127,6 +143,9 @@ export default {
             padding-top:0.2rem;
             input{
                 border:none;
+            }
+            .mmint-switch-input{
+                background:#2e8d91
             }
         }
         .people{

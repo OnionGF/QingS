@@ -58,6 +58,56 @@
                     <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2579789256,2857994698&fm=27&gp=0.jpg"/>
                 </p>
             </div>
+             <div class="searchcontent">
+                <div class="searchimg">
+                    <span class="searchpri">¥210</span>
+                </div>
+                <p class="ptit">胡同民俗|四合院儿(人多请先咨询)</p>
+                <p class="ptype">合住房间•1室4床2卫</p>
+                <p class="pimg">
+                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2579789256,2857994698&fm=27&gp=0.jpg"/>
+                </p>
+            </div>
+             <div class="searchcontent">
+                <div class="searchimg">
+                    <span class="searchpri">¥210</span>
+                </div>
+                <p class="ptit">胡同民俗|四合院儿(人多请先咨询)</p>
+                <p class="ptype">合住房间•1室4床2卫</p>
+                <p class="pimg">
+                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2579789256,2857994698&fm=27&gp=0.jpg"/>
+                </p>
+            </div>
+             <div class="searchcontent">
+                <div class="searchimg">
+                    <span class="searchpri">¥210</span>
+                </div>
+                <p class="ptit">胡同民俗|四合院儿(人多请先咨询)</p>
+                <p class="ptype">合住房间•1室4床2卫</p>
+                <p class="pimg">
+                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2579789256,2857994698&fm=27&gp=0.jpg"/>
+                </p>
+            </div>
+             <div class="searchcontent">
+                <div class="searchimg">
+                    <span class="searchpri">¥210</span>
+                </div>
+                <p class="ptit">胡同民俗|四合院儿(人多请先咨询)</p>
+                <p class="ptype">合住房间•1室4床2卫</p>
+                <p class="pimg">
+                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2579789256,2857994698&fm=27&gp=0.jpg"/>
+                </p>
+            </div>
+             <div class="searchcontent">
+                <div class="searchimg">
+                    <span class="searchpri">¥210</span>
+                </div>
+                <p class="ptit">胡同民俗|四合院儿(人多请先咨询)</p>
+                <p class="ptype">合住房间•1室4床2卫</p>
+                <p class="pimg">
+                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2579789256,2857994698&fm=27&gp=0.jpg"/>
+                </p>
+            </div>
             
 
         </section>
