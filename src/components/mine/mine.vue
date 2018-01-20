@@ -1,4 +1,5 @@
 <template>
+
 	<div class="home">
 		<div class="m-image">
 			<div class="title">
@@ -18,7 +19,7 @@
 			<nav>
 				<router-link to="/wallet" class="wallet">
 					<i class="iconfont iwallet">&#xe623;</i>
-					<span>收藏</span>
+					<span>钱包</span>
 				</router-link>
 				<router-link to="/sale" class="sale">
 					<i class="iconfont isale">&#xe61f;</i>

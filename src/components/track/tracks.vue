@@ -21,7 +21,7 @@
             </div>
 
 
-            <div class="message">
+            <div class="message" @click="dialog()">
                 <div class="messageicon">
                    <img src="http://img2.imgtn.bdimg.com/it/u=1931833139,3778162471&fm=27&gp=0.jpg"/>
                 </div>
@@ -30,7 +30,7 @@
                     <p class="chat">你什么时候可以入住?</p>
                 </div>
             </div>
-            <div class="message">
+            <div class="message" @click="dialog()">
                 <div class="messageicon">
                    <img src="http://img2.imgtn.bdimg.com/it/u=1931833139,3778162471&fm=27&gp=0.jpg"/>
                 </div>
@@ -39,7 +39,7 @@
                     <p class="chat">你什么时候可以入住?</p>
                 </div>
             </div>
-            <div class="message">
+            <div class="message" @click="dialog()">
                 <div class="messageicon">
                    <img src="http://img2.imgtn.bdimg.com/it/u=1931833139,3778162471&fm=27&gp=0.jpg"/>
                 </div>
@@ -61,5 +61,10 @@
     export default {
         name:'tracks',
         components:{foots},
+        methods: {
+            dialog() {
+                this.$router.push({ name: "dialog"});
+            }
+        },
     }
 </script>

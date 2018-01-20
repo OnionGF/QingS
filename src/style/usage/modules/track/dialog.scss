@@ -1,0 +1,63 @@
+.dialogcon{
+        @include flexbox();
+        @include flex-direction(column);
+        height: 100%;
+        .dialogcontit{
+            @include flexbox();
+            @include justify-content(center);
+            height: 0.47rem;
+            font-size:0.2rem;
+            line-height:0.47rem;
+            color: #fff;
+            background: #017C84;
+            border-bottom:1px solid #ccc;
+            position: relative;
+            .back{
+                position: absolute;
+                top: 0.02rem;
+                left: 0.1rem;
+            }
+        }
+        .dialogcontitcon{
+            @include flex();
+            
+        }
+        .dialogconfooter{
+            display: flex;
+            height: 0.46rem;
+            border-top: 1px solid #999999;
+            .dialogconvoice{
+               margin-left: 0.14rem;
+                .dialogvoice{
+                    font-size: 36px;
+                    color: #666666;
+                }
+            }
+            .dialogconwenzi{
+                .dialogtxt{
+                    width: 2.1rem;
+                    border: none;
+                    outline: none;
+                    height: 0.38rem;
+                    margin-left: 0.1rem;
+                    border-bottom: 1px solid #999999;
+                }
+            }
+            .dialogconsmile{
+                .dialogsmile{
+                    font-size: 36px;
+                    margin-left: 0.1rem;
+                     color: #666666;
+                }
+            }
+            .dialogconinsert{margin-top: -0.05rem;
+                .dialoginsert{
+                    
+                    font-size: 40px;
+                    margin-left: 0.05rem;
+                     color: #666666;
+                }
+            }
+            
+        }
+    }

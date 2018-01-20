@@ -1,0 +1,80 @@
+.updateinfo{
+    height:100%;
+    background: #f8faf8;
+    .updateinfotitle{
+        @include flexbox();
+        @include justify-content(center);
+        height: 0.4rem;
+        font-size:0.2rem;
+        line-height:0.4rem;
+        color: #fff;
+        background: #017C84;
+        border-bottom:1px solid #ccc;
+        position: relative;
+        .back{
+            position: absolute;
+            top: 0.02rem;
+            left: 0.1rem;
+        }
+       
+    }
+    .updatehead{
+        @include flexbox();
+        height: 0.53rem;
+        line-height: 0.53rem;
+        background: #fff;
+        padding-left: 0.14rem;
+        background: #fff;
+        border-bottom: 1px solid #d9d9d9;
+        .updateheadimg{
+           width: 0.4rem;
+           height: 0.4rem;
+           margin-left: 2.6rem;
+           overflow: hidden; 
+            margin-right: 0.09rem;
+           img{
+               width: 100%;
+               height: 100%;
+           }
+           .updateicon1{
+              color: #666;
+             
+           }
+        }
+        .updateheadtou{
+            color: #333333;
+            font-size: 14px;
+        }
+    }
+    .updatenickname{
+        @include flexbox();
+        height: 0.53rem;
+        line-height: 0.53rem;
+        background: #fff;
+        padding-left: 0.14rem;
+        border-bottom: 1px solid #d9d9d9;
+        position: relative;
+        .updatenicknamekey{
+            color: #333333;
+            font-size: 14px;
+        }
+        .updateicon{
+             color: #666;
+            position: absolute;
+            top:0.02rem ;
+            left: 3.49rem;
+        }
+    }
+    .exitbtn{
+        width: 100%;
+        height: 0.44rem;
+        background: #fff;
+        color: #ee7a65;
+        line-height: 0.44rem;
+        text-align: center;
+        outline: none;
+        border: none;
+        margin-top: 0.2rem;
+        font-size: 14px;
+    }
+}

@@ -23,8 +23,11 @@ import evaluate  from '@/components/mine/evaluate.vue'
 import release  from '@/components/mine/release.vue'
 import setup  from '@/components/mine/setup.vue'
 import connect  from '@/components/mine/connect.vue'
+import updateinfo from '@/components/mine/updateinfo.vue'
+import updatehead from '@/components/mine/updateinfo/updatehead.vue'
+import updatenickname from '@/components/mine/updateinfo/updatenickname.vue'
 
-
+import nologin from '@/components/track/nologin.vue'
 import tracks from '@/components/track/tracks.vue'
 import dialog from '@/components/track/dialog.vue'
 import collect from '@/components/collect/collect.vue'
@@ -43,6 +46,9 @@ import password from '@/components/login/password.vue'
     {path:'/orderHotel/',component:orderHotel,name:'orderHotel'},
     {path:'/mysearch',component:mysearch,name:'mysearch'},
     {path:'/tracks',name:'tracks',component:tracks},
+
+    {path:'/nologin',name:'nologin',component:nologin},
+
     {path:'/dialog',name:'dialog',component:dialog},
     {path:'/noLogin',name:'nologin',component:noLogin},
     {path:'/forget',name:'forget',component:forget},
@@ -75,6 +81,8 @@ import password from '@/components/login/password.vue'
     {path:'/release',component:release,name:'release'},
     {path:'/setup',component:setup,name:'setup'},
     {path:'/connect',component:connect,name:'connect'},
+    {path:'/updateinfo',component:updateinfo,name:'updateinfo'},
+    {path:'/updatenickname',component:updatenickname,name:'updatenickname'},
     {path:'**',redirect:'/mains'}
  ]
      

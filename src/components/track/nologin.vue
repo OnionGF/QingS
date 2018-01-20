@@ -1,25 +1,17 @@
 <template>
-
-	<div class="dialogcon">
-		<div class="dialogcontit"> 
-			<i class="iconfont back" onclick="javascript:history.back(-1);">&#xe624;</i>
-            <span class="mess">三亚异地风情度假村</span>
-        </div>  
-        <div class="dialogcontitcon">
-        	<!--<p class="dialogcontitconp">09:57</p>
-        	<p class=""></p>-->
-        	
+	<div class="nologin">
+		<div class="nologintitle">
+            <span class="nologintitlet">消息</span>
         </div>
-        <div class="dialogconfooter">
-        	<p class="dialogconvoice"><i class="iconfont dialogvoice">&#xe805;</i></p>
-        	<p class="dialogconwenzi"><input class="dialogtxt"type="text"/></p>
-        	<p class="dialogconsmile"><i class="iconfont dialogsmile">&#xe62c;</i></p>
-        	<p class="dialogconinsert"><i class="iconfont dialoginsert">&#xe726;</i></p>
+        <div class="nologincenter">
+        	<p class="nologincenterwenzi">啊哦，您还没有登录哦！</p>
         </div>
-		
+        <div class="nologindivbtn">
+        	<button class="nologinbtn" @click="gologin()">立即登录</button>
+        </div>
+        
+        <foots></foots>
 	</div>
-    <!--<v-button type="primary" @click="_showModal2">显示对话框</v-button>-->
-
 </template>
 
 <script>
@@ -65,12 +57,4 @@
 		}
 	}
 
-
-
-
-
-
-	
-	
 </style>
-

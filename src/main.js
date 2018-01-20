@@ -16,6 +16,14 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI);
 
+
+import { Actionsheet } from 'mint-ui';
+
+Vue.component(Actionsheet.name, Actionsheet);
+import { Field } from 'mint-ui';
+
+Vue.component(Field.name, Field);
+
 import './style/usage/app.scss'
 //swiper
 
