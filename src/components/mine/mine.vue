@@ -27,7 +27,7 @@
 				</router-link>
 				<router-link to="/bankcard" class="bankcard">
 					<i class="iconfont ibankcard">&#xe610;</i>
-					<span>银行卡</span>
+					<span>浏览记录</span>
 				</router-link>
 			</nav>
 		</div>
@@ -57,7 +57,6 @@
 		<mt-actionsheet :actions="actions" v-model="sheetVisible">
 		</mt-actionsheet>
 	</div>
-
 </template>
 
 <script>

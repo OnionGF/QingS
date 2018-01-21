@@ -3,6 +3,7 @@ import getpos from '../../modules/position.js'
 import { Toast } from 'mint-ui';
 import axios from "axios"
 import router from '../../router'
+import axios from 'axios'
 const  actions = {
 
     //定位搜索框
@@ -43,43 +44,77 @@ const  actions = {
             }
         }, 1000);
     },
+    
     //发送验证码
-    send(){
-        // console.log('验证码')
-        axios('/dola/app/user/newgetverifycode').then(({data})=>{
-            if(data.code===2001){
-                console.log('1234')
+    login({commit},user_info){
+        console.log(user_info)
+        axios.post('/dola/api/user/send_login_code.html',user_info).then(({data})=>{
+            console.log(data)
+            if(data.result){
+                Toast('验证码发送成功！');
+            }else{
+                Toast(data.error);               
+            }
+        })
+        // setTimeout(() => {             
+        //    if(user_info.name=='123'&&user_info.pass=='456'){
+        //     //    alert('登录成功')
+        //     router.push({path:'/mine'});
+        //     commit('login',user_info)	    		                   
+        //     Toast({
+        //         message: '登陆成功',
+        //         iconClass: 'icon icon-success'
+        //       });
+               
+        //     }else{
+  
+        //     // alert('密码错误')
+        //      Toast('验证码错误');
+               
+        //     }         
+           
+        // }, 1000);
+
+    },
+    //验证码登录
+    denglu({commit},user_info){
+        axios.post('/dola/api/user/code_login.html',user_info).then(({data})=>{
+            console.log(data);
+            if(data.success){
+                Toast('登录成功');
+                commit('denglu')
+                sessionStorage.setItem("key", data.result.ticket);
+                router.push({path:'/mains'});
+            }else{
+                Toast(data.error);                
+            }   
+
+        })
+    },
+    //密码登录
+    register({commit},user_info){
+        console.log(user_info)
+        axios.post('/dola/api/user/pwd_login.html',user_info).then(({data})=>{
+            console.log(data)
+            if(data.success){
+                console.log(data.result.ticket)
+                localStorage.setItem("key", data.result.ticket);
+                Toast('登录成功');
+                commit('register')
+                router.push({path:'/mains'});
+            }else{
+                Toast(data.error);
             }
         })
     },
-    //登录
-    login({commit},user_info){
-        console.log(user_info)
-        // axios('/dola/app/user/newgetverifycode').then(({data})=>{
-        //     if(data.code===2001){
-        //         console.log('1234')
-        //         Toast.success('验证码：1234',1,()=>{			                   
-        //         },true)
-        //     }else{
-        //         Toast.fail('发送失败')
-        //     }            
-        // })
-        setTimeout(() => {             
-           if(user_info.name=='123'&&user_info.pass=='456'){
-            router.push({path:'/mine'});
-            commit('login',user_info)	    		                   
-            Toast({
-                message: '登陆成功',
-                iconClass: 'icon icon-success'
-              });
-               
-           }else{
-             Toast('密码错误');
-               
-            }         
-           
-        }, 1000);
-
+    //退出登录
+    exitLogin({commit}){
+        var value = localStorage.getItem("key"); 
+        console.log(value)
+        axios.post('/dola/api/user/logout.html',value).then(({data})=>{          
+            console.log(data);
+            commit('exitLogin',data)
+        })
     },
     //提交建议
     submitSuggest(){

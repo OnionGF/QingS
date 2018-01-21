@@ -36,7 +36,7 @@
 </template>
 
 <script>
-	import {mapState,mapMutations} from 'vuex'
+	import {mapState,mapActions} from 'vuex'
 	 export default {
 		name:'setup',
 		data:function(){
@@ -48,7 +48,7 @@
 		},
 		
 		methods:{
-			...mapMutations(['exitLogin'])
+			...mapActions(['exitLogin'])
 		}
 
 		

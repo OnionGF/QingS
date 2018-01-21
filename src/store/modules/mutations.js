@@ -27,20 +27,19 @@ const mutations = {
         state.LoginOnData = true;
     },
     //退出登录
-    exitLogin(state){
-        console.log('退出登录')
+    exitLogin(state,data){
+        Toast(data.result);
         router.push({path:'/mains'});
         state.LoginOnData = false;
     },
-    
-    //修改昵称
-//	savenickname(state,nickname){
-//	  	console.log(nickname,999)
-//	  	state.nickname = nickname
-//	  	localStorage.user_info = JSON.stringify(nickname)
-//	  	router.push({name:"updateinfo",params:{nickname:nickname}})
-//	}
-
+    //用户名登录
+    register(state){
+        state.LoginOnData = true;
+    },
+    //验证码登录
+    denglu(state){
+        state.LoginOnData = true;
+    }
 }
 
 export default mutations
