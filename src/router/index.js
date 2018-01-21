@@ -26,6 +26,11 @@ import connect  from '@/components/mine/connect.vue'
 import updateinfo from '@/components/mine/updateinfo.vue'
 import updatehead from '@/components/mine/updateinfo/updatehead.vue'
 import updatenickname from '@/components/mine/updateinfo/updatenickname.vue'
+import updatebrief from '@/components/mine/updateinfo/updatebrief.vue'
+import updatesex from '@/components/mine/updateinfo/updatesex.vue'
+import updateage from '@/components/mine/updateinfo/updateage.vue'
+import updatejob from '@/components/mine/updateinfo/updatejob.vue'
+import updatecity from '@/components/mine/updateinfo/updatecity.vue'
 
 import nologin from '@/components/track/nologin.vue'
 import tracks from '@/components/track/tracks.vue'
@@ -81,8 +86,16 @@ import password from '@/components/login/password.vue'
     {path:'/release',component:release,name:'release'},
     {path:'/setup',component:setup,name:'setup'},
     {path:'/connect',component:connect,name:'connect'},
+//  {path:'/updateinfo/:nickname',component:updateinfo,name:'updateinfo'},
+//  {path:'/updatenickname/:nickname',component:updatenickname,name:'updatenickname'},
     {path:'/updateinfo',component:updateinfo,name:'updateinfo'},
     {path:'/updatenickname',component:updatenickname,name:'updatenickname'},
+    {path:'/updatebrief',component:updatebrief,name:'updatebrief'},
+    {path:'/updatesex',component:updatesex,name:'updatesex'},
+    {path:'/updateage',component:updateage,name:'updateage'},
+    {path:'/updatejob',component:updatejob,name:'updatejob'},
+    {path:'/updatecity',component:updatecity,name:'updatecity'},
+    
     {path:'**',redirect:'/mains'}
  ]
      

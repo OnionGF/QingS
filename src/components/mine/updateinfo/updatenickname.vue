@@ -11,6 +11,9 @@
         <div class="nicknameinput">
         	<input v-model="mes" class="nicknameinput1" type="text"/>
         </div>
+        <!--<div class="nicknameinput">
+        	<input  class="nicknameinput1" v-model="nickname" type="text"/>
+        </div>-->
         <div class="nicknamecon">
         	<p class="nicknameconneed">4~20个字符(汉字、字母、数字、下划线)</p>
         	<p class="nicknamecontip">提示：请勿透露您的联系方式、公寓名称、品牌名称等信息、否则无法通过审核</p>

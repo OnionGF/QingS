@@ -1,8 +1,8 @@
 
 import getpos from '../../modules/position.js'
 import { Toast } from 'mint-ui';
+import axios from "axios"
 import router from '../../router'
-import axios from 'axios'
 const  actions = {
 
     //定位搜索框

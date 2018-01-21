@@ -7,14 +7,19 @@
         <div class="updatehead" @click="actionSheet">
 			<p class="updateheadtou">头像</p>
 			<p class="updateheadimg"><img src="../../style/usage/img/1.png"/></p>
-			<i class="iconfont  updateicon1" @click="updatehead()">&#xe609;</i>
+			<i class="iconfont  updateicon1">&#xe609;</i>
 		</div>
+		<!--<div class="updatenickname" @click="updatenickname(nickname)">
+			<p class="updatenicknamekey">昵称</p>
+			<p class="updatenicknamevalue" >哈哈哈</p>
+			<i class="iconfont  updateicon" >&#xe609;</i>
+		</div>-->
 		<div class="updatenickname" @click="updatenickname()">
 			<p class="updatenicknamekey">昵称</p>
 			<p class="updatenicknamevalue">{{nick.nickName}}</p>
 			<i class="iconfont  updateicon" >&#xe609;</i>
 		</div>
-		<div class="updatenickname">
+		<div class="updatenickname" @click="updatebrief()">
 			<p class="updatenicknamekey">简介</p>
 			<p class="updatenicknamevalue">{{nick.introduce}}</p>
 			<i class="iconfont  updateicon">&#xe609;</i>
@@ -53,6 +58,7 @@
 		<button class="exitbtn" @click="exitLogin">退出登录</button>
         <mt-actionsheet :actions="actions" v-model="sheetVisible">
 		</mt-actionsheet>
+		<!--{{nicknameone}}-->
 	</div>
 </template>
 
@@ -72,7 +78,9 @@
 						method: this.getLibrary
 					}
 				],
-				sheetVisible: false
+				sheetVisible: false,
+//				nickname:'ddd',
+//				nicknameone:JSON.parse(localStorage.user_info?localStorage.user_info:'[]')
 			}
 		},
 		computed:{
@@ -99,9 +107,53 @@
 			updatenickname:function(){
 				this.$router.push({
 					name: "updatenickname"
+				});	
+			},
+//			updatenickname:function(nickname){
+//				console.log(nickname)
+//				//bus.$emit("change-nickname",this.nickname);
+//				this.$router.push({
+//					name: "updatenickname",params:{nickname:nickname}
+//				});
+//				
+//				
+//			},
+//			getNickname(){
+//				console.log(this.$route.params.nickname)
+//				
+//				
+//			},
+			updatebrief:function(){
+				this.$router.push({
+					name: "updatebrief"
 				});
-			}
-		}
+			},
+			updatesex:function(){
+				this.$router.push({
+					name: "updatesex"
+				});
+			},
+			updateage:function(){
+				this.$router.push({
+					name: "updateage"
+				});
+			},
+			updatejob:function(){
+				this.$router.push({
+					name: "updatejob"
+				});
+			},
+			updatecity:function(){
+				this.$router.push({
+					name: "updatecity"
+				});
+			},
+			
+		},
+//		mounted(){
+//			this.getNickname()
+//			this.nicknameone = JSON.parse(localStorage.user_info?localStorage.user_info:'[]')
+//		}
 	}
 </script>
 
