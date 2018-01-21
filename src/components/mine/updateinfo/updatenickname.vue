@@ -3,14 +3,18 @@
 		<div class="updatenicknametitle"> 
 		    <i class="iconfont back" onclick="javascript:history.back(-1);">&#xe624;</i>
             <span class="updatenicknamekey">昵称</span> 
+         <!--   <span class="save" @click="savenickname(nickname)">保存</span>-->
             <span class="save">保存</span>
         </div> 
         <div class="nicknametit">
          		昵称
         </div>
         <div class="nicknameinput">
-        	<input class="nicknameinput1" type="text"/>
+        	<input  class="nicknameinput1" type="text"/>
         </div>
+        <!--<div class="nicknameinput">
+        	<input  class="nicknameinput1" v-model="nickname" type="text"/>
+        </div>-->
         <div class="nicknamecon">
         	<p class="nicknameconneed">4~20个字符(汉字、字母、数字、下划线)</p>
         	<p class="nicknamecontip">提示：请勿透露您的联系方式、公寓名称、品牌名称等信息、否则无法通过审核</p>
@@ -20,11 +24,33 @@
 </template>
 
 <script>
+//	import bus from '../../../store/modules/bus.js'
+	import axios from 'axios'
+	import {Toast} from 'mint-ui' 
 	export default{
 		name:'updatenickname',
+		data(){
+            return {
+                //nickname:'',
+            }
+        },
+//      mounted(){
+//			this.acceptnickname()
+//     },
+		//methods:{
+//			acceptnickname(){
+//    			this.nickname = this.$route.params.nickname
+//    		},
+//          savenickname(nickname){
+//          	let that = this;
+//              if(nickname==""){
+//                  return false
+//              }
+//              that.$store.dispatch('savenickname',{nickname:that.nickname})
+//     		}
 		
-	    
-	}
+	//}
+}
 </script>
 
 <style lang="scss">

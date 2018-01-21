@@ -1,6 +1,7 @@
 
 import getpos from '../../modules/position.js'
 import { Toast } from 'mint-ui';
+import axios from "axios"
 import router from '../../router'
 const  actions = {
 
@@ -65,7 +66,6 @@ const  actions = {
         // })
         setTimeout(() => {             
            if(user_info.name=='123'&&user_info.pass=='456'){
-            //    alert('登录成功')
             router.push({path:'/mine'});
             commit('login',user_info)	    		                   
             Toast({
@@ -73,9 +73,7 @@ const  actions = {
                 iconClass: 'icon icon-success'
               });
                
-            }else{
-  
-            // alert('密码错误')
+           }else{
              Toast('密码错误');
                
             }         
@@ -96,7 +94,14 @@ const  actions = {
     subOrder(){
         Toast('提交成功');
         router.push({path:'/mains'});
-    }
+    },
+    
+//  //保存昵称
+//  savenickname({commit},nickname){
+//  	alert(1)
+//  	console.log(nickname)
+//		this.commit('savenickname',nickname)  
+//  }
 
 }
 

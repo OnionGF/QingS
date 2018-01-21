@@ -45,9 +45,9 @@ import {Toast} from 'mint-ui'
                     }
                     Toast('登陆成功')
                     let data = {phone:that.phone,password:that.password}
-                    console.log(data)
+                               // console.log(data)
                     that.LoginOnData = res.data.data
-                    console.log(that.LoginOnData,6666)
+                               //console.log(that.LoginOnData,6666)
                     //调用vuex方法 创建本地存储
                     that.$store.commit('change_type',data)    
                     that.$router.replace({name:'mine'})  //跳转到个人中心页面     

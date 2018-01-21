@@ -31,7 +31,15 @@ const mutations = {
         console.log('退出登录')
         router.push({path:'/mains'});
         state.LoginOnData = false;
-    }
+    },
+    
+    //修改昵称
+//	savenickname(state,nickname){
+//	  	console.log(nickname,999)
+//	  	state.nickname = nickname
+//	  	localStorage.user_info = JSON.stringify(nickname)
+//	  	router.push({name:"updateinfo",params:{nickname:nickname}})
+//	}
 
 }
 
