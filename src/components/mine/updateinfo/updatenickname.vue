@@ -3,13 +3,13 @@
 		<div class="updatenicknametitle"> 
 		    <i class="iconfont back" onclick="javascript:history.back(-1);">&#xe624;</i>
             <span class="updatenicknamekey">昵称</span> 
-            <span class="save">保存</span>
+            <a @click='change({nickName:mes})' class="save">保存</a>
         </div> 
         <div class="nicknametit">
          		昵称
         </div>
         <div class="nicknameinput">
-        	<input class="nicknameinput1" type="text"/>
+        	<input v-model="mes" class="nicknameinput1" type="text"/>
         </div>
         <div class="nicknamecon">
         	<p class="nicknameconneed">4~20个字符(汉字、字母、数字、下划线)</p>
@@ -18,11 +18,18 @@
         </div>
 	</div>
 </template>
-
 <script>
+	  import {mapActions} from 'vuex'
 	export default{
 		name:'updatenickname',
-		
+		data(){
+			return{
+				mes:''
+			}
+		},
+		methods:{
+			...mapActions(['change'])
+		}
 	    
 	}
 </script>

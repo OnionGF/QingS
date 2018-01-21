@@ -11,45 +11,46 @@
 		</div>
 		<div class="updatenickname" @click="updatenickname()">
 			<p class="updatenicknamekey">昵称</p>
-			<p class="updatenicknamevalue"></p>
+			<p class="updatenicknamevalue">{{nick.nickName}}</p>
 			<i class="iconfont  updateicon" >&#xe609;</i>
 		</div>
 		<div class="updatenickname">
 			<p class="updatenicknamekey">简介</p>
-			<p class="updatenicknamevalue"></p>
+			<p class="updatenicknamevalue">{{nick.introduce}}</p>
 			<i class="iconfont  updateicon">&#xe609;</i>
 		</div>
 		<div class="updatenickname">
+			<p class="updatenicknamekey">手机号</p>
+			<p class="updatenicknamevalue">{{nick.phone}}</p>
+			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
+		</div>
+		<div class="updatenickname">
 			<p class="updatenicknamekey">性别</p>
-			<p class="updatenicknamevalue"></p>
+			<p class="updatenicknamevalue">{{nick.gender}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
 		<div class="updatenickname">
 			<p class="updatenicknamekey">年龄</p>
-			<p class="updatenicknamevalue"></p>
+			<p class="updatenicknamevalue">{{nick.age}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
 		<div class="updatenickname">
 			<p class="updatenicknamekey">职业</p>
-			<p class="updatenicknamevalue"></p>
+			<p class="updatenicknamevalue">{{nick.profession}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
-		<div class="updatenickname">
-			<p class="updatenicknamekey">星座</p>
-			<p class="updatenicknamevalue"></p>
-			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
-		</div>
-		<div class="updatenickname">
+		
+		<!-- <div class="updatenickname">
 			<p class="updatenicknamekey">血型</p>
 			<p class="updatenicknamevalue"></p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
-		</div>
+		</div> -->
 		<div class="updatenickname">
 			<p class="updatenicknamekey">故乡</p>
-			<p class="updatenicknamevalue"></p>
+			<p class="updatenicknamevalue">{{nick.city}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
-		<button class="exitbtn" @click="gologin()">退出登录</button>
+		<button class="exitbtn" @click="exitLogin">退出登录</button>
         <mt-actionsheet :actions="actions" v-model="sheetVisible">
 		</mt-actionsheet>
 	</div>
@@ -57,7 +58,7 @@
 
 <script>
 
-
+	import {mapState,mapActions} from 'vuex';
 	export default{
 		name:'updateinfo',
 	   	data() {
@@ -74,7 +75,11 @@
 				sheetVisible: false
 			}
 		},
+		computed:{
+			...mapState(['nick'])
+		},
 		methods: {
+			...mapActions(['exitLogin']),
 			actionSheet: function() {
 				this.sheetVisible = true;
 			},

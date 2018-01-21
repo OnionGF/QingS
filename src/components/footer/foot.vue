@@ -24,7 +24,7 @@
                 <b>订单</b>
             </router-link>
 
-             <router-link  @click.native='clicklogin' tag='li' class="dd" :to=path[4]>
+             <router-link  tag='li' class="dd" :to=path[4]>
                 <i class="iconfont homeicon">&#xe619;</i>
                 <b>我的</b>
             </router-link>
