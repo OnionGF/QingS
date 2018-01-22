@@ -12,20 +12,20 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       //代理服务器  
-      '/api':{
-        target:'http://localhost:9000',  //我们请求数据的目标地址
-        changeOrigin:true
-       },
-       '/mz':{
-        target:'http://localhost:9000',  //我们请求数据的目标地址
-        changeOrigin:true,     
-       },
-       '/dola':{
-         //http://www.dolapocket.com/app/user/newgetverifycode
-        target:'http://10.9.164.93',  //我们请求数据的目标地址
-        changeOrigin:true,  
-        pathRewrite:{'^/dola': ''}
-       },
+      // '/api':{
+      //   target:'http://10.9.164.93',  //我们请求数据的目标地址
+      //   changeOrigin:true
+      //  },
+      //  '/mz':{
+      //   target:'http://localhost:9000',  //我们请求数据的目标地址
+      //   changeOrigin:true,     
+      //  },
+      //  '/dola':{
+      //    //http://www.dolapocket.com/app/user/newgetverifycode
+      //   target:'http://10.9.164.93',  //我们请求数据的目标地址
+      //   changeOrigin:true,  
+      //   pathRewrite:{'^/dola': ''}
+      //  },
     },
 
     // Various Dev Server settings

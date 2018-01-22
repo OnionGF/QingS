@@ -1,6 +1,6 @@
 <template>
     <div class="con-hotdetail">
-	<header class="mint-header"><div class="mint-header-button is-left"><a href="#/" class="router-link-active"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-back"></i></span> <label class="mint-button-text">返回</label></button></a></div> <h1 class="mint-header-title"></h1> <div class="mint-header-button is-right"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-more"></i></span> <label class="mint-button-text"></label></button></div></header>
+	<!-- <header class="mint-header"><div class="mint-header-button is-left"><a href="#/" class="router-link-active"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-back"></i></span> <label class="mint-button-text">返回</label></button></a></div> <h1 class="mint-header-title"></h1> <div class="mint-header-button is-right"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-more"></i></span> <label class="mint-button-text"></label></button></div></header> -->
     	<div class="conhotcontent">
     	<!-----------------------------------轮播图部分---------------------------------------->
 	        <!-- <i class="iconfont back posback" onclick="javascript:history.back(0);">&#xe624;</i> -->
@@ -89,12 +89,12 @@
 	        </div>
     	</div>
     	<div class="conhotdetailfooter">
-	    	<div class="daphone">
-	    		<i class="iconfont daphoneicon">&#xe627;</i>
-	    		<span>通话</span>
+	    	<div @click='back' class="daphone">
+	    		<p><Icon type="ios-undo-outline"></Icon></p>
+	    		<span>返回</span>
 	    	</div>
-	    	<div class="chatt">
-	    		<i class="iconfont chatticon">&#xe628;</i>
+	    	<div @click='chat' class="chatt">
+	    		<p><Icon type="ios-chatbubble-outline"></Icon></p>
 	    		<span>聊天</span>
 	    	</div>
 	    	<div class="insorder">
@@ -125,7 +125,13 @@
            orderHotel(){
                 
                 this.$router.push({name:'orderHotel'})
-            }
+			},
+			back(){
+				this.$router.push({name:'mains'})
+			},
+			chat(){
+				this.$router.push({name:'dialog'})
+			}
 		},
 		created(){
 		
@@ -145,10 +151,10 @@
     height:100%;
     flex-direction: column;
 	overflow-y: auto;
+
         .mint-header{
 			background:#017C84;
-
-
+			opacity:0;
 		}
         .conhotcontent{
             flex:1;
@@ -169,7 +175,7 @@
 	            img{
 	                width: 100%;
 	                height: 100%;
-	
+
 	            }
 	        }
             .conhottitle{
@@ -438,7 +444,7 @@
         		display: flex;
         		flex-direction: column;
         		text-align: center;
-        		.daphoneicon{
+        		p{
         			font-size: 26px;
         			color: #017C84;
         		}
@@ -449,7 +455,7 @@
         		display: flex;
         		flex-direction: column;
         		text-align: center;
-        		.chatticon{
+        		p{
         			font-size: 26px;
         			color: #017C84;
         		}

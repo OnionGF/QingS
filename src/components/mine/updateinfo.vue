@@ -29,18 +29,18 @@
 			<p class="updatenicknamevalue">{{nick.phone}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
-		<div class="updatenickname">
+		<div class="updatenickname"  @click="updatesex()">
 			<p class="updatenicknamekey">性别</p>
 			<p class="updatenicknamevalue">{{nick.gender}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
 		<div class="updatenickname">
-			<p class="updatenicknamekey">年龄</p>
+			<p class="updatenicknamekey" @click="updateage()">年龄</p>
 			<p class="updatenicknamevalue">{{nick.age}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
 		<div class="updatenickname">
-			<p class="updatenicknamekey">职业</p>
+			<p class="updatenicknamekey" @click="updatejob()">职业</p>
 			<p class="updatenicknamevalue">{{nick.profession}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
@@ -51,7 +51,7 @@
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div> -->
 		<div class="updatenickname">
-			<p class="updatenicknamekey">故乡</p>
+			<p class="updatenicknamekey" @click="updatecity()">故乡</p>
 			<p class="updatenicknamevalue">{{nick.city}}</p>
 			<i class="iconfont  updateicon" @click="updateinfo()">&#xe609;</i>
 		</div>
@@ -109,20 +109,7 @@
 					name: "updatenickname"
 				});	
 			},
-//			updatenickname:function(nickname){
-//				console.log(nickname)
-//				//bus.$emit("change-nickname",this.nickname);
-//				this.$router.push({
-//					name: "updatenickname",params:{nickname:nickname}
-//				});
-//				
-//				
-//			},
-//			getNickname(){
-//				console.log(this.$route.params.nickname)
-//				
-//				
-//			},
+
 			updatebrief:function(){
 				this.$router.push({
 					name: "updatebrief"

@@ -5,15 +5,16 @@
             <pos/>
             <search/>
             <sousuo :isShow="isShow" />
-        </div>     
+        </div>   
+        <div style="height:1.7rem;">
+        </div>  
         <div class="con">            
                 <conHot/> 
-                <conCho/>           
-                <conCho/>           
-                <conCho/>           
+                <lunbo/>         
+                <conCho/>  
+                <!-- <order/>          -->
         </div>
         <backTop/>     
-        
         <foots></foots>
     </div>
 </template>
@@ -30,13 +31,15 @@
     import axios from 'axios'
     import conHot from './contentBox/conHot.vue'
     import conCho from './contentBox/conChoose.vue'
+    import lunbo from './contentBox/lunbo.vue'
+    import order from './contentBox/order.vue'
     import conHotdetail from './contentBox/conHotdetail.vue'
     import backTop from './backTop'
     import foots from '../footer/foot'
   
 	export default{
 		name:'mains',
-        components:{banner,search,pos,sousuo,conHot,conCho,conHotdetail,foots,backTop},
+        components:{banner,search,pos,sousuo,conHot,conCho,conHotdetail,foots,backTop,lunbo,order},
         data(){
             return{
                 scroll:"",
@@ -60,5 +63,5 @@
 
 </script>
 <style lang="scss">
-    
+  
 </style>

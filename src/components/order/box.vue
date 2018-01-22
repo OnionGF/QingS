@@ -6,12 +6,14 @@
             <div class="box-con">
                 <img src="/static/img/0_03.png" alt="">
                 <a href="">
-                    <h3>主题公寓</h3>
-                    <span>09月16日-09月17日</span>
-                    <span>房价：￥6000</span>
+                    <h3>{{data.name}}</h3>
+                    <span>{{data.date}}</span>
+                    <span>{{data.price}}</span>
                 </a>
             </div>
-            <a  class='ply' href="">{{data}}</a>
+            <!-- <a  class='ply' href=""></a> -->
+            <i-button   class='ply'  type="primary" shape="circle" size="small">{{data.ping}}</i-button>
+            <!-- <i-button   class='ply'  type="primary" shape="circle" size="small">{{data.again}}</i-button>             -->
         </div>     
 
 </template>
@@ -20,7 +22,12 @@
 <script>
     export default {
         name:'box',
-        props:['data']
+        props:['data'],
+        data(){
+            return{
+               
+            }
+        }
     }
 </script>
 
@@ -50,6 +57,8 @@
         .ply{
             font-size:0.15rem;
             margin-top:0.2rem;
+            height:0.25rem;
+            background:#017C84;
             margin-right:0.1rem;
         }
     }

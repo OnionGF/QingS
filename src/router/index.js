@@ -5,6 +5,7 @@ Vue.use(Router)
 
 import index from '@/components/index/index.vue'
 import conHotdetail from '@/components/index/contentBox/conHotdetail.vue'
+import con1 from '@/components/index/contentBox/lunbo/con1.vue'
 import orderHotel from  '@/components/index/contentBox/orderHotel.vue'
 import mysearch from '@/components/index/mysearch.vue'
 import noLogin from '@/components/index/noLogin.vue'
@@ -47,8 +48,8 @@ import password from '@/components/login/password.vue'
  const routes = [
     {path:'',redirect:'/mains'},  //重定向，为空的时候进入到main文件里
     {path:'/mains',name:'mains',component:index},
-    {path:'/conHotdetail/:id',component:conHotdetail,name:'conHotdetail'},
-    {path:'/orderHotel/',component:orderHotel,name:'orderHotel'},
+    {path:'/conHotdetail',component:conHotdetail,name:'conHotdetail'},
+    {path:'/orderHotel',component:orderHotel,name:'orderHotel'},
     {path:'/mysearch',component:mysearch,name:'mysearch'},
     {path:'/tracks',name:'tracks',component:tracks},
 
@@ -63,12 +64,12 @@ import password from '@/components/login/password.vue'
         {path:'/yanzhengma',component:yanzhengma,name:'yanzhengma'},
         {path:'/password',component:password,name:'password'}
       ]},
-    // {path:'/collect',component:collect,
-    //   children:[
-    //     {path:'/collect',redirect:'/tag1'},
-    //     {path:'/tag1',component:tag1,name:'tag1'},
-    //     {path:'/tag2',component:tag2,name:'tag2'}
-    //   ]},
+    {path:'/collect',component:collect,
+      children:[
+        {path:'/collect',redirect:'/tag1'},
+        {path:'/tag1',component:tag1,name:'tag1'},
+        {path:'/tag2',component:tag2,name:'tag2'}
+      ]},
     {path:'/order',component:order,
       children:[
         {path:'/order',redirect:'/or1'},
@@ -89,6 +90,7 @@ import password from '@/components/login/password.vue'
 //  {path:'/updateinfo/:nickname',component:updateinfo,name:'updateinfo'},
 //  {path:'/updatenickname/:nickname',component:updatenickname,name:'updatenickname'},
     {path:'/updateinfo',component:updateinfo,name:'updateinfo'},
+    {path:'/con1',component:con1,name:'con1'},
     {path:'/updatenickname',component:updatenickname,name:'updatenickname'},
     {path:'/updatebrief',component:updatebrief,name:'updatebrief'},
     {path:'/updatesex',component:updatesex,name:'updatesex'},

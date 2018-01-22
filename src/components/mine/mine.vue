@@ -6,36 +6,29 @@
 				<span>我的</span>
 				<i class="iconfont share">&#xe626;</i>
 			</div>
-			<header >
+			<header @click='login'>
 				<div class="person-head" @click="actionSheet">
 					<img src="../../style/usage/img/1.png" />
 				</div>
-				<div class="person-info">
+				<div  class="person-info">
 					<p class="person-info-name"> {{nick.nickName}}</p>
-					<!-- <p class="person-info-signature">来到青宿一天了</p> -->
+					<p class="person-info-signature">个性签名</p>
 				</div>
-				<div class="iconfont personmore" @click="updateinfo()">&#xe609;</div>
+				<!-- <div class="iconfont personmore" >&#xe609;</div> -->
 			</header>
-			<nav>
-				<router-link to="/wallet" class="wallet">
-					<i class="iconfont iwallet">&#xe623;</i>
-					<span>收藏</span>
-				</router-link>
-				<router-link to="/sale" class="sale">
-					<i class="iconfont isale">&#xe61f;</i>
-					<span>优惠券</span>
-				</router-link>
-				<router-link to="/bankcard" class="bankcard">
-					<i class="iconfont ibankcard">&#xe610;</i>
-					<span>浏览记录</span>
-				</router-link>
-			</nav>
+		
 		</div>
 		<div class="mes">
 			<router-link to="/need" class="need">
 				<i class="iconfont ineed">&#xe650;</i>
-				<span>我的需求</span>
+				<span>优惠券</span>
 			</router-link>
+			
+			<router-link to="/collect" class="bankcard">
+				<i class="iconfont ibankcard">&#xe610;</i>
+				<span>收藏/浏览记录</span>
+			</router-link>
+
 			<router-link to="/evaluate" class="evaluate">
 				<i class="iconfont ievaluate">&#xe66e;</i>
 				<span>我的评价</span>
@@ -109,11 +102,23 @@
 				console.log("打开相册")
 
 			},
-			updateinfo:function(){
-				this.$router.push({
-					name: "updateinfo"
-				});
-
+			// updateinfo:function(){
+			// 	this.$router.push({
+			// 		name: "updateinfo"
+			// 	});
+			// },
+			login(){
+				console.log('点击')
+				if(this.nick.nickName=='立即登录'){
+					this.$router.push({
+						name: "password"
+					});
+				}else{
+					this.$router.push({
+						name: "updateinfo"
+					});
+				}
+			
 			}
 		}
 	}

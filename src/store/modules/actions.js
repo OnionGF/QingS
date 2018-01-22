@@ -14,18 +14,18 @@ const  actions = {
          }, 1000);
     },
     getMes({commit},mes){
-        console.log(mes)
-        $.post("/apiuser/selectHouse",mes,function(data) {
-            if(data.result==1){
-                //成功
-                console.log("成功")  
-                
-            } else {
-                console.log("失败");
-                router.push({path:'mysearch'})
+        console.log("qingqiu")
+        router.push({path:'/mysearch'});
+        axios.post('/api/house/findHouseById.html',{"id":1}).then(({data})=>{
+            // axios.post('/dola/api/house/findHouseById.html',"id=1").then(({data})=>{
+            console.log(data)
+            if(data.result){
+                Toast('验证码发送成功！');
+            }else{
+                Toast('请求失败');               
             }
-        });
-        commit('getMes',mes.place)
+        })
+        // commit('getMes',mes.place)
     },
    
     startDate({commit},start){
@@ -47,8 +47,8 @@ const  actions = {
     
     //发送验证码
     login({commit},user_info){
-        console.log(user_info)
-        axios.post('/dola/api/user/send_login_code.html',user_info).then(({data})=>{
+        console.log("发送验证码")
+        axios.post('/api/user/send_login_code.html',user_info).then(({data})=>{
             console.log(data)
             if(data.result){
                 Toast('验证码发送成功！');
@@ -59,7 +59,7 @@ const  actions = {
     },
     //验证码登录
     denglu({commit},user_info){
-        axios.post('/dola/api/user/code_login.html',user_info).then(({data})=>{
+        axios.post('/api/user/code_login.html',user_info).then(({data})=>{
             console.log(data);
             if(data.success){
                 Toast('登录成功');
@@ -75,7 +75,7 @@ const  actions = {
     //密码登录
     register({commit},user_info){
         console.log(user_info)
-        axios.post('/dola/api/user/pwd_login.html',user_info).then(({data})=>{
+        axios.post('/api/user/pwd_login.html',user_info).then(({data})=>{
             console.log(data)
             if(data.success){
                 console.log(data.result.ticket)
@@ -93,7 +93,7 @@ const  actions = {
         console.log(['退出'])
         var value = localStorage.getItem("key"); 
         console.log(value)
-        axios.post('/dola/api/user/logout.html',value).then(({data})=>{          
+        axios.post('/api/user/logout.html',value).then(({data})=>{          
             console.log(data);
             commit('exitLogin',data)
         })
@@ -114,7 +114,7 @@ const  actions = {
     },
     //忘记密码
     forget({commit},user_info){
-        axios.post('/dola/api/user/forget_pwd.html',user_info).then(({data})=>{          
+        axios.post('/api/user/forget_pwd.html',user_info).then(({data})=>{          
             console.log(data);
             if(data.result){
                 Toast('修改成功');                
@@ -127,7 +127,7 @@ const  actions = {
     //修改昵称
     change({commit},user_info){
         console.log(user_info)
-        axios.post('/dola/api/user/update.html',user_info).then(({data})=>{          
+        axios.post('/api/user/update.html',user_info).then(({data})=>{          
             console.log(data);
             if(data.result){
                 Toast('修改成功');                
@@ -140,8 +140,21 @@ const  actions = {
     },
     //收藏
     love(user_info){
-        // alert(user_info.houseId)
-        axios.post('/dola/api/house/addCollection.html',{houseId:1}).then(({data})=>{          
+        // alert("收藏")
+        // axios.post('/api/house/addCollection.html',{houseId:1}).then(({data})=>{          
+            // console.log(data);
+            let data={result:true};
+            if(data.result){
+                Toast(data.message);                
+            }else{
+                Toast(data.message);
+            }
+        // })
+    },
+    //详情页数据
+    conHotdetail(user_info){
+        router.push({path:'/conHotdetail'}); 
+        axios.post('/api/house/findHouseById.html',{houseId:1}).then(({data})=>{          
             console.log(data);
             if(data.result){
                 Toast(data.message);                
@@ -149,7 +162,10 @@ const  actions = {
                 Toast(data.message);
             }
         })
+
     }
+    //浏览记录
+
 
 }
 

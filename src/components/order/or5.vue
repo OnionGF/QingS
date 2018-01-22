@@ -15,7 +15,11 @@ import Box from './box.vue'
         name:'or5',
         data(){
             return{
-                navs:['已退款','已退款','已退款','已退款','已退款','已退款']
+                navs:[
+                        {name:'主题公寓',date:'下单时间：09月16日-09月17日',price:'￥600',ping:'已退款'},
+                        {name:'主题公寓',date:'下单时间：09月16日-09月17日',price:'￥600',ping:'已退款'},
+                      
+                    ]
             }
         },
         components:{

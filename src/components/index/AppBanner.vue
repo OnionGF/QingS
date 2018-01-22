@@ -3,7 +3,7 @@
 		
 		<div class="swiper-wrapper">
 			<div v-for="billboard in billboards" :key="billboard.id" class="swiper-slide">
-				<img width="100%" :src="billboard.imageUrl" :title="billboard.name" />
+				<img width="100%" height='100%' :src="billboard.imageUrl" :title="billboard.name" />
 			</div>
 		</div>
 		
@@ -25,7 +25,7 @@
 			getData(){
 				let that = this;
 				//https://m.maizuo.com/v4/api/billboard/home?__t=1514030525181
-				axios.get("/mz/v4/api/billboard/home")
+				axios.get("/static/mock/picture.json")
 				.then((response)=>{
 					// console.log(response);
 					that.billboards = response.data.data.billboards
@@ -38,7 +38,8 @@
 		updated(){
 			new Swiper('.app-banner',{
 				loop :true,
-				autoplay:{delay:1500}
+				direction:'vertical',
+				autoplay:{delay:2000}
 			})
 		}
 	}
