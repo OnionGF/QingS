@@ -3,14 +3,13 @@
 		<div class="updatenicknametitle"> 
 		    <i class="iconfont back" onclick="javascript:history.back(-1);">&#xe624;</i>
             <span class="updatenicknamekey">昵称</span> 
-         <!--   <span class="save" @click="savenickname(nickname)">保存</span>-->
-            <span class="save">保存</span>
+            <a @click='change({nickName:mes})' class="save">保存</a>
         </div> 
         <div class="nicknametit">
          		昵称
         </div>
         <div class="nicknameinput">
-        	<input  class="nicknameinput1" type="text"/>
+        	<input v-model="mes" class="nicknameinput1" type="text"/>
         </div>
         <!--<div class="nicknameinput">
         	<input  class="nicknameinput1" v-model="nickname" type="text"/>
@@ -22,35 +21,20 @@
         </div>
 	</div>
 </template>
-
 <script>
-//	import bus from '../../../store/modules/bus.js'
-	import axios from 'axios'
-	import {Toast} from 'mint-ui' 
+	  import {mapActions} from 'vuex'
 	export default{
 		name:'updatenickname',
 		data(){
-            return {
-                //nickname:'',
-            }
-        },
-//      mounted(){
-//			this.acceptnickname()
-//     },
-		//methods:{
-//			acceptnickname(){
-//    			this.nickname = this.$route.params.nickname
-//    		},
-//          savenickname(nickname){
-//          	let that = this;
-//              if(nickname==""){
-//                  return false
-//              }
-//              that.$store.dispatch('savenickname',{nickname:that.nickname})
-//     		}
-		
-	//}
-}
+			return{
+				mes:''
+			}
+		},
+		methods:{
+			...mapActions(['change'])
+		}
+	    
+	}
 </script>
 
 <style lang="scss">

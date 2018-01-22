@@ -64,8 +64,8 @@
 </template>
 
 <script>
-//import bus from '../../store/modules/bus.js'
 
+	import {mapState,mapActions} from 'vuex';
 	export default{
 		name:'updateinfo',
 	   	data() {
@@ -84,7 +84,11 @@
 //				nicknameone:JSON.parse(localStorage.user_info?localStorage.user_info:'[]')
 			}
 		},
+		computed:{
+			...mapState(['nick'])
+		},
 		methods: {
+			...mapActions(['exitLogin']),
 			actionSheet: function() {
 				this.sheetVisible = true;
 			},

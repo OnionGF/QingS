@@ -22,7 +22,7 @@ module.exports = {
        },
        '/dola':{
          //http://www.dolapocket.com/app/user/newgetverifycode
-        target:'http://10.9.168.32',  //我们请求数据的目标地址
+        target:'http://10.9.164.93',  //我们请求数据的目标地址
         changeOrigin:true,  
         pathRewrite:{'^/dola': ''}
        },

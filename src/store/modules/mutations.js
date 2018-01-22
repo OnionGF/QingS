@@ -17,11 +17,11 @@ const mutations = {
         state.endDate = info
     },
 
-    //用户登录 本地存储
-    change_type(state,user_info){
-        state.user_info = user_info
-        localStorage.user_info = JSON.stringify(user_info)
-    },
+    // //用户登录 本地存储
+    // change_type(state,user_info){
+    //     state.user_info = user_info
+    //     localStorage.user_info = JSON.stringify(user_info)
+    // },
     //登录验证
     login(state,user_info){       
         state.LoginOnData = true;
@@ -29,16 +29,26 @@ const mutations = {
     //退出登录
     exitLogin(state,data){
         Toast(data.result);
-        router.push({path:'/mains'});
+        state.nick={nickName:'立即登录'};        
+        router.push({path:'/mine'});
+        localStorage.setItem("LoginOnData", false);        
         state.LoginOnData = false;
     },
     //用户名登录
-    register(state){
+    register(state,data){
+        state.nick=data.result;
+        localStorage.setItem("LoginOnData", true);
         state.LoginOnData = true;
     },
     //验证码登录
-    denglu(state){
+    denglu(state,data){
+        state.nick=data.result; 
+        localStorage.setItem("LoginOnData", true);        
         state.LoginOnData = true;
+    },
+    //修改昵称
+    change(state,data){
+        state.nick.nickName = data.nickName;
     }
 }
 

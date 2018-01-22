@@ -14,6 +14,7 @@ const  actions = {
          }, 1000);
     },
     getMes({commit},mes){
+        console.log(mes)
         $.post("/apiuser/selectHouse",mes,function(data) {
             if(data.result==1){
                 //成功
@@ -55,25 +56,6 @@ const  actions = {
                 Toast(data.error);               
             }
         })
-        // setTimeout(() => {             
-        //    if(user_info.name=='123'&&user_info.pass=='456'){
-        //     //    alert('登录成功')
-        //     router.push({path:'/mine'});
-        //     commit('login',user_info)	    		                   
-        //     Toast({
-        //         message: '登陆成功',
-        //         iconClass: 'icon icon-success'
-        //       });
-               
-        //     }else{
-  
-        //     // alert('密码错误')
-        //      Toast('验证码错误');
-               
-        //     }         
-           
-        // }, 1000);
-
     },
     //验证码登录
     denglu({commit},user_info){
@@ -81,9 +63,9 @@ const  actions = {
             console.log(data);
             if(data.success){
                 Toast('登录成功');
-                commit('denglu')
+                commit('denglu',data)
                 sessionStorage.setItem("key", data.result.ticket);
-                router.push({path:'/mains'});
+                router.push({path:'/mine'});
             }else{
                 Toast(data.error);                
             }   
@@ -99,8 +81,8 @@ const  actions = {
                 console.log(data.result.ticket)
                 localStorage.setItem("key", data.result.ticket);
                 Toast('登录成功');
-                commit('register')
-                router.push({path:'/mains'});
+                commit('register',data)
+                router.push({path:'/mine'});
             }else{
                 Toast(data.error);
             }
@@ -108,6 +90,7 @@ const  actions = {
     },
     //退出登录
     exitLogin({commit}){
+        console.log(['退出'])
         var value = localStorage.getItem("key"); 
         console.log(value)
         axios.post('/dola/api/user/logout.html',value).then(({data})=>{          
@@ -127,15 +110,46 @@ const  actions = {
     //提交订单
     subOrder(){
         Toast('提交成功');
-        router.push({path:'/mains'});
+        router.push({path:'/mine'});
     },
-    
-//  //保存昵称
-//  savenickname({commit},nickname){
-//  	alert(1)
-//  	console.log(nickname)
-//		this.commit('savenickname',nickname)  
-//  }
+    //忘记密码
+    forget({commit},user_info){
+        axios.post('/dola/api/user/forget_pwd.html',user_info).then(({data})=>{          
+            console.log(data);
+            if(data.result){
+                Toast('修改成功');                
+                router.push({path:'/password'}); 
+            }else{
+                Toast(data.error);
+            }
+        })
+    },
+    //修改昵称
+    change({commit},user_info){
+        console.log(user_info)
+        axios.post('/dola/api/user/update.html',user_info).then(({data})=>{          
+            console.log(data);
+            if(data.result){
+                Toast('修改成功');                
+                router.push({path:'/updateinfo'}); 
+                commit('change',user_info)
+            }else{
+                Toast(data.error);
+            }
+        })
+    },
+    //收藏
+    love(user_info){
+        // alert(user_info.houseId)
+        axios.post('/dola/api/house/addCollection.html',{houseId:1}).then(({data})=>{          
+            console.log(data);
+            if(data.result){
+                Toast(data.message);                
+            }else{
+                Toast(data.message);
+            }
+        })
+    }
 
 }
 

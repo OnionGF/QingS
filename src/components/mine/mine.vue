@@ -6,20 +6,20 @@
 				<span>我的</span>
 				<i class="iconfont share">&#xe626;</i>
 			</div>
-			<header>
+			<header >
 				<div class="person-head" @click="actionSheet">
 					<img src="../../style/usage/img/1.png" />
 				</div>
 				<div class="person-info">
-					<p class="person-info-name"> 那天八点半</p>
-					<p class="person-info-signature">来到青宿一天了</p>
+					<p class="person-info-name"> {{nick.nickName}}</p>
+					<!-- <p class="person-info-signature">来到青宿一天了</p> -->
 				</div>
 				<div class="iconfont personmore" @click="updateinfo()">&#xe609;</div>
 			</header>
 			<nav>
 				<router-link to="/wallet" class="wallet">
 					<i class="iconfont iwallet">&#xe623;</i>
-					<span>钱包</span>
+					<span>收藏</span>
 				</router-link>
 				<router-link to="/collect" class="sale">
 					<i class="iconfont isale">&#xe61f;</i>
@@ -62,10 +62,14 @@
 <script>
 	import foots from '../footer/foot'
 	import bus from '../../store/modules/bus.js'
+	import {mapState} from 'vuex'
 	export default {
 		name: 'mine',
 		components: {
 			foots
+		},
+		computed:{
+			...mapState(['nick'])
 		},
 		created() {
 			var that = this

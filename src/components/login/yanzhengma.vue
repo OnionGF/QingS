@@ -1,8 +1,9 @@
 <template>
     <div>
        <div id="yanzhengma">        
-		 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" id="num" v-model='userName' placeholder="手机号"></p>
-         <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text"   v-model='password'  id="yan" placeholder="验证码"><input type="button"  @click=login({phone:userName})  class="huo" value="获取验证码"/></p>
+		 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" id="phone" v-model='userName' placeholder="手机号"></p>
+         <!-- <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text"   v-model='password'  id="yan" placeholder="验证码"><input type="button" @click=login({phone:userName})  class="huo" value="获取验证码"/></p> -->
+         <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text"   v-model='password'  id="yan" placeholder="验证码"><a href="javascript:;" class="send1"    onclick="sends.send();">发送验证码</a></p>
          <p class="pbtn"><input @click="denglu({phone:userName,code:password})" type="button" id="btn" value="登录"/></p>
          <p class="tip">未注册的手机号将自动创建为青宿短租账户</p>
         </div>        

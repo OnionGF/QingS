@@ -23,7 +23,7 @@
 		 <p class="pnum"><i class="iconfont number">&#xe627;</i> <input type="text" id="num" v-model='userName' placeholder="手机号"></p>
          <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="text"   v-model='word'  id="yan" placeholder="验证码"><input type="button"  @click=login({phone:userName})  class="huo" value="获取验证码"/></p>
 		 <p class="pnum"><i class="iconfont number">&#xe60a;</i> <input type="text" id="num" v-model='password' placeholder="请输入6-16位密码"></p>
-         <p class="pbtn"><input @click="denglu({phone:userName,code:word,passqord:password})" type="button" id="btn" value="确定"/></p>
+         <p class="pbtn"><input @click="forget({phone:userName,code:word,password:password})" type="button" id="btn" value="确定"/></p>
          
         </div>    
     </div>
@@ -42,7 +42,7 @@
             }
         },
         methods:{
-            ...mapActions(['login','denglu'])
+            ...mapActions(['login','forget'])
           
         }
            
