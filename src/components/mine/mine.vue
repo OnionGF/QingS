@@ -21,7 +21,7 @@
 					<i class="iconfont iwallet">&#xe623;</i>
 					<span>钱包</span>
 				</router-link>
-				<router-link to="/sale" class="sale">
+				<router-link to="/collect" class="sale">
 					<i class="iconfont isale">&#xe61f;</i>
 					<span>优惠券</span>
 				</router-link>

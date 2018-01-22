@@ -46,6 +46,7 @@
         methods:{
             scrollfunc(){
                 this.scroll =  document.getElementsByClassName("home")[0].scrollTop
+                console.log(this.scroll)
                 if( this.scroll>=400){
                     this.isShow = true
                 }else{
