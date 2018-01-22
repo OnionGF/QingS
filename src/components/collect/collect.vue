@@ -3,26 +3,25 @@
 <template>
     <div class="home">
        <div class="title">
-            <span class="tit">收藏</span>
-            <i class="iconfont sharecollect">&#xe61d;</i>
+            <i class="iconfont backdiscount" onclick="javascript:history.back(0);">&#xe624;</i>
+            <span class="tit">我的优惠券</span>
         </div> 
         <div class="nav">
-            <router-link to='tag1' class="navl">我的收藏</router-link>
-            <router-link to='tag2' class="nav2">浏览记录</router-link>
+            <router-link to='tag1' class="navl">领劵中心</router-link>
+            <router-link to='tag2' class="nav2">已领优惠券</router-link>
         </div>
        
         <router-view></router-view>
-        <foots></foots> 
+       
       
     </div>
 </template>
 
 
 <script>
-    import foots from '../footer/foot'
+  
     export default {
         name:'collect',
-        components:{foots},
         data:function(){
             return {
 
@@ -30,3 +29,15 @@
         }
     }
 </script>
+<style lang="scss" scoped>
+    .title{
+        position: relative;
+         .backdiscount{
+            position: absolute;
+            top: 0.01rem;
+            left:0.1rem;
+
+        }
+    }
+   
+</style>
