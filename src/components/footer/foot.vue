@@ -5,9 +5,7 @@
         <ul class="aa">
 
             <router-link tag='li' class="aa":to=path[0]>
-            	<!--<i class="bg1"></i>-->
-                <i class="iconfont homeicon">&#xe61a;</i>
-              <!--  <i class="iconfont homeicon"  v-show="!isShow">&#xe60d;</i>-->
+                <i class="iconfont homeicon" >&#xe61a;</i>
                 <b>首页</b>
             </router-link>   
             <router-link  @click.native='clicklogin'   tag='li' class="bb" :to=path[1]>
@@ -46,8 +44,7 @@
             ...mapState(['LoginOnData'])
         },
         methods:{
-             clicklogin(){
-                //  alert('1')
+            clicklogin(){
                  console.log(this.LoginOnData)
                 if(!this.LoginOnData){
                     this.$router.push({name:'nologin'})
@@ -55,10 +52,6 @@
                    return ;
                 }
              },
-             kk(){
-             	//alert('1')
-             	this.isShow = true
-             }
              
         },
         mounted(){
@@ -70,9 +63,6 @@
 
 
 <style scoped>
-	/*.{
-		color:#333333;
-	}*/
    .router-link-active{
    	color: #017c84 !important;
    }

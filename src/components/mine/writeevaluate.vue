@@ -10,7 +10,9 @@
 
             <div class="pcon">
                 <p class="pconscore">评分</p>
-                <p class="pconimg"></P>
+                <p class="pconimg">
+                	<Rate :value.sync="value"></Rate>
+                </P>
             </div>    
         </div> 
         <div class="writeevaluatecon">
@@ -24,7 +26,8 @@
 		name:'updatenickname',
 		data(){
             return {
-              
+                value: 0
+
             }
         },
        
@@ -79,16 +82,15 @@
             .pcon{
                 display: flex;
                 flex-direction: column;
-               // height: 0.35rem;
                 margin-top: 0.18rem;
                 .pconscore{
-                   // height: 0.23rem;
                    margin-left:0.09rem; 
                 }
                 .pconimg{
-                   width: 1rem;
+                   width: 2rem;
                    height: 0.19rem;
-                  // background: url("../../../static/img/xing.png");
+                   margin-left:0.1rem;
+                  
                 }
 
             }

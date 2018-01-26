@@ -17,7 +17,7 @@
 		<div class="updatenickname" @click="updatenickname()">
 			<div class="updatenicknamekey">昵称</div>
 			<div class="updatenicknameright">
-				<span class="updatenicknamevalue" ></span>
+				<span class="updatenicknamevalue"></span>
 				<i class="iconfont  updateicon" >&#xe609;</i>
 			</div>
 			

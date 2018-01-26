@@ -4,6 +4,7 @@
             <span class="nologintitlet">消息</span>
         </div>
         <div class="nologincenter">
+        	<i class="iconfont nologinicon">&#xe657;</i>
         	<p class="nologincenterwenzi">啊哦，您还没有登录哦！</p>
         </div>
         <div class="nologindivbtn">
@@ -29,6 +30,7 @@
 
 <style lang="scss">
 	.nologin{
+		text-align: center;
 		.nologintitle{
 			height: 0.4rem;
 			background: #017C84;
@@ -38,8 +40,14 @@
 			font-size: 0.2rem;
 		}
 		.nologincenter{
+			text-align: center;
+			margin-top: 1.2rem;
+			.nologinicon{
+				font-size: 0.8rem;
+    			color: #017C84;
+			}
 			.nologincenterwenzi{
-				margin-top: 3.14rem;
+				margin-top: 0.3rem;
 				text-align: center;
 				color: #5f636b;
 				font-size: 16px;
@@ -52,8 +60,9 @@
 			color: #fff;
 			outline: none;
 			border: none;
-			margin-top: 1.25rem;
-			margin-left: 0.25rem;
+			margin-top: 0.4rem;
+			border-radius: 12px;
+			
 		}
 	}
 
