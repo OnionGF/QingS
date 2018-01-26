@@ -9,9 +9,8 @@
    
        
      
-
+        <Back-top></Back-top>
         <div class="mark  animated"></div>
-        <!-- <foots></foots> -->
     </div>
 </template>
 

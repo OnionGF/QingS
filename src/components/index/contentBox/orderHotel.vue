@@ -1,6 +1,12 @@
 <template>
   <div class="orderHotel">
-     	<header class="mint-header"><div class="mint-header-button is-left"><a href="#/" class="router-link-active"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-back"></i></span> <label class="mint-button-text">返回</label></button></a></div> <h1 class="mint-header-title">确认订单</h1> <div class="mint-header-button is-right"><button class="mint-button mint-button--default mint-button--normal"><span class="mint-button-icon"><i class="mintui mintui-more"></i></span> <label class="mint-button-text"></label></button></div></header>
+    <header class="mint-header"><div class="mint-header-button is-left"><a href="#/" class="router-link-active">
+    <button class="mint-button mint-button--default mint-button--normal">
+        <span class="mint-button-icon"><i class="mintui mintui-back"></i></span> 
+        <label class="mint-button-text">返回</label></button></a></div> <h1 class="mint-header-title">确认订单</h1>
+         <div class="mint-header-button is-right"><button class="mint-button mint-button--default mint-button--normal">
+             <span class="mint-button-icon"><i class="mintui mintui-more"></i></span> <label class="mint-button-text">
+      </label></button></div></header>
      <section>
      <div>
         <div class="orderMes">
@@ -72,13 +78,8 @@ export default {
 
     // overflow:auto;
      header{
-            // height: 0.44rem;
             background:#017C84;
-            // text-align: center;
-            // line-height: 0.44rem;
-            // font-size: 0.18rem;
-            // padding:0 -0.15rem;
-            // overflow: auto;
+            opacity:0.7;
         }
     section{
         padding:0.13rem;

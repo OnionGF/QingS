@@ -9,15 +9,12 @@
 			<div class="updateheadimg"><p class="ppimg"><img src="../../style/usage/img/1.png"/></p><i class="iconfont  updateicon1">&#xe609;</i></div>
 			
 		</div>
-		<!--<div class="updatenickname" @click="updatenickname(nickname)">
-			<p class="updatenicknamekey">昵称</p>
-			<p class="updatenicknamevalue" >哈哈哈</p>
-			<i class="iconfont  updateicon" >&#xe609;</i>
-		</div>-->
 		<div class="updatenickname" @click="updatenickname()">
 			<div class="updatenicknamekey">昵称</div>
 			<div class="updatenicknameright">
-				<span class="updatenicknamevalue"></span>
+
+				<span class="updatenicknamevalue" >{{nick.nickName}}</span>
+
 				<i class="iconfont  updateicon" >&#xe609;</i>
 			</div>
 			
@@ -25,35 +22,37 @@
 		<div class="updatenickname" @click="updatebrief()">
 			<div class="updatenicknamekey">简介</div>
 			<div class="updatenicknameright">
-				<span class="updatenicknamevalue" ></span>
+				<span class="updatenicknamevalue" >{{nick.nickName}}</span>
 				<i class="iconfont  updateicon" >&#xe609;</i>
 			</div>
 		</div>
+	
+	
 		<div class="updatenickname" @click="updatesex()">
 			<div class="updatenicknamekey">性别</div>
 			<div class="updatenicknameright">
-				<span class="updatenicknamevalue" ></span>
+				<span class="updatenicknamevalue" >{{nick.gender}}</span>
 				<i class="iconfont  updateicon" >&#xe609;</i>
 			</div>
 		</div>
 		<div class="updatenickname"@click="updateage()">
 			<div class="updatenicknamekey">年龄</div>
 			<div class="updatenicknameright">
-				<span class="updatenicknamevalue" ></span>
+				<span class="updatenicknamevalue" >{{nick.age}}</span>
 				<i class="iconfont  updateicon" >&#xe609;</i>
 			</div>
 		</div>
 		<div class="updatenickname"  @click="updatejob()">
 			<div class="updatenicknamekey">职业</div>
 			<div class="updatenicknameright">
-				<span class="updatenicknamevalue" ></span>
+				<span class="updatenicknamevalue" >{{nick.profession}}</span>
 				<i class="iconfont  updateicon" >&#xe609;</i>
 			</div>
 		</div>
 		<div class="updatenickname"  @click="updatecity()">
 			<div class="updatenicknamekey">城市</div>
 			<div class="updatenicknameright">
-				<span class="updatenicknamevalue" ></span>
+				<span class="updatenicknamevalue" >{{nick.city}}</span>
 				<i class="iconfont  updateicon" >&#xe609;</i>
 			</div>
 		</div>
@@ -110,20 +109,7 @@
 					name: "updatenickname"
 				});	
 			},
-//			updatenickname:function(nickname){
-//				console.log(nickname)
-//				//bus.$emit("change-nickname",this.nickname);
-//				this.$router.push({
-//					name: "updatenickname",params:{nickname:nickname}
-//				});
-//				
-//				
-//			},
-//			getNickname(){
-//				console.log(this.$route.params.nickname)
-//				
-//				
-//			},
+
 			updatebrief:function(){
 				this.$router.push({
 					name: "updatebrief"

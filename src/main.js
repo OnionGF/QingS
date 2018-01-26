@@ -16,6 +16,9 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI);
 
+//fastclick
+import Fastclick from 'fastclick'
+Fastclick.attach(document.body)
 
 import { Actionsheet } from 'mint-ui';
 
