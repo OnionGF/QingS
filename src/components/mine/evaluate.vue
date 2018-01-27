@@ -7,7 +7,7 @@
 		<div class="alleval">
 			<p class="allevaltit">全部评价</p>
 		</div>
-		<div class="evalatecon">
+		<div class="evalatecon" @click="writeevaluate()">
 			<div class="evalatecon1">
 				<div class="evalhead">
 					<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3016890200,2017113207&fm=27&gp=0.jpg" />
@@ -35,7 +35,7 @@
 			</p>	
 		</div>
 		
-		<div class="evalatecon">
+		<div class="evalatecon" @click="writeevaluate()">
 			<div class="evalatecon1">
 				<div class="evalhead">
 					<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3016890200,2017113207&fm=27&gp=0.jpg" />
@@ -67,6 +67,22 @@
 </template>
 
 <script>
+	export default{
+		name:'updatenickname',
+		data(){
+            return {
+              
+            }
+		},
+		methods: {
+			writeevaluate: function() {
+				this.$router.push({
+					name: "writeevaluate"
+				});
+			},
+		}
+	}
+       
 </script>
 
 <style lang="scss">

@@ -3,6 +3,7 @@
 		<div class="updatecitytitle"> 
 		    <i class="iconfont back" onclick="javascript:history.back(-1);">&#xe624;</i>
             <span class="updatecitykey">请输入城市</span> 
+            <span class="save">保存</span>
         </div> 
         <div class="updatecitycon">
         	<input type="text" class="updatejobconinput" placeholder="请输入城市信息" />
@@ -22,19 +23,19 @@
 			height: 0.4rem;
 			background: #017C84;
 			color: #fff;
-			position: relative;
+			display: flex;
 			justify-content: space-between;
 			.back{
-	            position: absolute;
-	            top: 0.02rem;
-	            left: 0.1rem;
+	            line-height: 0.4rem;
+	           	padding-left: 0.1rem;
 	        }
 			.updatecitykey{
 			   line-height: 0.4rem;
-			   position: absolute;
-			   top: 0.03rem;
-			   left: 1.5rem;
 			   font-size: 0.2rem;
+			}
+			.save{
+				line-height: 0.4rem;
+				padding-right: 0.1rem;
 			}
 		}
 		.updatecitycon{

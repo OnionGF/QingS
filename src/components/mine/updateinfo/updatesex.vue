@@ -27,19 +27,16 @@
 			height: 0.4rem;
 			background: #017C84;
 			color: #fff;
+			text-align: center;
 			position: relative;
-			justify-content: space-between;
 			.back{
 	            position: absolute;
-	            top: 0.02rem;
+	            top: 0.01rem;
 	            left: 0.1rem;
 	        }
 			.updatesexkey{
 			   line-height: 0.4rem;
-			   position: absolute;
-			   top: 0.03rem;
-			   left: 1.7rem;
-			   font-size: 0.2rem;
+			   font-size: 0.2rem; 
 			}
 		}
 		.updatesexcon{

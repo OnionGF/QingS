@@ -11,7 +11,7 @@ const state = {
      //用户登录 密码  本地登录
     //  user_info:localStorage.user_info?localStorage.user_info:'',
     user_info:{},
-    LoginOnData:true,
+    LoginOnData:false,
     
     nick:{nickName:'立即登录'},
 }

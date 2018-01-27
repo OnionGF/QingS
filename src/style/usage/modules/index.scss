@@ -1,9 +1,9 @@
 
 
 .home{
-    //@include flex();
-    // @include flexbox();
-    // @include flex-direction(column);
+    @include flex();
+     @include flexbox();
+     @include flex-direction(column);
     position:relative;
     background:#fff; 
     padding-bottom:0.65rem;
@@ -15,7 +15,8 @@
        
     }
     .searchTop{
-        position:fixed;
+       // position:absolute;
+       position: fixed;
         top:0;
         left:0;
         width:100%;

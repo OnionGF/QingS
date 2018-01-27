@@ -25,27 +25,21 @@
 		flex-direction: column;
 		.updatebrieftitle{
 			height: 0.4rem;
+			line-height: 0.4rem;
 			background: #017C84;
 			color: #fff;
-			position: relative;
+			display: flex;
 			justify-content: space-between;
 			.back{
-	            position: absolute;
-	            top: 0.02rem;
-	            left: 0.1rem;
+	           padding-left: 0.1rem;
 	        }
 			.updatebriefkey{
 			   line-height: 0.4rem;
-			   position: absolute;
-			   top: 0.03rem;
-			   left: 1.7rem;
 			   font-size: 0.2rem;
 			}
 			.save{
 				line-height: 0.4rem;
-				position: absolute;
-				top: 0.03rem;
-				right: 0.16rem;
+				padding-right: 0.1rem;
 			}
 		}
 		.updatebriefcon{

@@ -20,79 +20,74 @@
     }
     .updatehead{
         @include flexbox();
+        @include justify-content(space-between);
         height: 0.6rem;
-        line-height: 0.53rem;
-        background: #fff;
-        padding-left: 0.14rem;
+        line-height: 0.6rem;
         background: #fff;
         margin-bottom: 0.1rem;
         border-bottom: 1px solid #d9d9d9;
-        .updateheadimg{
-           width: 0.5rem;
-           height: 0.5rem;
-           margin-left: 2.48rem;
-           overflow: hidden; 
-           border-radius: 50%;
-            margin-right: 0.09rem;
-           img{
-               width: 100%;
-               height: 100%;
-           }
-           .updateicon1{
-              color: #666;
-             
-           }
-        }
         .updateheadtou{
+            height: 0.6rem;
             color: #333333;
             font-size: 14px;
+            padding-left: 0.15rem;
         }
+        .updateheadimg{
+            @include flexbox();
+            height: 0.6rem;
+            .ppimg{
+               width: 0.5rem;
+               height: 0.5rem;
+               overflow: hidden; 
+               border-radius: 50%;
+               margin-right: 0.08rem;
+               img{
+                   width: 100%;
+                   height: 100%;
+               }
+               
+            }
+            .updateicon1{
+                color: #666;
+                margin-right: 0.08rem;     
+            }
+        }   
     }
     .updatenickname{
         @include flexbox();
+        @include justify-content(space-between);
         height: 0.53rem;
         line-height: 0.53rem;
         background: #fff;
-        padding-left: 0.14rem;
         border-bottom: 1px solid #d9d9d9;
-        position: relative;
         margin-bottom: 0.1rem;
-        position: relative;
         .updatenicknamekey{
+            line-height: 0.53rem;
             color: #333333;
-            font-size: 14px;
-            float:left;
+            font-size: 14px; 
+            padding-left: 0.2rem;
         }
-        .updatenicknamevalue{
-            float:right;
-        }
-        .updateicon{
-            color: #666;
-            position: absolute;
-            top:0.01rem ;
-            left: 3.49rem;
-        }
-        .updatenicknamevalue{
-            width:1.3rem;
+        .updatenicknameright{
+            width:2rem;
             height: 0.53rem;
-            position: absolute;
-            top: 0;
-            left: 2.1rem;
-            text-align: right;
-            
-           
+            @include flexbox();
+            @include justify-content(space-between);
+            line-height: 0.53rem;
+            padding-left: 0.04rem;
+            .updatenicknamevalue{
+                display: inline-block;
+                width:1.7rem;
+                height: 0.53rem;
+            }
+            .updateicon{
+                display: inline-block;
+                color: #666;
+                height: 0.53rem;
+                width: 0.3rem;
+                
+            }
         }
-    }
-    .exitbtn{
-        width: 100%;
-        height: 0.44rem;
-        background: #fff;
-        color: #ee7a65;
-        line-height: 0.44rem;
-        text-align: center;
-        outline: none;
-        border: none;
-        margin-top: 0.2rem;
-        font-size: 14px;
+        
+       
     }
 }

@@ -2,8 +2,10 @@
 
 <template>
     <div class="tag2 tag">
-        <div class="">
-            暂时没有浏览记录
+        <div class="mydiscount">
+            <p class="mydiscountone"></p>
+            <p class="mydiscountone"></p>
+            <p class="mydiscountone"></p>
         </div>
     </div>
 </template>
