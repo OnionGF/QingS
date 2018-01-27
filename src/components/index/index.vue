@@ -47,21 +47,21 @@
                 isShow:false
             }
         },
-        methods:{
-            scrollfunc(){
-                this.scroll =  document.getElementsByClassName("home")[0].scrollTop
-                console.log(this.scroll)
-                if( this.scroll>=400){
-                    this.isShow = true
-                }else{
-                    this.isShow = false
-                }
-            }
-        },
-        mounted(){   
+        // methods:{
+        //     scrollfunc(){
+        //         this.scroll =  document.getElementsByClassName("home")[0].scrollTop
+        //         console.log(this.scroll)
+        //         if( this.scroll>=400){
+        //             this.isShow = true
+        //         }else{
+        //             this.isShow = false
+        //         }
+        //     }
+        // },
+        // mounted(){   
  
-            window.addEventListener('scroll',this.scrollfunc,true)
-        }
+        //     window.addEventListener('scroll',this.scrollfunc,true)
+        // }
 
     }
 
