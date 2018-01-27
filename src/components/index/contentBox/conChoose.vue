@@ -6,21 +6,17 @@
         </h3>
         
         <div class='conBox'>
-            <div class='conDiv2' v-for='info of mes' :key='info.id'>
+            <div class='conDiv2' v-for='(info,id) in mes' :key='info.id'>
                 <img  @click="conHotdetail"  :src=info.image alt=""/>
                 <p><span><i class='iconfont' >&#xe61c;</i>{{info.addr}}</span></p>
-                <p class="route"><span>{{info.route}}</span><a  @click.stop="love({houseId:info.id})" ><Icon  class='like' :class="{active:isActive}" type="heart"></Icon></a></p>
+                <p class="route"><span>{{info.route}}</span><router-link to="#/" :class="{active:isActive==id}" @change="change"  @click.native.stop="love({houseId:info.id,id:id})" >点</router-link></p>
             </div>                       
         </div>
         <div class="bottom"></div>
 
     </div>
 </template>
-
-
 // import {mapState,mapMutations,mapGetters,mapActions}  from 'vuex'
-
-
 <script>
 import {mapActions} from 'vuex'
 	import axios from 'axios'
@@ -29,26 +25,26 @@ import {mapActions} from 'vuex'
         data:function(){
             return {
                 mes:[],
-                isActive:false,
+                isActive:0,
+            
             }
         },
         methods:{
-
             ...mapActions(['conHotdetail']),
-            love(){
-                // alert(this.isActive)
-                this.isActive=!this.isActive;
+            love(info){
+                this.isActive = info.id;
+                console.log(info.id)
+                console.log(this.isActive)
+                // this.isActive=!this.isActive;
                 this.$store.dispatch('love')
             },
-
-
+            change(){
+                alert('123')
+            },
             getData(){
-				// let that = this;
                 axios.get("/static/mock/choose.json")
                 .then((response)=>{
-                    console.log(response,1111111)
-                    this.mes = response.data.result;    
-                    console.log(this.mes)    
+                    this.mes = response.data.result;       
 				})
 			}
 		},
@@ -99,25 +95,33 @@ import {mapActions} from 'vuex'
                     margin-right:0.2rem;
                     span{
                         margin-right:0.1rem;
-                    }
-                    .like{
-                        font-size:0.4rem;
-                        float:right;
-                        color:#000;
-                        opacity:0.2;
-                        margin-top:-0.2rem;
-
+                    }           
+                    a{
+                        width:0.2rem;
+                        height:0.5rem;
+                        line-height: 0.5rem;
+                        color:#fff;
+                        background:#017c84;
+                        position:absolute;
+                        right:0;
+                        margin-right:0.25rem;  
+                        background:url('/static/img/click.jpg') no-repeat;
+                        background-size:100%;
                     }
                     .active{
-                        float:right;
-                        opacity:1;
-                        font-size:0.4rem;
-                        color:hsl(4, 69%, 50%);
-                        margin-top:-0.2rem;
-                        
+                        width:0.2rem;
+                        height:0.5rem;
+                        line-height: 0.5rem;
+                        position:absolute;
+                        right:0;
+                        margin-right:0.25rem;                                      
+                        color:#fff;
+                        background:#017c84;
+                        background:url('/static/img/unclick.jpg') no-repeat;
+                        background-size:100%;
                     }
                 }
-                // 
+               
             
             }
             .bottom{

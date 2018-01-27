@@ -19,12 +19,30 @@
             }
         }
         .dialogcontitcon{
-            @include flex();
+            width:100%;
+            height:100%;
+            border:1px solid #ccc;
+            margin-left:0;
+            overflow-Y:scroll;
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            li{
+				list-style:none;
+				width:100%;
+                padding:6px 0;
+                span{
+                    float:right;
+                    padding:4px 6px;
+                    margin-right:0.1rem;
+                }
+			}
+           
             
         }
         .dialogconfooter{
             display: flex;
-            height: 0.46rem;
+            height: 0.6rem;
             border-top: 1px solid #999999;
             .dialogconvoice{
                margin-left: 0.14rem;
@@ -58,6 +76,20 @@
                      color: #666666;
                 }
             }
-            
+            #t1{
+                width:100%;
+				height:46px;
+                float:right;
+                border-radius:10px;
+
+            }
+            #b1{
+                width:100px;;
+                height:46px;
+                float:left;
+                border-radius: 10px;
+                background:#017C84;
+                color:#fff;
+            }
         }
     }

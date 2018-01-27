@@ -10,7 +10,8 @@
         </div>  
         <div class="con">            
                 <conHot/> 
-                <lunbo/>         
+                <div class="adver"><img style='width:100%' src='/static/img/adver.jpg'/></div>        
+                <lunbo/> 
                 <conCho/>  
                 <!-- <order/>          -->
         </div>
@@ -48,7 +49,7 @@
         },
         methods:{
             scrollfunc(){
-                this.scroll =  document.getElementsByClassName("home")[0].scrollTop
+                this.scroll =  document.getElementsByClassName('home')[0].scrollTop
                 if( this.scroll>=400){
                     this.isShow = true
                 }else{
@@ -56,9 +57,11 @@
                 }
             }
         },
-        mounted(){
+        mounted(){   
+ 
             window.addEventListener('scroll',this.scrollfunc,true)
         }
+
     }
 
 </script>

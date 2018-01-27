@@ -22,24 +22,7 @@
         },
         name:'yanzhengma',
         methods:{
-            ...mapActions(['login','denglu']),
-            // login(){
-            //     console.log('发送验证码')
-            //     var text = var$('.huo').value
-            //      var num = 60
-            //         var timer = setInterval(function () {
-            //             num--
-            //             text = num + '秒后重新获取'
-            //             element.style.color = ' #ccc'
-            //             element.disabled = ' disabled'
-            //             if (num === 0) {
-            //             element.disabled = ''
-            //             element.style.color = ' #ffa600'
-            //             element.innerHTML = '获取验证码'
-            //             clearInterval(timer)
-            //             }
-            //         }, 1000)
-            // }
+            ...mapActions(['login','denglu']),          
         }
     }
   

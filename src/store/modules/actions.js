@@ -14,18 +14,14 @@ const  actions = {
          }, 1000);
     },
     getMes({commit},mes){
-        console.log("qingqiu")
         router.push({path:'/mysearch'});
         axios.post('/api/house/findHouseById.html',{"id":1}).then(({data})=>{
-            // axios.post('/dola/api/house/findHouseById.html',"id=1").then(({data})=>{
-            console.log(data)
             if(data.result){
                 Toast('验证码发送成功！');
             }else{
                 Toast('请求失败');               
             }
         })
-        // commit('getMes',mes.place)
     },
    
     startDate({commit},start){
@@ -155,14 +151,12 @@ const  actions = {
     conHotdetail(user_info){
         router.push({path:'/conHotdetail'}); 
         axios.post('/api/house/findHouseById.html',{houseId:1}).then(({data})=>{          
-            console.log(data);
             if(data.result){
                 Toast(data.message);                
             }else{
                 Toast(data.message);
             }
         })
-
     }
     //浏览记录
 

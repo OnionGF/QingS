@@ -122,9 +122,7 @@ import {mapActions,mapState} from 'vuex'
     export default {
         name:'mysearch',
         components:{},  
-        mounted(){ 
-
-        }
+        
     }
 </script>
 
@@ -135,7 +133,10 @@ import {mapActions,mapState} from 'vuex'
         .mysearchtop{
             height: 0.48rem;
             background: #017c84;
-            position: relative;
+            position: fixed;
+            width:100%;
+            z-index: 100;
+            top:0;
             .leftarror{
                 font-size: 0.4rem;
                 color: #ffffff;

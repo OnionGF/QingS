@@ -8,7 +8,8 @@ const mutations = {
         state.position = info.address  
     },
     getMes(state,info){
-        state.searchMes = info
+        state.searchMes = info;
+        
     },
     startDate(state,info){
         state.startDate = info

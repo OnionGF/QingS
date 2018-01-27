@@ -1,7 +1,7 @@
 <template>
     <div>
        <div id="login">
-           <a class="iconfont back posback" @click="back()">&#xe624;</a>
+           <a class="iconfont back posback" @click="back">&#xe624;</a>
             <div class="pictop">
                 <img width="100%" height="100%" src="../../style/usage/img/2.jpg"/>
             </div>
@@ -31,10 +31,9 @@
         methods:{
             back(){
                 console.log('回到首页')
-                this.$router.push({path:'login'})
+                this.$router.push({name:'mine'})
             }
-        }
-           
+        }      
     }
   
 </script>
@@ -42,7 +41,7 @@
 
 <style  scoped>
     .router-link-active{
-        color:aqua
-    }
+    	border-bottom:3px solid #017c84
+   }
 	
 </style>
