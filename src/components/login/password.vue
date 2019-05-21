@@ -7,6 +7,7 @@
                 <p class="pyan"><i class="iconfont pwd">&#xe60a;</i><input type="password" v-model = "password" id="pass" placeholder="密码"></p>
                 <p class="pbtn"><input @click=register({userName:phone,password:password}) type="button" id="btn" value="登录"/></p>
             </form> 
+            <div @click="busEvent">点我测试时间总线</div>
             <p class="forget"> <a href="#/forget">忘记密码？</a></p> 
         </div>  
              
@@ -29,7 +30,12 @@ import {mapActions} from 'vuex'
             }
         },
         methods:{
-            ...mapActions(['register'])         
+            ...mapActions(['register']) ,
+            busEvent(){
+                console.log('调用事件总线')
+                bus.$emit('loginondata')
+            }
+
     }
 }
   

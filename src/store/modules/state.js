@@ -12,7 +12,7 @@ const state = {
     //  user_info:localStorage.user_info?localStorage.user_info:'',
     user_info:{},
     LoginOnData:true,
-    
+    test:false,
     nick:{nickName:'立即登录'},
 }
 

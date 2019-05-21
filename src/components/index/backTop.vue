@@ -24,6 +24,11 @@
 </template>
 <script>
     export default {
+        methods:{
+            onDouble(){
+                console.log('儿子里的事件被点击')
+            }
+        }
         
     }
 </script>

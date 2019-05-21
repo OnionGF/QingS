@@ -66,16 +66,18 @@
 		},
 		created() {
 			var that = this
+			// 这个页面必须被加载过，才能成功的被事件总线调用
 			bus.$on("loginondata", (val) => {
+				console.log('val',val)
 				that.data = val
 				console.log(that.data)
 			})
 		},
 		mounted() {
-			let that = this
-			that.data = localStorage.getItem("user_info")
-			that.data = JSON.parse(that.data)
-			that.data_nickname = that.data.phone
+			// let that = this
+			// that.data = localStorage.getItem("user_info")
+			// that.data = JSON.parse(that.data)
+			// that.data_nickname = that.data.phone
 		},
 		data() {
 			return {

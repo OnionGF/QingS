@@ -7,10 +7,13 @@ const mutations = {
     getPosi(state,info){
         state.position = info.address  
     },
-    getMes(state,info){
-        state.searchMes = info;
-        
+    changetest(state,info){
+        console.log('state',state,info)
+        state.test = info.test  
     },
+    // getMes(state,info){
+    //     state.searchMes = info;
+    // },
     startDate(state,info){
         state.startDate = info
     },

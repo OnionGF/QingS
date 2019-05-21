@@ -1,5 +1,7 @@
 <template>
     <div class="home">
+        <div @click="doubleSon">点我</div>
+
         <banner/>         
         <div class='searchBox'  >
             <pos/>
@@ -15,14 +17,10 @@
                 <conCho/>  
                 <!-- <order/>          -->
         </div>
-        <backTop/>     
+        <backTop ref="son"/>     
         <foots></foots>
     </div>
 </template>
-
-
-
-
 
 <script>
 	import banner from "./AppBanner.vue"
@@ -37,6 +35,7 @@
     import conHotdetail from './contentBox/conHotdetail.vue'
     import backTop from './backTop'
     import foots from '../footer/foot'
+    import {mapState, mapMutations} from 'vuex'
   
 	export default{
 		name:'mains',
@@ -47,21 +46,30 @@
                 isShow:false
             }
         },
-        // methods:{
-        //     scrollfunc(){
-        //         this.scroll =  document.getElementsByClassName("home")[0].scrollTop
-        //         console.log(this.scroll)
-        //         if( this.scroll>=400){
-        //             this.isShow = true
-        //         }else{
-        //             this.isShow = false
-        //         }
-        //     }
-        // },
-        // mounted(){   
- 
-        //     window.addEventListener('scroll',this.scrollfunc,true)
-        // }
+        methods:{
+            doubleSon(){
+                console.log('点我了',this)
+                this.$refs.son.onDouble();
+                this.changetest('changetest')
+            },
+            scrollfunc(){
+                this.scroll =  document.getElementsByClassName("home")[0].scrollTop
+                console.log(this.scroll)
+                if( this.scroll>=400){
+                    this.isShow = true
+                }else{
+                    this.isShow = false
+                }
+            },
+            ...mapMutations(['changetest'])
+
+        },
+        computed: {
+            ...mapState(['test']),
+        },
+        mounted(){   
+            window.addEventListener('scroll',this.scrollfunc,true)
+        }
 
     }
 

@@ -38,14 +38,13 @@
            	   path:[{name:'mains'},{name:'tracks'},{name:'or1'},{name:'password'},{name:'mine'}],
            	   isShow:false
            }
-           
         },
         computed:{
-            ...mapState(['LoginOnData'])
+            ...mapState(['LoginOnData','nick'])
         },
         methods:{
             clicklogin(){
-                 console.log(this.LoginOnData)
+                 console.log(123,this)
                 if(!this.LoginOnData){
                     this.$router.push({name:'nologin'})
                 }else{
