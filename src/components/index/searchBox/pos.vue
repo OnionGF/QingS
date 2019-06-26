@@ -42,6 +42,7 @@
         },
         mounted(){
             this.getPosition()
+            console.log(1,this)
         }
     }
 

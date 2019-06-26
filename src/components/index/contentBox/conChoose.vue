@@ -4,7 +4,6 @@
             <p>优质房源</p> 
             <i>为您特别推荐</i>
         </h3>
-        
         <div class='conBox'>
             <div class='conDiv2' v-for='(info,id) in mes' :key='info.id'>
                 <img  @click="conHotdetail"  :src=info.image alt=""/>
@@ -26,7 +25,6 @@ import {mapActions} from 'vuex'
             return {
                 mes:[],
                 isActive:0,
-            
             }
         },
         methods:{

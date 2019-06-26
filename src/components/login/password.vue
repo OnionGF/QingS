@@ -20,22 +20,23 @@ import bus from '../../store/modules/bus.js'
 import axios from 'axios'
 import {Toast} from 'mint-ui'
 import {mapActions} from 'vuex'
-    export default {
-        name:'password',
-        data(){
-            return {
-                phone:'',
-                password:'',
-                LoginOnData:''
-            }
-        },
-        methods:{
-            ...mapActions(['register']) ,
-            busEvent(){
-                console.log('调用事件总线')
-                bus.$emit('loginondata')
-            }
 
+
+export default {
+    name:'password1',
+    data(){
+        return {
+            phone:'',
+            password:'',
+            LoginOnData:''
+        }
+    },
+    methods:{
+        ...mapActions(['register']) ,
+        busEvent(){
+            console.log('调用事件总线')
+            bus.$emit('loginondata')
+        }
     }
 }
   
